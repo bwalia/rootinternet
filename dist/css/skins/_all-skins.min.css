@@ -63,12 +63,12 @@
 }
 .skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a {
 	color: #fff;
-	background: #1e282c;
-	border-left-color: #3c8dbc
+	background: #fbb83b;
+	border-left-color: #1e282c;
 }
 .skin-blue .sidebar-menu>li>.treeview-menu {
 	margin: 0 1px;
-	background: #2c3b41
+	background: #fff;
 }
 .skin-blue .sidebar a {
 	color: #444
@@ -80,17 +80,18 @@
 	color: #8aa4af
 }
 .skin-blue .treeview-menu>li.active>a, .skin-blue .treeview-menu>li>a:hover {
-	color: #fff
+	color: #000
 }
 .skin-blue .sidebar-form {
 	border-radius: 3px;
-	border: 1px solid #374850;
+
 	margin: 10px 10px
 }
 .skin-blue .sidebar-form input[type="text"], .skin-blue .sidebar-form .btn {
 	box-shadow: none;
-	background-color: #374850;
-	border: 1px solid transparent;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	padding-right:none;
 	height: 35px
 }
 .skin-blue .sidebar-form input[type="text"] {

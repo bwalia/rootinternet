@@ -14,15 +14,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="css/Admin.min.css">
+  
  
   <link rel="stylesheet" href="css/skins/_all-skins.min.css">
-
-  
-
- 
-</head>
-<body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
+ </head>
+ <body class="hold-transition skin-blue sidebar-mini">	
+ <div class="wrapper">
 
   <header class="main-header">
     <!-- Logo -->
@@ -399,137 +396,281 @@
 
     <!-- Main content -->
     <section class="content">
-      <!-- Small boxes (Stat box) -->
+   
       <div class="row">
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-              <h3>150</h3>
-
-              <p>New Task</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-tasks"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-              <p>Invoices</p>
-            </div>
-            <div class="icon">
-              <i CLASS="fa fa-book"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3>44</h3>
-
-              <p>User Registrations</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-person-add"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-              <h3>20</h3>
-
-              <p>Locations</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-map-marker"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-      </div>
-	  
-	  
-	  
-	  <div class="row">
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-              <h3>150</h3>
-
-              <p>New Task</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-tasks"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-              <p>Invoices</p>
-            </div>
-            <div class="icon">
-              <i CLASS="fa fa-book"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3>44</h3>
-
-              <p>User Registrations</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-person-add"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-              <h3>20</h3>
-
-              <p>Locations</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-map-marker"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-      </div>
-      <!-- /.row -->
-      <!-- Main row -->
+       
+		
+				
+		<div class="panel-body no-padding-top bg-white"> 
+     <div data-example-id="togglable-tabs" STYLE="margin-bottom: 30px;">
+    <ul id="new-customer-tab" class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#customerinfo" id="home-tab" role="tab" data-toggle="tab" aria-controls="customer-info" aria-expanded="true">Server Details
+    
+</a></li>
+      <li role="presentation"><a href="#licenceno" role="tab" id="profile-tab" data-toggle="tab" aria-controls="licenceno">Active Domains on Server</a></li>  
+     
+    </ul>
+    <div id="myTabContent" class="tab-content" style="padding-top:25px; border-left: 1px solid #ddd; border-right: 1px solid #ddd;  border-bottom: 1px solid #ddd; padding-bottom:25px; padding-left:15px; padding-right:15px;">
+      <div role="tabpanel" class="tab-pane fade in active" id="customerinfo" aria-labelledby="home-tab">
+      <form class="form-horizontal">
+       		 <div class="row">
+           		  <div class=" col-sm-12 col-lg-8">
+             
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Server Name  <sup class="required">*</sup></label>
+    <div class="col-sm-6  ">
+      <input type="text" class="form-control" id="" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Server Type <sup class="required">*</sup></label>
+    <div class="col-sm-6 ">
+     <select class="form-control">
+									<option value="Live">Live</option>
+									<option value="Staging">Staging</option>
+									<option value="Dev">Dev</option>
+								</select>
+    </div>
+     
+  </div>
+  
+  
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label"> Managed By<sup class="required">*</sup></label>
+    <div class="col-sm-6 ">
+     <select class="form-control">
+								
+								
+									<option value="78520DB5B70F41BBBACAA6697A91D276">Nishant Tyagi</option>
+								
+									<option value="5AFF32193FA341AD8FA5D7A373FA677E">Preeti Behgal</option>
+								
+									<option value="7EAEE848C6504609A78FB0E52F09B3DA">Simon Jones</option>
+								
+									<option value="BE6900C86B1C4CFFA74238FB1214E782">Simmi Hundal</option>
+								
+									<option value="AE5EB299B92548528D647B68F46C740F">James Loosely</option>
+								
+									<option value="6981F3A95EB249E49918CE2A57FCA74F">Dimpi Gupta</option>
+								
+									<option value="6A81E1A4883D461F8F2FFFA60EC2BA22">Swati Mehta</option>
+								
+									<option value="6003CAED803612448197CAE88A059D0A">Elliott Neal</option>
+								
+									<option value="CA91A37E95045541B0BDA2FF15C074CD">Pankaj Joshi</option>
+								
+									<option value="B065DD1B7C5048438A9D2D01EA40A2A1">Laura New</option>
+								
+									<option value="DDDDBFD4B3239B46A647B86B3C693025">Puneet Chopra</option>
+								
+									<option value="6EB894C1DFD9884587DA9EF724BE7BFC">Tanima Bansal</option>
+								
+									<option value="892AA54E-D0DA-42A7-90A9-C080E3853F31">Harpreet Brar</option>
+								
+									<option value="E5E5E1A2-D3B5-4426-9BF0-E578C91DB6A3">Neha Kapoor</option>
+								
+									<option value="9030FB91-26E9-4F9A-A4BE-606CE044A495">Virender Singh</option>
+								
+									<option value="D58E4CED-0559-4A4C-AB3B-F7C15736CB04">Sandeep Shah</option>
+								
+									<option value="5359FE8C-47E5-4627-8F4F-AACA80EB363C">Pat Bensky</option>
+								
+									<option value="A66460D2-C59D-4A7B-9726-EA825EA5901E">Sarah Catlin</option>
+								
+									<option value="FDD9FC81-B660-426D-B0E1-309EC38648E2">Stacey Carter</option>
+								
+									<option value="450CF279-701C-49D9-B37C-014F351FC35B">Kevin Williams</option>
+								
+									<option value="872FE26D-65CD-4B3A-8EF9-E723F21C1DF3">Balinder Walia</option>
+									
+								</select>
+    </div>
+     
+  </div>
+  
+  
+  
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label"> Server OS<sup class="required">*</sup></label>
+    <div class="col-sm-6 ">
+         <select class="form-control">
+									<option value="">--Select OS--</option>
+									<option value="CentOS">CentOS</option>
+									<option value="RedHat">RedHat</option>
+									<option value="Windows">Windows</option>
+									<option value="Apple OSX">Apple OSX</option>
+								</select>
+    </div>
+     
+  </div>
+  
+  
+  
+ 
+  
+  <div class="form-group">
+    <label for="firstname" class="col-sm-3  control-label">Root User </label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Root Password  </label>
+    <div class="col-sm-6">
+      <input type="password" class="form-control" id="" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Root Path</label>
+    <div class="col-sm-6">
+      <input type="Root Path" class="form-control" id="" placeholder="">
+    </div>
+  </div>
+   
+   
+  
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Server Location <sup class="required">*</sup> </label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="" >
+    </div>
+    </div>
+    <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Lan IP Address </label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="" placeholder="">
+    </div>
+     </div>
+    <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Lan IP Address (Long) </label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="" >
+    </div>
+     </div>
+    <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Lan IP Address v6</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="" placeholder="">
+    </div>
+     </div>
+    <div class="form-group">
+    <label for="firstname" class="col-sm-3 control-label">Server Support Ref no</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="" placeholder="">
+    </div>
+     </div>
+    <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Wan IP Address</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="" placeholder="">
+    </div>
+     </div>
+    <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Wan IP Address (Long)</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="" placeholder="">
+    </div>
+     </div>
+    <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Wan IP Address v6o</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="" placeholder="">
+    </div>
+     </div>
+      <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Status <sup class="required">*</sup></label>
+    <div class="col-sm-6">
+	
+	<select class="form-control" >
+									<option value="">--Select Status--</option>
+									<option value="true">Active</option>
+									<option value="false" selected="">InActive</option>
+								</select>
+  
+    </div>
+     </div>
       
+    
+ 
+ 
+             </div>
+       			 
+             
+       		 </div>
+             
+             </form>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="licenceno" aria-labelledby="profile-tab">
+       		 <form class="form-horizontal">
+             	<div class="row">
+                	<div class="col-sm-10  col-md-12 col-lg-9">
+                        <div class="form-group">
+                              <label for="" class="col-sm-3 control-label">Catbase Type</label>
+                             <div class="col-sm-6">
+                              <input type="text" class="form-control" id="" placeholder="">
+                             </div>
+                        </div>
+                        <div class="form-group">
+                              <label for="" class="col-sm-3 control-label">Catbase Prog Type</label>
+                             <div class="col-sm-6">
+                              <input type="text" class="form-control" id="" placeholder="">
+                             </div>
+                        </div>
+                        <div class="form-group">
+                              <label for="" class="col-sm-3 control-label">Catbase Version</label>
+                             <div class="col-sm-6">
+                              <input type="text" class="form-control" id="" placeholder="">
+                             </div>
+                        </div>
+                        <div class="form-group">
+                              <label for="" class="col-sm-3 control-label">Number of users</label>
+                             <div class="col-sm-6">
+                              <input type="text" class="form-control" id="" placeholder="">
+                             </div>
+                        </div>
+                        <div class="form-group">
+                              <label for="" class="col-sm-3 control-label">Licence Number</label>
+                             <div class="col-sm-6">
+                              <input type="text" class="form-control" id="" placeholder="">
+                             </div>
+                        </div>
+                        <div class="form-group">
+                               <div class=" col-sm-offset-3  col-sm-7">
+                             <input type="button" class="btn  palette-belize-hole btn-color  margin-right-5 btn-sm margin-btm10-xs" data-toggle="modal" data-target="#myModal" value="Generate New License"> <input type="button" class="btn  palette-belize-hole btn-color margin-right-5 btn-sm" data-toggle="modal" data-target="#activeLic" value="Activate License Number"> 
+                         
+                             </div>
+                        </div>
+                        <div class="form-group">
+                              <label for="" class="col-sm-3 control-label">Old Licence Number</label>
+                             <div class="col-sm-6">
+                              <input type="text" class="form-control" id="" placeholder="">
+                             </div>
+                        </div>
+                         
+                        
+                	</div>
+                   
+                
+                </div>
+                    
+             </form>   
+      </div>
+      
+         
+     
+    </div>
+     
+  </div>
+   <div class="col-sm-12 margin-top-15 " ALIGN="CENTER">
+                <input class="btn  palette-belize-hole btn-color margin-right-5 btn-sm " type="submit"> <input class="btn btn-primary btn-sm " type="reset">
+                </div>
+        
+      </div>
+		
+		
+		
+        <!-- right col -->
+      </div>
       <!-- /.row (main row) -->
 
     </section>
@@ -551,8 +692,20 @@
 
 <script src="js/jquery-2.2.3.min.js"></script>
 
+
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-checkbox-radio-switch.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('#table').basictable();
+	   $('#table-breakpoint').basictable({
+        breakpoint: 751
+      });
+
+      
+    });
+  </script>
+  <script src="js/basictable.js"></script>
 <script src="js/app.min.js"></script>
 
 </body>

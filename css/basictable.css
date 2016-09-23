@@ -71,7 +71,6 @@ table tr,
 table th,
 table td {
   border: none;
-  border-bottom: 1px solid #ccc;
   
 }
 
@@ -103,8 +102,8 @@ table.bt tfoot th,
 table.bt tfoot td,
 table.bt tbody td {
     padding: 0;
-/*	 background: #3498db;*/
-	 background: #3993ba;
+
+	 background: #444;
 	
 	
 }

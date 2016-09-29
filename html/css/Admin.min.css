@@ -24,6 +24,10 @@ body {
 	position: relative;
 	overflow: hidden
 }
+
+
+
+
 .wrapper:before, .wrapper:after {
 	content: " ";
 	display: table
@@ -31,6 +35,43 @@ body {
 .wrapper:after {
 	clear: both
 }
+
+
+.btn-light-orange {
+    background-color: #fbb83b;
+	border-bottom: 3px solid #d69d33!important;
+    border-right: 3px solid #d69d33!important;
+	 border-left: none!important;
+    border-top: none!important;
+	color:#fff!important;
+	
+   
+}
+
+
+.btn-light-orange a {
+	 border-bottom: 3px solid #d69d33!important;
+    border-right: 3px solid #d69d33!important;
+	color:#fff!important;
+	
+   
+}
+
+
+.btn-light-orange:hover, .btn-light-orange:active, .btn-light-orange.hover {
+	background-color: #fbb83b;border-bottom: 3px solid #d69d33;
+border-right: 3px solid #d69d33;
+border-left:none;
+border-top:none;
+
+}
+
+.btn-light-orange.focus, .btn-light-orange:focus{
+	background-color: #dc9a1e!important;
+}
+
+
+
 .layout-boxed .wrapper {
 	max-width: 1250px;
 	margin: 0 auto;
@@ -4813,6 +4854,20 @@ border:1px solid #CCCCCC;-webkit-box-shadow: #FEFFFF 0px 1px 1px ;-moz-box-shado
  background-image: -ms-linear-gradient(top, #E0E0E0, #BDBBBC);
  background-image: -o-linear-gradient(top, #E0E0E0, #BDBBBC);
  background-image: linear-gradient(to bottom, #E0E0E0, #BDBBBC);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#E0E0E0, endColorstr=#BDBBBC);
+}
+
+
+
+ .logo-margin {
+    margin-top: 100px;
+}
+.login-panel .panel-heading {
+    background: #2a3f54;
+    color: #fff;
+}
+
+.checkbox input, .radio input{
+	display:block!important;
 }
 
 

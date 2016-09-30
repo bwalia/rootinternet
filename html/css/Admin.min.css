@@ -11,6 +11,11 @@ html, body {
 .layout-boxed html, .layout-boxed body {
 	height: 100%
 }
+
+
+
+
+
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -19,6 +24,20 @@ body {
 	overflow-x: hidden;
 	overflow-y: auto
 }
+
+@font-face {	
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon/icomoon.eot');
+	src:url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.woff') format('woff'),
+		url('../fonts/icomoon/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
 .wrapper {
 	min-height: 100%;
 	position: relative;
@@ -4856,8 +4875,6 @@ border:1px solid #CCCCCC;-webkit-box-shadow: #FEFFFF 0px 1px 1px ;-moz-box-shado
  background-image: linear-gradient(to bottom, #E0E0E0, #BDBBBC);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#E0E0E0, endColorstr=#BDBBBC);
 }
 
-
-
  .logo-margin {
     margin-top: 100px;
 }
@@ -4868,6 +4885,24 @@ border:1px solid #CCCCCC;-webkit-box-shadow: #FEFFFF 0px 1px 1px ;-moz-box-shado
 
 .checkbox input, .radio input{
 	display:block!important;
+}
+
+
+
+table > tbody > tr > td {
+    border-right: 1px solid #f8f8f9;
+    border-bottom: 1px solid #e2e2e5;
+}
+
+.table.btn-gradient-grey td {
+    background: #f5f6f7;
+    background: -moz-linear-gradient(top,#f5f6f7 0%,#eaebec 100%);
+    background: -webkit-linear-gradient(top,#f5f6f7 0%,#eaebec 100%);
+    background: linear-gradient(to bottom,#f5f6f7 0%,#eaebec 100%);
+}
+
+.table{
+
 }
 
 

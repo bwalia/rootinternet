@@ -2265,7 +2265,9 @@ border-top:none;
 	margin: 0;
 	border-bottom-color: #f4f4f4;
 	border-top-right-radius: 3px;
-	border-top-left-radius: 3px
+	border-top-left-radius: 3px;
+	width: 100%;
+	
 }
 .nav-tabs-custom>.nav-tabs>li {
 	border-top: 3px solid transparent;

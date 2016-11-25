@@ -9,6 +9,11 @@
   <!-- Bootstrap 3.3.6 -->
   
   <link rel="stylesheet" href="css/ion.rangeSlider.css">
+   	<link rel="stylesheet" href="css/autocomplete.css">
+	
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	
+	
   <!-- ion slider Nice -->
   <link rel="stylesheet" href="css/ion.rangeSlider.skinNice.css">
   <!-- bootstrap slider -->
@@ -24,7 +29,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="css/Admin.min.css">
 	<link rel="stylesheet" href="css/basictable.css">
- 	<link rel="stylesheet" href="css/autocomplete.css">
+
   
   <style>
   .box-primary h4{
@@ -36,6 +41,42 @@ font-size: 20px;
 
  
   }
+  
+   #ProjectForm .custom-combobox{
+  
+      width: 351px;
+    margin-left: 25px;
+    top: 2px;
+  }
+  
+  
+  .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    width: auto; 
+    height: auto;
+    line-height: 19px !important;
+    background: #fafafa !important;
+    padding: 7px 6px;
+    border: 1px solid #ddd;
+}
+  
+  
+  #ProjectForm .ui-button {
+    background: #fff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #f0f1f2 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f0f1f2));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#f0f1f2 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#f0f1f2 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#f0f1f2 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#f0f1f2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f1f2',GradientType=0 );
+    display: inline-block;
+    border: 1px solid #cfdde8;
+   background-position: 94%;
+    background-repeat: no-repeat;
+    margin-left: -5px;
+    padding: 0 6px;
+    height: 35px;
+}
   
   
   </style>
@@ -924,7 +965,8 @@ font-size: 20px;
             
             <!-- /.box-header -->
             <div class="box-body">
-			<form class="form-horizontal">
+			
+			<form class="form-horizontal" id="ProjectForm">
        		 <div class="row">
            		  <div class=" col-sm-12 col-lg-11">
              													<div class="form-group">

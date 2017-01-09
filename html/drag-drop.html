@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="css/Admin.min.css">
    <link rel="stylesheet" href="css/basictable.css">
 	
-  
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <style>
   .box-primary h4{
 	  margin: 7px 5px 0px 0px;
@@ -1197,6 +1197,17 @@ font-size: 20px;
 <script src="js/ion.rangeSlider.min.js"></script>
 <!-- Bootstrap slider -->
 <script src="js/bootstrap-slider.js"></script>
-
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+  $( function() {
+    $( ".dragdrop" ).draggable({ revert: "valid" });
+    $( "#droppable" ).droppable({
+      classes: {
+        "ui-droppable-active": "ui-state-active",
+        "ui-droppable-hover": "ui-state-hover"
+      }
+    });
+  } );
+  </script>
 </body>
 </html>

@@ -394,6 +394,25 @@
 
     <!-- Main content -->
     <section class="content">
+	
+	
+	
+
+
+
+<div class="btn-group" id="toggle_event_editing">
+	<button type="button" class="btn btn-info locked_active">OFF</button>
+	<button type="button" class="btn btn-default unlocked_inactive">ON</button>
+</div>
+
+
+
+
+
+
+
+
+
    
       <div class="row">
        
@@ -704,6 +723,28 @@
       
     });
   </script>
+  
+  <script>
+
+$('#toggle_event_editing button').click(function(){
+	if($(this).hasClass('locked_active') || $(this).hasClass('unlocked_inactive')){
+		
+		
+        $('#switch_status').html('Switched on.');
+	}else{
+		
+        $('#switch_status').html('Switched off.');
+	}
+	
+
+	$('#toggle_event_editing button').eq(0).toggleClass('locked_inactive locked_active btn-default btn-info');
+	$('#toggle_event_editing button').eq(1).toggleClass('unlocked_inactive unlocked_active btn-info btn-default');
+	});
+	
+	
+
+
+</script>
   <script src="js/basictable.js"></script>
 <script src="js/app.min.js"></script>
 

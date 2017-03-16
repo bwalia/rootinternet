@@ -1,5 +1,5 @@
 .skin-blue .main-header .navbar {
-	background-color: #444
+	background-color:#00256b;
 }
 .skin-blue .main-header .navbar .nav>li>a {
 	color: #fff
@@ -34,7 +34,7 @@
 }
 }
 .skin-blue .main-header .logo {
-	background-color: #444;
+	background-color: #00256b;
 	color: #fff;
 	border-bottom: 0 solid transparent
 }
@@ -1573,9 +1573,4 @@
 .skin-purple-light.sidebar-mini.sidebar-collapse .sidebar-menu>li>.treeview-menu {
 	border-left: 1px solid #d2d6de
 }
-}
-
-
-.btn{
-	margin-bottom:10px;
 }

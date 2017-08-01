@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Root CRM</title>
+ <!-- Tell the browser to be responsive to screen width -->
+ <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+ <!-- Bootstrap 3.3.6 -->
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+ <!-- Font Awesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+ <!-- Ionicons -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+ <!-- Theme style -->
+ <link rel="stylesheet" href="css/Admin.min.css">
+ <link rel="stylesheet" href="css/skins/_all-skins.min.css">
+ </head>
+ <body class="hold-transition skin-blue sidebar-mini">	
+ <div class="wrapper">
+ 
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><img src="images/small-logo.png"  STYLE="padding-left:5px; width:32px;"></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><IMG SRC="images/root-crm-logo.png" STYLE="width:160px;" ALT=""/></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+          <li class="dropdown messages-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope-o"></i>
+              <span class="label label-success">4</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 4 messages</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- start message -->
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Support Team
+                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <!-- end message -->
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Design Team
+                        <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Developers
+                        <small><i class="fa fa-clock-o"></i> Today</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Sales Department
+                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Reviewers
+                        <small><i class="fa fa-clock-o"></i> 2 days</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">See All Messages</a></li>
+            </ul>
+          </li>
+          <!-- Notifications: style can be found in dropdown.less -->
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">10</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 10 notifications</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                      page and may cause design problems
+                    </a>
+                  </li>
+                  <li CLASS="active2">
+                    <a href="#">
+                      <i class="fa fa-users text-red"></i> 5 new members joined
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-user text-red"></i> You changed your username
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">View all</a></li>
+            </ul>
+          </li>
+          <!-- Tasks: style can be found in dropdown.less -->
+          <li class="dropdown tasks-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-flag-o"></i>
+              <span class="label label-danger">9</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 9 tasks</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Design some buttons
+                        <small class="pull-right">20%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">20% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Create a nice theme
+                        <small class="pull-right">40%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">40% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Some task I need to do
+                        <small class="pull-right">60%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">60% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Make beautiful transitions
+                        <small class="pull-right">80%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">80% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                </ul>
+              </li>
+              <li class="footer">
+                <a href="#">View all tasks</a>
+              </li>
+            </ul>
+          </li>
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">Alexander Pierce</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Followers</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Sales</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Friends</a>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+            <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+            </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+      </ul>
+	  
+	  
+	  
+  </div>
+  </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Alexander Pierce</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat" STYLE="border-left:none;     line-height: 12px;"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+      
+        <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+		  </li>
+         
+		
+		
+		
+		<li class=" treeview">
+          <a href="#">
+            <i class=" fa fa-tasks"></i> <span>Task</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="tasks.html"><i class="fa fa-circle-o"></i> Tasks</a></li>
+			 <li class="active"><a href="new-task.html"><i class="fa fa-circle-o"></i> New Task</a></li>
+           
+          </ul>
+        </li>
+		
+		
+		
+	<li class=" treeview">
+          <a href="#">
+            <i class="fa fa-book"></i> <span>Projects</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="projects.html"><i class="fa fa-circle-o"></i> Project</a></li>
+			 <li class="active"><a href="new-project.html"><i class="fa fa-circle-o"></i> New Project</a></li>
+           
+          </ul>
+        </li>
+		
+		
+		
+		<li class=" treeview">
+          <a href="#">
+            <i class="fa fa-location-arrow"></i> <span>Location</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="location.html"><i class="fa fa-circle-o"></i> Location</a></li>
+			 <li class="active"><a href="new-location.html"><i class="fa fa-circle-o"></i> Enter New Location</a></li>
+           
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+       
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Dashboard
+        <small>Control panel</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+	 
+      <div class="row">
+	  
+	  <div CLASS="col-md-6">
+	  <form class="form-horizontal">
+       		 <div class="row">
+           		  <div class=" col-sm-12 col-lg-12">
+             
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Job Applied for  </label>
+    <div class="col-sm-8  ">
+      <input class="form-control" id="" placeholder="" type="text">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Name<sup class="required">*</sup></label>
+    <div class="col-sm-8 ">
+       <input class="form-control" id="" placeholder="name" type="text">
+    </div>
+     
+  </div>
+  
+  
+  
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Email<sup class="required">*</sup></label>
+    <div class="col-sm-8 ">
+       <input class="form-control" id="" placeholder="tobykc@ymail.com" type="text">
+    </div>
+     
+  </div>
+  
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Telephone/Mobile<sup class="required">*</sup></label>
+    <div class="col-sm-8 ">
+       <input class="form-control" id="" placeholder="0797011058" type="text">
+    </div>
+     
+  </div>
+  
+  
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Postcode</label>
+    <div class="col-sm-8 ">
+       <input class="form-control" id="" placeholder="SE18 2NL" type="text">
+    </div>
+     
+  </div>
+  
+  
+  
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Download Original CV</label>
+    <div class="col-sm-8 ">
+     <a target="_blank" href="download_cv.php?GUID=439352F9-D6AB-E2EE-D054-D70C14714481" title="Download CV"><i class="fa fa-download"></i> BAs.pdf</a>
+    </div>
+     
+  </div>
+  
+  
+  
+  
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label"> Upload new CV<sup class="required">*</sup></label>
+    <div class="col-sm-8 ">
+     <div class="form-control">
+												<input id="fileinput" name="fileinput" type="file"><span>&nbsp;</span>
+												
+									</div>
+    </div>
+     
+  </div>
+  
+  
+  
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label"> Comments</label>
+    <div class="col-sm-8 ">
+     
+													<textarea rows="10" id="Comments" name="Comments" class="form-control">Please see attached CV for consideration</textarea>
+													
+													<span class="help-block">Automatic resize</span>
+												
+    </div>
+     
+  </div>
+  
+  
+  <div class="col-sm-12 margin-top-15 " align="CENTER">
+                <input class="btn btn-primary btn-color margin-right-5 btn-sm " type="submit" VALUE="Submit">  
+                </div>
+  
+  
+      
+    
+ 
+ 
+             </div>
+       			 
+             
+       		 </div>
+             
+             </form>
+	  
+	  
+	  
+	  </div>
+       <div CLASS="col-md-6">
+	   <div class="panel-body no-padding-top bg-white"> 
+     <div data-example-id="togglable-tabs" STYLE="margin-bottom: 30px;">
+	<ul id="new-customer-tab" class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#customerinfo" id="home-tab" role="tab" data-toggle="tab" aria-controls="customer-info" aria-expanded="true"> CV Preview
+    
+</a></li>
+      <li role="presentation"><a href="#licenceno" role="tab" id="profile-tab" data-toggle="tab" aria-controls="licenceno">  CV Extracted Information</a></li>  
+	  
+	  
+	  <li role="presentation"> <a href="#tabdata" role="tab" id="tab3" data-toggle="tab" aria-controls="tabdata"> CV Content</a></li>
+     
+    </ul>
+    <div id="myTabContent" class="tab-content" style="padding-top:25px; border-left: 1px solid #ddd; border-right: 1px solid #ddd;  border-bottom: 1px solid #ddd; padding-bottom:25px; padding-left:15px; padding-right:15px;">
+      <div role="tabpanel" class="tab-pane fade in active" id="customerinfo" aria-labelledby="home-tab">
+      PDF Design
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="licenceno" aria-labelledby="profile-tab">
+       		 <table class="table table-striped table-bordered dataTable no-footer">
+														<thead><tr><th>Key</th><th>Value</th></tr></thead>
+														<tbody>
+																													<tr><td>POSTCODE</td><td>SE18 2NL</td></tr>
+																													<tr><td>RAW_TEXT</td><td>   TOBY MADU       a)  16 Kings High Way, London. SE18 2NL  (Family Home)                                     E-mail: tobykc@ymail.com  b)  21 Nursery Gardens, Reading.  RG8 8AS  (Work Residence)                            Tel: +44(0)7970110578      PROFILE   I  am  a  proactive  analyst,  technically  astute  across  the  project  management,  business  analysis  &amp;  control  spectrum  specifically  major  project  P&amp;L  $$$,  Program  &amp;  Portfolio  governance,  business  development,  Scoping,  planning,    cost  &amp;  Budgeting,  Human  Resources,  Risk  management,  Project  Manager  /  monitoring  &amp;  control,      stakeholder  management,  QHSE,  document  control,  Hybrid  BA  &amp;  PM,  business  Analyst  &amp; change,  investment, migration,  acquisition,  requirements  gathering,  Data  Models,  process  improvement,  IT  /  IS  Hardware  /  software  development,    Data  Analysis,  Data  Flow  diagrams, Regression testing (UAT), Regulatory / Compliance Projects    EDUCATION AND PROFESSIONAL QUALIFICATIONS:  2008-2010 M.Sc. Business / Project Management - University of Dundee  2006-2008 HND in Management of Information System (MIS)  IMIS, Kent      Focus was on the Business Management of Information systems and IT Project Management.                                                    2012  Project Changes Control and Management Certification, PMI;   2002-2005 B.A (Hons) in Philosophy - Pontifical Urbaniana University, Rome    Other Courses:  2011  Certificates in Delf A2 &amp; Delf B1;             2012   Project Quality Control Management Certification, PMI;  2010  Certificate in Tanker Specialisation;  2017   In view with Certificate in Project Management Professional (PMP)  PMI; equivalent of PRINCE2 certificate    RELEVANT SKILLS:  Practical knowledge and experience with Project Management tools like: MS Project (MSP) or Primavera P6.  Use of Earned Value Management (EVM) and Critical Path Analysis, S curve (CPI, SPI, SV&amp;CV) and Histogram   Experience in using planning information (Gantt charts, histograms, WBS, critical path Method (CPM), PERT charts, Cost  control, Baselines Schedules, Milestone, S Curves &amp; Progress reports) for Project and to stakeholders  Experience in Requirement Gathering, process/ design mapping facilitating workshop &amp; presentation  Good experience in Data Analysis, statistical techniques, operation design and modelling skills   Practical knowledge and experience working within Waterfall, Agile with methodologies (e.g. Prince 2/ SCRUM  On-Time)  Resources management and stakeholders engagement on project (Designers, Architect, Developers, Testers, SMEs etc.)  Good experience as Project Manager in: Scope, Time, Cost, Resource and Quality Objectives, Business cases  Experienced in organizing, assessing, prioritizing tasks, Risks, Resources, milestones, and deliverables  Strong Business Analysis, project management, Data Analysis, and Testing Principle skills  Practical useof: UML, Use Case, Version Control, Testing Principles, OOAD, ERDs, Querying and UAT etc.  Project Management tools: MS Project (MSP) or Primavera P6, On-Time Scrum  Model: V-Model (SDLC &amp; STLC), Iterative, Waterfall, and Agile Project Mgt. principles   Operating Systems: Windows 98/2000/XP/Vista, 7 as well as Mac OS 8/9/X.  Office Tools: Microsoft office suite (Word, Excel, Power Point, Outlook, Access, Project), JIRA and Primavera P6  Database: MS Access, SQL, Visio, SharePoint, Enovia2012, MFG-PRO, PSP3    WORK HISTORY    GE  Capital, Digital, Corporation Aviation Finance                                                                            March 15 - Date  Position: Business Analyst / Project Manager (Lead Programs Specialist / IT Asset Mgt.)   Budget/ Cost Analysis, Data Analyst, Roadmap, Modelling Data, Critical Path, Dash-boarding on data, BI, SDLC,  Waterfall, Agile/Scrum, Application Development, Stakeholder Mgt., Project Control, Software Development, UAT,  UML: Use Cases, Activity/State Diagrams, Process Mapping, Financial Data, Banking, EVM, ETC, EAC, BAC    Delivery: Based on various GE services &amp; solutions structured around IT strategy, infrastructure  &amp; support to all aspects  of  clients  value  chain,  digital  transformation  of  corporate  bank,  online  and  mobile  design  &amp;  implementation,  Exchange  upgrades, launch of new operating model, Digital Cloud transformation, Microsoft O365/ SharePiont online Migration, and  Predix Design System, across EMEA /APAC portfolios / programs. (GEs portfolio of software solutions on track to growth  of 25%+ with Digital orders &gt; $7 billion, 2016)  Business  Analyst  role:  Documentation  of  business  requirements  (with  business  users  of  all  levels;  analysis  of  these  requirements, and convert them into business requirement documents); evaluating; testing and implementation of change  management  process.  Acting  as  a  link  between  the  Project  Management  office  and  relevant  stakeholders  in  facilitating  delivery of the scope, requirements and business solution design for a range of change Programme / projects.     Primarily  role  was  to  work  closely  with  the  business,  professional  services  and  support  teams  like:  IT  team,   Development and Testing teams and Management &amp; Product Development team (for future roadmap &amp; landscape)     Working with the business SMEs, Technology and Compliance on requirements and clarifying issues during analysis,  development,  testing  and  implementation.  Providing  link  between  development  team  and  business  representatives  regarding software functionality, throughout the development lifecycle.  Focal  contact  person  for  Technology  Agile  project  teams,  providing  input  into  Scrums  and  creating  business  documentation and tracking deliverables as required.        Conducting  feasibility,  benchmark  and  competitive  analysis  studies,  interviewing  stakeholders  and  capturing  data  elements, organise and model data to support or improve recommendations, analysing business objectives and align  requirements captured to these business objectives     Ensuring that the project impacts are understood and effectively managed for all key areas of the business, IS &amp; IT      Analysing  and  documenting  complex  business  processes  using  either  UML  &amp;  BMPN  etc.  Translate  business   Initiating and presenting recommendations based on business analysis to influence the decisions made by PMs   requirements into detailed functional design using UML (Use Cases, Activity/State Diagrams, Process Mapping)     Ensuring  Backlog  refinement,  User  Story  development  and  prioritization,  Sprint  Planning,  Sprint  Reviews,  Scrum   Meetings, identify gaps and areas of improvement.     Ensuring compliance  with  project  reporting  requirements  and  delivery  milestones,  including  communicating  of work-  stream status, regular reports of progress and any changes to the Project Manager and Head of IT Programmes.     Working  with  designers  and  Project  Stakeholders  to  ensure  all  customer  journeys  and  functional  requirements  are   clearly mapped and captured     Ensuring all User Stories are accurately defined and scheduled in accordance with the overall plan    Work  closely  with  external  and  internal  Design,  Creative  and  Technology  project  teams  to  deliver  system   requirements, user interactions, data capture/analysis, alongside test cases and acceptance plans     Bridging  gap  between  OPER  and  ITEC  team  to  ensure  development,  implementations,  installation  and  roll  out   deadlines are met. Liaising with various departments and stakeholders: Senior Mgt., Legal, IT / IS, Testers etc     Project Manager role: Program control and coordination of integrated product development within IT teams, that involves  broad  range  of  projects,  at  varying  stages  of  the  software  development  life  cycle  (SDLC),  using  visual  management  techniques, configuration and risk management processes, to meet the program's lead time and within budget.      Facilitating program planning and earned value analysis activities of projects, developing a cohesive integrated plan,  performance  analysis  of  schedule,  Budget,  Resource,  Quality,  Project  Risks  and  Delivery    Early  identification  of  deviations from planned and forecasted performance, and the implementation of effective corrective actions.     Coordinating  multi-function  project  teams  to  develop  and  maintain  accurate,  resourced  and  appropriately  linked  plans.  Manage  integration  of the  projects  into  a  program  Integrated  Master  Portfolio.  Develop /  maintains  high  level  work breakdown structures (WBS), assuring traceability to program requirements of inter-related projects.  Identifying  route  causes  and  ensuring  resolutions  to  project  issues.  Manage  the  processes  related  to  project  management systems-Baseline/ Earned Value Analysis &amp; Reporting, Risk Management &amp; Actions        Defining work package and control account structure. Managing and maintaining  project schedule logic that permits   analysis of multiple critical paths.      Analysing  existing  format,  assessing  room  for  improvement  in  productivity  and  user  experience  (UX)  alongside  developers, creating (UAT) scripts / acceptance criteria, test execution (Regression test) &amp; project task management.    Monitoring  progress  and  performance  against  project  plans.  Define  and  collect  metrics  to  translate  project   progression and measure customer satisfaction of deliverables     Work  closely  with  the  business  /  tech  stakeholders  like:  (internal  /  external  auditors,  quantitative  risk  modellers,   technical accountants and IT developers, Operations, Finance) to own software projects from inception to delivery      Reviews  with  senior  Leaders  and  management,  and  communication  project  performance  updates  with  internal  and   external stakeholders throughout the duration of the project     Eaton Corporation                                                                                                                             June 12  March 15  Position: Business Analyst / Project Manager (Senior Project Planning &amp; Control Analyst / PMO)  Project planning &amp; Change Initiatives Mgt., Business Analysis, Modelling data or Processes, SQL, Agile/ Scrum /  Kanban /System Development, Waterfall, Functional Testing, SPI, CPI, System Implementation &amp; Integration,  Software Application Development and Maintenance, PMO Support, UML: Use Cases, Activity/State Diagrams,     Based on IT Migration and integration (in partnerships with third-party platform vendors) providing integrated services like:  IT  support/  solutions,  bespoke  testing;  System  Implementation  &amp;  Integration,  Application  Development/  Maintenance,  enhanced finance Platforms to new products and business models and delivery of IT projects and non-IT change, within  the change portfolio through project management lifecycle (PMLC), software development lifecycle and (SDLC) and UAT  validation    Business  Analyst  Role:  Documentation  of  requirements,  Data  analysis  and  mapping  for  migrations  to  enhance  the  Project management for the planning and delivery of the functional and architectural improvement of consolidated system    Obtaining  input  from  Commercial  business  stakeholders,  Strategy  &amp;  Architecture,  Development  Services  and   Infrastructure Services, to support the business in defining and documenting the technology requirements     Dealing  with  issues  and  questions,  and  to  support  the  business  in  implementing  the  required  changes  to  make   effective use of the new system or process. Recommending actions that overcome business problems     Work with the business to methodically investigate, analyse, review, define and document business requirements    Working with the development and testing project teams to ensure requirements are understood     Providing business analysis to the whole life cycle - requirements gathering, requirements analysis, writing functional   specifications, development support and testing through to implementation and measuring business improvements     Analysing  Business  requirements  using  interviews,  document  analysis,  requirements  workshops,  business  process   descriptions, use cases, scenarios, business analysis, process flow diagrams, task and workflow analysis     Working closely with the IT project team where appropriate to deliver technical solutions to business requirements    Driving  and  defining  comprehensive  documentation,  including  business  requirements/ stories,  communicate  change   requirements and project status reporting.        Manage  user  acceptance  testing;  like:  authoring  test  cases,  executing  the  initial  test  cycle,  coordinating  the  testing   with the business users, test execution status reporting and engage Eaton customers about any proposed change   Project Manager Role: Coordinating between business, IT, senior management, Designers, Architect, Developers &amp; Testers.  Ensuring  projects  are  executed  with  proper  prioritization,  safely,  on-schedule,  &amp;  cost  controlled,  especially  the  ERP  Transformation (HUC) Project deliveries &gt; $1.3 Billion    Define project requirements to meet program objectives, performing Program Management Review &amp; Cost Analysis,   Resource/ Risk Management &amp; Earned Value and CPA.      Scoping the project management boundaries, ensuring all deliverables are being covered, interfaces are understood   and that the project does not creep     Establishing project Scope, budgets, time scales and identifying the required level of resources to complete WBS by   coordinating with related functional managers; to track, report and analyse performance for improvement.      Monitoring workloads to ensure that deadlines are realistic and project is to be delivered in time with the programme    Determine  project  schedule  Risks  and  opportunities  than  works  with  project  team  members  to  drive  risk  mitigation  strategies. Provides look ahead, backlog and future late reporting with prioritizations to clearly communicate potential  and real risk and drive the project priorities     Provides regular status reporting with forecasting and analytics to project team members    Communicate the project status to relevant stakeholders. And escalate issues/risks to ensure is properly addressed      G4s Secure Solution UK                                                                                                                         May 11   June 12  Position: Business and Data Analyst / Project Manager / Scheduler   Budget Planning, Business Administration, Human Resource Management, Auditing, Agile, Project Reporting,  Planning Analysis, System Implementation &amp; Integration, Application Development, Process System Analysis,  User Stories Customer Journeys Business System Analyst (BSA), Requirement Analysis, BA    Enterprise Resource Project and Scheduling for G4S Business Unit, based in controlling office - Canary Wharf, London   for project operation for the London Organising Committee of the Olympic and Paralympics Games (LOCOG) 2012  - NPI  project - Introduction of new improved and enhanced software tools to support a fully systems automated employee self- services. key contract R-SXD portfolio &gt; 86Million. Accountable for maintaining positive margin and Scheduling  Business Analyst Role: Primary role was to Elicit, analyse, challenge, prioritise, validate and document the requirements  of  the  business;  Write  and  model  functional  requirements  specifications;  Manage  scope  and  requirements  traceability  throughout the development lifecycle     Gathering  and  analysing  business  requirements,  defining  current  processes  and  performing  gap  analysis,  researching best practices, identifying and documenting operational model, process improvements and user stories /  functional specifications for project solution     Contributing to the development of new tools, processes, and solutions to meet desired product needs, by following   established business processes, protocols, and quality standards in the development and deployment of solutions.     Manage  stakeholder  expectations  and  raise  appropriate  issues  to  project  managers  as  necessary;  Identify  and  document  process  improvements  and functional  specifications  based  on  research  of  best  practices and  analysis  of  work group data.     Working with project teams to deliver solutions including scoping, testing, and reporting against advisory standards.    Strong in process mapping and Gap analysis, data Analysis and impact assessment,    Working directly with a broad range of clients and staffs, across a number of different sectors to deliver both advisory   and assurance engagements including internal audit assignments.     Building  client  relationships  through  engagement  delivery  and  targeted  business  development  activity,  identifying  opportunities  to  help  clients  resolve  their  security  challenges.  Perform  analysis  on  existing  systems;  identifying  options for potential solutions and assess for both technical and business suitability.      Conducting  user  interviews  and  facilitates  workshops  with  users,  producing  system  requirements  documents  &amp;   solution, system design documents, System Setup, Process &amp; support documents     Self-log  (on-site  &amp;  off-site);  self-holiday,  and  online  account  query:  payslip,  schedule  etc.  which  eliminates  costly  administrative tasks.; as well as automating incident identification and prioritisation. Work in close collaboration with  account  managers,  project  managers,  technical  architects  and  development  project  teams,  regarding  definition,  development and implementation of solutions      Project  Manager  role:  Project management  and Technical coordination  of  a  multi-discipline  IT  project  stakeholders  like:  Designers,  Architect,  Developers,  Testers  (system,  Hardware,  software,  validation  engineers)  to  meet  the  project  requirements throughout the full project delivery life cycle.    Defining the Project scope; managing the Project time (work breakdown structure -WBS and deadlines); Project cost  management  (BAC,  EAC,  ETC,  SPI,  CPI  and  TCPI  indexes,  Variance  analysis  and  Forecast  estimate);  Resources  (Human  hours  and  Hardware  Materials);  Risk  &amp;  opportunity  management  (issue,  change  and  opportunity  and  mitigation plan); Project Quality management and Communicating the KPIs performance to business     Analyzing  performance,  Monitoring  and  Control  the  trends  and  historical  information,  tracking  and  identifying  deviations  from  planned  and  forecasted  performance;  and  implement  corrective  actions;  capture  failure  codes  and  ensure repair/ corrective actions &amp; update Change log and Lesson learned Document   Facilitating  integrated  project  planning  and  earned  value  analysis  activities(EVM),  developing  plans  to  facilitates  reliable performance using MS Project/Primavera, (PERT, CPM, WBS, Baseline scope&amp; Milestone)            Reporting and presentation the integrated project schedule to the project team, division management, and customers   during Integrated Baseline Reviews (IBRs). Work directly with customers to integrate customer plans and schedules       Training Courses and professional mentoring                                                                                      June 10- May 11     Learning new skills and Training courses on French language with DELF A2 &amp; DELF B1 certificates      University of Dundee                                                                                                                     September 08 -June 10  Graduate study- Masters Degree in Business Administration and Project Management;  Focus on: UML, SQL Querying, Use case and Structured Analysis Techniques, Business modelling, Version  Control, Testing Principles, Database Administration, OOAD (Object Oriented Analysis and Design, ERDs (Entity  Relationship Diagram)  Based on Business Analysis &amp; Modelling    Process  re-engineering,  facilities  management,  renewable  energy  and  sustainability  options,  quality  management,   ISO 19001, Quality planning, construction design management, health and safety management     Primary  focus  was  on  Process  Change,  asset  management  and  Business  analysis.  With  high  exposure  to  several   forms of BA processes and procedure, Asset management for all operational projects and process change      Reviewing and identifying potential changes across the operations requirements    Examining  processes  holistically  to  understand  the  impact  of  changing  them  on  people,  strategy,  systems  and   general business operations      Analysing  process  models  as  they  are  (As-is),  compare  them  to  the  future  and  improved  designs  (To-be)  and  determine  the  necessary  changes  for  arriving  at  the  improved  state.  Support  in  preparing  Reports  of  findings  and  recommendations following functional reviews, including cost / benefit analysis for implementing change      Assisting specialists and work with the functional teams to conduct periodic reviews of operational processes    Assisting in the administration of agreed process changes with functional areas, providing support as required    Supporting the functional teams to document / update Procedure Manual with changed processes    Proactively contributing to timely and accurate delivery of assigned responsibilities    Participating in discussion on and provides input to special projects under way in the department    Creating data models  data definitions, logical and physical data models. Data analysis and data flow diagrams       Post Graduate student  Project Manager &amp; Cost Control     Focus was on project Management, control, planning tools, techniques such as Critical path analysis, Earned value  analysis, organizational structure OBS, milestone planning, task responsibility matrix, WBS. Business case scoping,  team building, Crash analysis, EPC &amp; MPR Cost planning, configuration management.     Value and Risk Management (Internal and external risks).    Project  financial  management,  corporate  and  financial  planning,  Internal  and  external  appraisals,  performance  gap  analysis  and  strategy,  project  level  cash  flow  forecasting  to  include  mark  up,  front  end  loading,  cost  accounting,  variations,  cost  value  reconciliation  (BAC,  ETC,  EAC  and  TCPI  etc  )  and  investment  appraisal  techniques  such  as  payback, IRR, NPV Balance sheets and Profit and loss accounts.     Supporting  in  benefits-focused  CAPEX  /  OPEX  planning  process  and  data  analysis  that  reflects  the  organisational   strategy, and aligning our business case with that of our client.     Management  information  systems,  document  management  systems,  requirement  gathering,  e-commerce,  business  solution  architecture,  inventory  systems,  MIS  reporting  and  decision  support  systems,  transaction  processing  systems, Material requirements planning (MRP), Information systems strategy and data flow modelling.      Contracts,  procurement,  construction  procurement,  Procurement  routes,  Contract  law,  Standard  types  of  contract  like:  Fixed  price  contracts  (FFP,  FPIF),  Cost  reimbursable  contracts  (CPFF,  CPIF)  and  Time  &amp;  Material  (T&amp;M),  Government works etc. and principles of payment.             </td></tr>
+																													<tr><td>PHONE_NUMBER</td><td></td></tr>
+																													<tr><td>AREA_CODE</td><td></td></tr>
+																													<tr><td>EMAIL</td><td>tobykc@ymail.com</td></tr>
+																													<tr><td>EMAIL_DOMAIN</td><td>ymail.com</td></tr>
+																													<tr><td>ADDRESS</td><td></td></tr>
+																													<tr><td>LINKEDIN</td><td>0</td></tr>
+																													<tr><td>GITHUB</td><td>0</td></tr>
+																													<tr><td>PHD</td><td>0</td></tr>
+																													<tr><td>JAVA_COUNT</td><td>0</td></tr>
+																													<tr><td>PYTHON_COUNT</td><td>0</td></tr>
+																													<tr><td>R_COUNT</td><td>0</td></tr>
+																													<tr><td>LATEX_COUNT</td><td>0</td></tr>
+																													<tr><td>STATA_COUNT</td><td>0</td></tr>
+																													<tr><td>CS_COUNT</td><td>0</td></tr>
+																													<tr><td>MYSQL_COUNT</td><td>0</td></tr>
+																													<tr><td>MS_OFFICE</td><td>1</td></tr>
+																													<tr><td>ANALYTICS</td><td>1</td></tr>
+																												</tbody>
+													</table>   
+      </div>
+	  
+	  
+	  
+	  
+	  <div role="tabpanel" class="tab-pane fade" id="tabdata" aria-labelledby="tab3">
+       		 
+                        								$7 billion, 2016)  Business  Analyst  role:  Documentation  of  business  requirements  (with  business  users  of  all  levels;  analysis  of  these  requirements, and convert them into business requirement documents); evaluating; testing and implementation of change  management  process.  Acting  as  a  link  between  the  Project  Management  office  and  relevant  stakeholders  in  facilitating  delivery of the scope, requirements and business solution design for a range of change Programme \/ projects.     Primarily  role  was  to  work  closely  with  the  business,  professional  services  and  support  teams  like:  IT  team,   Development and Testing teams and Management &amp; Product Development team (for future roadmap &amp; landscape)     Working with the business SMEs, Technology and Compliance on requirements and clarifying issues during analysis,  development,  testing  and  implementation.  Providing  link  between  development  team  and  business  representatives  regarding software functionality, throughout the development lifecycle.  Focal  contact  person  for  Technology  Agile  project  teams,  providing  input  into  Scrums  and  creating  business  documentation and tracking deliverables as required.      \f  Conducting  feasibility,  benchmark  and  competitive  analysis  studies,  interviewing  stakeholders  and  capturing  data  elements, organise and model data to support or improve recommendations, analysing business objectives and align  requirements captured to these business objectives     Ensuring that the project impacts are understood and effectively managed for all key areas of the business, IS &amp; IT      Analysing  and  documenting  complex  business  processes  using  either  UML  &amp;  BMPN  etc.  Translate  business   Initiating and presenting recommendations based on business analysis to influence the decisions made by PMs   requirements into detailed functional design using UML (Use Cases, Activity\/State Diagrams, Process Mapping)     Ensuring  Backlog  refinement,  User  Story  development  and  prioritization,  Sprint  Planning,  Sprint  Reviews,  Scrum   Meetings, identify gaps and areas of improvement.     Ensuring compliance  with  project  reporting  requirements  and  delivery  milestones,  including  communicating  of work-  stream status, regular reports of progress and any changes to the Project Manager and Head of IT Programmes.     Working  with  designers  and  Project  Stakeholders  to  ensure  all  customer  journeys  and  functional  requirements  are   clearly mapped and captured     Ensuring all User Stories are accurately defined and scheduled in accordance with the overall plan    Work  closely  with  external  and  internal  Design,  Creative  and  Technology  project  teams  to  deliver  system   requirements, user interactions, data capture\/analysis, alongside test cases and acceptance plans     Bridging  gap  between  OPER  and  ITEC  team  to  ensure  development,  implementations,  installation  and  roll  out   deadlines are met. Liaising with various departments and stakeholders: Senior Mgt., Legal, IT \/ IS, Testers etc     Project Manager role: Program control and coordination of integrated product development within IT teams, that involves  broad  range  of  projects,  at  varying  stages  of  the  software  development  life  cycle  (SDLC),  using  visual  management  techniques, configuration and risk management processes, to meet the program's lead time and within budget.      Facilitating program planning and earned value analysis activities of projects, developing a cohesive integrated plan,  performance  analysis  of  schedule,  Budget,  Resource,  Quality,  Project  Risks  and  Delivery    Early  identification  of  deviations from planned and forecasted performance, and the implementation of effective corrective actions.     Coordinating  multi-function  project  teams  to  develop  and  maintain  accurate,  resourced  and  appropriately  linked  plans.  Manage  integration  of the  projects  into  a  program  Integrated  Master  Portfolio.  Develop \/  maintains  high  level  work breakdown structures (WBS), assuring traceability to program requirements of inter-related projects.  Identifying  route  causes  and  ensuring  resolutions  to  project  issues.  Manage  the  processes  related  to  project  management systems-Baseline\/ Earned Value Analysis &amp; Reporting, Risk Management &amp; Actions        Defining work package and control account structure. Managing and maintaining  project schedule logic that permits   analysis of multiple critical paths.      Analysing  existing  format,  assessing  room  for  improvement  in  productivity  and  user  experience  (UX)  alongside  developers, creating (UAT) scripts \/ acceptance criteria, test execution (Regression test) &amp; project task management.    Monitoring  progress  and  performance  against  project  plans.  Define  and  collect  metrics  to  translate  project   progression and measure customer satisfaction of deliverables     Work  closely  with  the  business  \/  tech  stakeholders  like:  (internal  \/  external  auditors,  quantitative  risk  modellers,   technical accountants and IT developers, Operations, Finance) to own software projects from inception to delivery      Reviews  with  senior  Leaders  and  management,  and  communication  project  performance  updates  with  internal  and   external stakeholders throughout the duration of the project     Eaton Corporation                                                                                                                             June 12  March 15  Position: Business Analyst \/ Project Manager (Senior Project Planning &amp; Control Analyst \/ PMO)  Project planning &amp; Change Initiatives Mgt., Business Analysis, Modelling data or Processes, SQL, Agile\/ Scrum \/  Kanban \/System Development, Waterfall, Functional Testing, SPI, CPI, System Implementation &amp; Integration,  Software Application Development and Maintenance, PMO Support, UML: Use Cases, Activity\/State Diagrams,     Based on IT Migration and integration (in partnerships with third-party platform vendors) providing integrated services like:  IT  support\/  solutions,  bespoke  testing;  System  Implementation  &amp;  Integration,  Application  Development\/  Maintenance,  enhanced finance Platforms to new products and business models and delivery of IT projects and non-IT change, within  the change portfolio through project management lifecycle (PMLC), software development lifecycle and (SDLC) and UAT  validation    Business  Analyst  Role:  Documentation  of  requirements,  Data  analysis  and  mapping  for  migrations  to  enhance  the  Project management for the planning and delivery of the functional and architectural improvement of consolidated system    Obtaining  input  from  Commercial  business  stakeholders,  Strategy  &amp;  Architecture,  Development  Services  and   Infrastructure Services, to support the business in defining and documenting the technology requirements     Dealing  with  issues  and  questions,  and  to  support  the  business  in  implementing  the  required  changes  to  make   effective use of the new system or process. Recommending actions that overcome business problems     Work with the business to methodically investigate, analyse, review, define and document business requirements    Working with the development and testing project teams to ensure requirements are understood     Providing business analysis to the whole life cycle - requirements gathering, requirements analysis, writing functional   specifications, development support and testing through to implementation and measuring business improvements     Analysing  Business  requirements  using  interviews,  document  analysis,  requirements  workshops,  business  process   descriptions, use cases, scenarios, business analysis, process flow diagrams, task and workflow analysis     Working closely with the IT project team where appropriate to deliver technical solutions to business requirements    Driving  and  defining  comprehensive  documentation,  including  business  requirements\/ stories,  communicate  change   requirements and project status reporting.      \f  Manage  user  acceptance  testing;  like:  authoring  test  cases,  executing  the  initial  test  cycle,  coordinating  the  testing   with the business users, test execution status reporting and engage Eaton customers about any proposed change   Project Manager Role: Coordinating between business, IT, senior management, Designers, Architect, Developers &amp; Testers.  Ensuring  projects  are  executed  with  proper  prioritization,  safely,  on-schedule,  &amp;  cost  controlled,  especially  the  ERP  Transformation (HUC) Project deliveries &gt; $1.3 Billion    Define project requirements to meet program objectives, performing Program Management Review &amp; Cost Analysis,   Resource\/ Risk Management &amp; Earned Value and CPA.      Scoping the project management boundaries, ensuring all deliverables are being covered, interfaces are understood   and that the project does not creep     Establishing project Scope, budgets, time scales and identifying the required level of resources to complete WBS by   coordinating with related functional managers; to track, report and analyse performance for improvement.      Monitoring workloads to ensure that deadlines are realistic and project is to be delivered in time with the programme    Determine  project  schedule  Risks  and  opportunities  than  works  with  project  team  members  to  drive  risk  mitigation  strategies. Provides look ahead, backlog and future late reporting with prioritizations to clearly communicate potential  and real risk and drive the project priorities     Provides regular status reporting with forecasting and analytics to project team members    Communicate the project status to relevant stakeholders. And escalate issues\/risks to ensure is properly addressed      G4s Secure Solution UK                                                                                                                         May 11   June 12  Position: Business and Data Analyst \/ Project Manager \/ Scheduler   Budget Planning, Business Administration, Human Resource Management, Auditing, Agile, Project Reporting,  Planning Analysis, System Implementation &amp; Integration, Application Development, Process System Analysis,  User Stories Customer Journeys Business System Analyst (BSA), Requirement Analysis, BA    Enterprise Resource Project and Scheduling for G4S Business Unit, based in controlling office - Canary Wharf, London   for project operation for the London Organising Committee of the Olympic and Paralympics Games (LOCOG) 2012  - NPI  project - Introduction of new improved and enhanced software tools to support a fully systems automated employee self- services. key contract R-SXD portfolio &gt; 86Million. Accountable for maintaining positive margin and Scheduling  Business Analyst Role: Primary role was to Elicit, analyse, challenge, prioritise, validate and document the requirements  of  the  business;  Write  and  model  functional  requirements  specifications;  Manage  scope  and  requirements  traceability  throughout the development lifecycle     Gathering  and  analysing  business  requirements,  defining  current  processes  and  performing  gap  analysis,  researching best practices, identifying and documenting operational model, process improvements and user stories \/  functional specifications for project solution     Contributing to the development of new tools, processes, and solutions to meet desired product needs, by following   established business processes, protocols, and quality standards in the development and deployment of solutions.     Manage  stakeholder  expectations  and  raise  appropriate  issues  to  project  managers  as  necessary;  Identify  and  document  process  improvements  and functional  specifications  based  on  research  of  best  practices and  analysis  of  work group data.     Working with project teams to deliver solutions including scoping, testing, and reporting against advisory standards.    Strong in process mapping and Gap analysis, data Analysis and impact assessment,    Working directly with a broad range of clients and staffs, across a number of different sectors to deliver both advisory   and assurance engagements including internal audit assignments.     Building  client  relationships  through  engagement  delivery  and  targeted  business  development  activity,  identifying  opportunities  to  help  clients  resolve  their  security  challenges.  Perform  analysis  on  existing  systems;  identifying  options for potential solutions and assess for both technical and business suitability.      Conducting  user  interviews  and  facilitates  workshops  with  users,  producing  system  requirements  documents  &amp;   solution, system design documents, System Setup, Process &amp; support documents     Self-log  (on-site  &amp;  off-site);  self-holiday,  and  online  account  query:  payslip,  schedule  etc.  which  eliminates  costly  administrative tasks.; as well as automating incident identification and prioritisation. Work in close collaboration with  account  managers,  project  managers,  technical  architects  and  development  project  teams,  regarding  definition,  development and implementation of solutions      Project  Manager  role:  Project management  and Technical coordination  of  a  multi-discipline  IT  project  stakeholders  like:  Designers,  Architect,  Developers,  Testers  (system,  Hardware,  software,  validation  engineers)  to  meet  the  project  requirements throughout the full project delivery life cycle.    Defining the Project scope; managing the Project time (work breakdown structure -WBS and deadlines); Project cost  management  (BAC,  EAC,  ETC,  SPI,  CPI  and  TCPI  indexes,  Variance  analysis  and  Forecast  estimate);  Resources  (Human  hours  and  Hardware  Materials);  Risk  &amp;  opportunity  management  (issue,  change  and  opportunity  and  mitigation plan); Project Quality management and Communicating the KPIs performance to business     Analyzing  performance,  Monitoring  and  Control  the  trends  and  historical  information,  tracking  and  identifying  deviations  from  planned  and  forecasted  performance;  and  implement  corrective  actions;  capture  failure  codes  and  ensure repair\/ corrective actions &amp; update Change log and Lesson learned Document   Facilitating  integrated  project  planning  and  earned  value  analysis  activities(EVM),  developing  plans  to  facilitates  reliable performance using MS Project\/Primavera, (PERT, CPM, WBS, Baseline scope&amp; Milestone)          \f  Reporting and presentation the integrated project schedule to the project team, division management, and customers   during Integrated Baseline Reviews (IBRs). Work directly with customers to integrate customer plans and schedules       Training Courses and professional mentoring                                                                                      June 10- May 11     Learning new skills and Training courses on French language with DELF A2 &amp; DELF B1 certificates      University of Dundee                                                                                                                     September 08 -June 10  Graduate study- Masters Degree in Business Administration and Project Management;  Focus on: UML, SQL Querying, Use case and Structured Analysis Techniques, Business modelling, Version  Control, Testing Principles, Database Administration, OOAD (Object Oriented Analysis and Design, ERDs (Entity  Relationship Diagram)  Based on Business Analysis &amp; Modelling    Process  re-engineering,  facilities  management,  renewable  energy  and  sustainability  options,  quality  management,   ISO 19001, Quality planning, construction design management, health and safety management     Primary  focus  was  on  Process  Change,  asset  management  and  Business  analysis.  With  high  exposure  to  several   forms of BA processes and procedure, Asset management for all operational projects and process change      Reviewing and identifying potential changes across the operations requirements    Examining  processes  holistically  to  understand  the  impact  of  changing  them  on  people,  strategy,  systems  and   general business operations      Analysing  process  models  as  they  are  (As-is),  compare  them  to  the  future  and  improved  designs  (To-be)  and  determine  the  necessary  changes  for  arriving  at  the  improved  state.  Support  in  preparing  Reports  of  findings  and  recommendations following functional reviews, including cost \/ benefit analysis for implementing change      Assisting specialists and work with the functional teams to conduct periodic reviews of operational processes    Assisting in the administration of agreed process changes with functional areas, providing support as required    Supporting the functional teams to document \/ update Procedure Manual with changed processes    Proactively contributing to timely and accurate delivery of assigned responsibilities    Participating in discussion on and provides input to special projects under way in the department    Creating data models  data definitions, logical and physical data models. Data analysis and data flow diagrams       Post Graduate student  Project Manager &amp; Cost Control     Focus was on project Management, control, planning tools, techniques such as Critical path analysis, Earned value  analysis, organizational structure OBS, milestone planning, task responsibility matrix, WBS. Business case scoping,  team building, Crash analysis, EPC &amp; MPR Cost planning, configuration management.     Value and Risk Management (Internal and external risks).    Project  financial  management,  corporate  and  financial  planning,  Internal  and  external  appraisals,  performance  gap  analysis  and  strategy,  project  level  cash  flow  forecasting  to  include  mark  up,  front  end  loading,  cost  accounting,  variations,  cost  value  reconciliation  (BAC,  ETC,  EAC  and  TCPI  etc  )  and  investment  appraisal  techniques  such  as  payback, IRR, NPV Balance sheets and Profit and loss accounts.     Supporting  in  benefits-focused  CAPEX  \/  OPEX  planning  process  and  data  analysis  that  reflects  the  organisational   strategy, and aligning our business case with that of our client.     Management  information  systems,  document  management  systems,  requirement  gathering,  e-commerce,  business  solution  architecture,  inventory  systems,  MIS  reporting  and  decision  support  systems,  transaction  processing  systems, Material requirements planning (MRP), Information systems strategy and data flow modelling.      Contracts,  procurement,  construction  procurement,  Procurement  routes,  Contract  law,  Standard  types  of  contract  like:  Fixed  price  contracts  (FFP,  FPIF),  Cost  reimbursable  contracts  (CPFF,  CPIF)  and  Time  &amp;  Material  (T&amp;M),  Government works etc. and principles of payment.          
+															   TOBY MADU       a)  16 Kings High Way, London. SE18 2NL  (Family Home)                                     E-mail: tobykc@ymail.com  b)  21 Nursery Gardens, Reading.  RG8 8AS  (Work Residence)                            Tel: +44(0)7970110578      PROFILE   I  am  a  proactive  analyst,  technically  astute  across  the  project  management,  business  analysis  &amp;  control  spectrum  specifically  major  project  P&amp;L  $$$,  Program  &amp;  Portfolio  governance,  business  development,  Scoping,  planning,    cost  &amp;  Budgeting,  Human  Resources,  Risk  management,  Project  Manager  /  monitoring  &amp;  control,      stakeholder  management,  QHSE,  document  control,  Hybrid  BA  &amp;  PM,  business  Analyst  &amp; change,  investment, migration,  acquisition,  requirements  gathering,  Data  Models,  process  improvement,  IT  /  IS  Hardware  /  software  development,    Data  Analysis,  Data  Flow  diagrams, Regression testing (UAT), Regulatory / Compliance Projects    EDUCATION AND PROFESSIONAL QUALIFICATIONS:  2008-2010 M.Sc. Business / Project Management - University of Dundee  2006-2008 HND in Management of Information System (MIS)  IMIS, Kent      Focus was on the Business Management of Information systems and IT Project Management.                                                    2012  Project Changes Control and Management Certification, PMI;   2002-2005 B.A (Hons) in Philosophy - Pontifical Urbaniana University, Rome    Other Courses:  2011  Certificates in Delf A2 &amp; Delf B1;             2012   Project Quality Control Management Certification, PMI;  2010  Certificate in Tanker Specialisation;  2017   In view with Certificate in Project Management Professional (PMP)  PMI; equivalent of PRINCE2 certificate    RELEVANT SKILLS:  Practical knowledge and experience with Project Management tools like: MS Project (MSP) or Primavera P6.  Use of Earned Value Management (EVM) and Critical Path Analysis, S curve (CPI, SPI, SV&amp;CV) and Histogram   Experience in using planning information (Gantt charts, histograms, WBS, critical path Method (CPM), PERT charts, Cost  control, Baselines Schedules, Milestone, S Curves &amp; Progress reports) for Project and to stakeholders  Experience in Requirement Gathering, process/ design mapping facilitating workshop &amp; presentation  Good experience in Data Analysis, statistical techniques, operation design and modelling skills   Practical knowledge and experience working within Waterfall, Agile with methodologies (e.g. Prince 2/ SCRUM  On-Time)  Resources management and stakeholders engagement on project (Designers, Architect, Developers, Testers, SMEs etc.)  Good experience as Project Manager in: Scope, Time, Cost, Resource and Quality Objectives, Business cases  Experienced in organizing, assessing, prioritizing tasks, Risks, Resources, milestones, and deliverables  Strong Business Analysis, project management, Data Analysis, and Testing Principle skills  Practical useof: UML, Use Case, Version Control, Testing Principles, OOAD, ERDs, Querying and UAT etc.  Project Management tools: MS Project (MSP) or Primavera P6, On-Time Scrum  Model: V-Model (SDLC &amp; STLC), Iterative, Waterfall, and Agile Project Mgt. principles   Operating Systems: Windows 98/2000/XP/Vista, 7 as well as Mac OS 8/9/X.  Office Tools: Microsoft office suite (Word, Excel, Power Point, Outlook, Access, Project), JIRA and Primavera P6  Database: MS Access, SQL, Visio, SharePoint, Enovia2012, MFG-PRO, PSP3    WORK HISTORY    GE  Capital, Digital, Corporation Aviation Finance                                                                            March 15 - Date  Position: Business Analyst / Project Manager (Lead Programs Specialist / IT Asset Mgt.)   Budget/ Cost Analysis, Data Analyst, Roadmap, Modelling Data, Critical Path, Dash-boarding on data, BI, SDLC,  Waterfall, Agile/Scrum, Application Development, Stakeholder Mgt., Project Control, Software Development, UAT,  UML: Use Cases, Activity/State Diagrams, Process Mapping, Financial Data, Banking, EVM, ETC, EAC, BAC    Delivery: Based on various GE services &amp; solutions structured around IT strategy, infrastructure  &amp; support to all aspects  of  clients  value  chain,  digital  transformation  of  corporate  bank,  online  and  mobile  design  &amp;  implementation,  Exchange  upgrades, launch of new operating model, Digital Cloud transformation, Microsoft O365/ SharePiont online Migration, and  Predix Design System, across EMEA /APAC portfolios / programs. (GEs portfolio of software solutions on track to growth  of 25%+ with Digital orders &gt; $7 billion, 2016)  Business  Analyst  role:  Documentation  of  business  requirements  (with  business  users  of  all  levels;  analysis  of  these  requirements, and convert them into business requirement documents); evaluating; testing and implementation of change  management  process.  Acting  as  a  link  between  the  Project  Management  office  and  relevant  stakeholders  in  facilitating  delivery of the scope, requirements and business solution design for a range of change Programme / projects.     Primarily  role  was  to  work  closely  with  the  business,  professional  services  and  support  teams  like:  IT  team,   Development and Testing teams and Management &amp; Product Development team (for future roadmap &amp; landscape)     Working with the business SMEs, Technology and Compliance on requirements and clarifying issues during analysis,  development,  testing  and  implementation.  Providing  link  between  development  team  and  business  representatives  regarding software functionality, throughout the development lifecycle.  Focal  contact  person  for  Technology  Agile  project  teams,  providing  input  into  Scrums  and  creating  business  documentation and tracking deliverables as required.        Conducting  feasibility,  benchmark  and  competitive  analysis  studies,  interviewing  stakeholders  and  capturing  data  elements, organise and model data to support or improve recommendations, analysing business objectives and align  requirements captured to these business objectives     Ensuring that the project impacts are understood and effectively managed for all key areas of the business, IS &amp; IT      Analysing  and  documenting  complex  business  processes  using  either  UML  &amp;  BMPN  etc.  Translate  business   Initiating and presenting recommendations based on business analysis to influence the decisions made by PMs   requirements into detailed functional design using UML (Use Cases, Activity/State Diagrams, Process Mapping)     Ensuring  Backlog  refinement,  User  Story  development  and  prioritization,  Sprint  Planning,  Sprint  Reviews,  Scrum   Meetings, identify gaps and areas of improvement.     Ensuring compliance  with  project  reporting  requirements  and  delivery  milestones,  including  communicating  of work-  stream status, regular reports of progress and any changes to the Project Manager and Head of IT Programmes.     Working  with  designers  and  Project  Stakeholders  to  ensure  all  customer  journeys  and  functional  requirements  are   clearly mapped and captured     Ensuring all User Stories are accurately defined and scheduled in accordance with the overall plan    Work  closely  with  external  and  internal  Design,  Creative  and  Technology  project  teams  to  deliver  system   requirements, user interactions, data capture/analysis, alongside test cases and acceptance plans     Bridging  gap  between  OPER  and  ITEC  team  to  ensure  development,  implementations,  installation  and  roll  out   deadlines are met. Liaising with various departments and stakeholders: Senior Mgt., Legal, IT / IS, Testers etc     Project Manager role: Program control and coordination of integrated product development within IT teams, that involves  broad  range  of  projects,  at  varying  stages  of  the  software  development  life  cycle  (SDLC),  using  visual  management  techniques, configuration and risk management processes, to meet the program's lead time and within budget.      Facilitating program planning and earned value analysis activities of projects, developing a cohesive integrated plan,  performance  analysis  of  schedule,  Budget,  Resource,  Quality,  Project  Risks  and  Delivery    Early  identification  of  deviations from planned and forecasted performance, and the implementation of effective corrective actions.     Coordinating  multi-function  project  teams  to  develop  and  maintain  accurate,  resourced  and  appropriately  linked  plans.  Manage  integration  of the  projects  into  a  program  Integrated  Master  Portfolio.  Develop /  maintains  high  level  work breakdown structures (WBS), assuring traceability to program requirements of inter-related projects.  Identifying  route  causes  and  ensuring  resolutions  to  project  issues.  Manage  the  processes  related  to  project  management systems-Baseline/ Earned Value Analysis &amp; Reporting, Risk Management &amp; Actions        Defining work package and control account structure. Managing and maintaining  project schedule logic that permits   analysis of multiple critical paths.      Analysing  existing  format,  assessing  room  for  improvement  in  productivity  and  user  experience  (UX)  alongside  developers, creating (UAT) scripts / acceptance criteria, test execution (Regression test) &amp; project task management.    Monitoring  progress  and  performance  against  project  plans.  Define  and  collect  metrics  to  translate  project   progression and measure customer satisfaction of deliverables     Work  closely  with  the  business  /  tech  stakeholders  like:  (internal  /  external  auditors,  quantitative  risk  modellers,   technical accountants and IT developers, Operations, Finance) to own software projects from inception to delivery      Reviews  with  senior  Leaders  and  management,  and  communication  project  performance  updates  with  internal  and   external stakeholders throughout the duration of the project     Eaton Corporation                                                                                                                             June 12  March 15  Position: Business Analyst / Project Manager (Senior Project Planning &amp; Control Analyst / PMO)  Project planning &amp; Change Initiatives Mgt., Business Analysis, Modelling data or Processes, SQL, Agile/ Scrum /  Kanban /System Development, Waterfall, Functional Testing, SPI, CPI, System Implementation &amp; Integration,  Software Application Development and Maintenance, PMO Support, UML: Use Cases, Activity/State Diagrams,     Based on IT Migration and integration (in partnerships with third-party platform vendors) providing integrated services like:  IT  support/  solutions,  bespoke  testing;  System  Implementation  &amp;  Integration,  Application  Development/  Maintenance,  enhanced finance Platforms to new products and business models and delivery of IT projects and non-IT change, within  the change portfolio through project management lifecycle (PMLC), software development lifecycle and (SDLC) and UAT  validation    Business  Analyst  Role:  Documentation  of  requirements,  Data  analysis  and  mapping  for  migrations  to  enhance  the  Project management for the planning and delivery of the functional and architectural improvement of consolidated system    Obtaining  input  from  Commercial  business  stakeholders,  Strategy  &amp;  Architecture,  Development  Services  and   Infrastructure Services, to support the business in defining and documenting the technology requirements     Dealing  with  issues  and  questions,  and  to  support  the  business  in  implementing  the  required  changes  to  make   effective use of the new system or process. Recommending actions that overcome business problems     Work with the business to methodically investigate, analyse, review, define and document business requirements    Working with the development and testing project teams to ensure requirements are understood     Providing business analysis to the whole life cycle - requirements gathering, requirements analysis, writing functional   specifications, development support and testing through to implementation and measuring business improvements     Analysing  Business  requirements  using  interviews,  document  analysis,  requirements  workshops,  business  process   descriptions, use cases, scenarios, business analysis, process flow diagrams, task and workflow analysis     Working closely with the IT project team where appropriate to deliver technical solutions to business requirements    Driving  and  defining  comprehensive  documentation,  including  business  requirements/ stories,  communicate  change   requirements and project status reporting.        Manage  user  acceptance  testing;  like:  authoring  test  cases,  executing  the  initial  test  cycle,  coordinating  the  testing   with the business users, test execution status reporting and engage Eaton customers about any proposed change   Project Manager Role: Coordinating between business, IT, senior management, Designers, Architect, Developers &amp; Testers.  Ensuring  projects  are  executed  with  proper  prioritization,  safely,  on-schedule,  &amp;  cost  controlled,  especially  the  ERP  Transformation (HUC) Project deliveries &gt; $1.3 Billion    Define project requirements to meet program objectives, performing Program Management Review &amp; Cost Analysis,   Resource/ Risk Management &amp; Earned Value and CPA.      Scoping the project management boundaries, ensuring all deliverables are being covered, interfaces are understood   and that the project does not creep     Establishing project Scope, budgets, time scales and identifying the required level of resources to complete WBS by   coordinating with related functional managers; to track, report and analyse performance for improvement.      Monitoring workloads to ensure that deadlines are realistic and project is to be delivered in time with the programme    Determine  project  schedule  Risks  and  opportunities  than  works  with  project  team  members  to  drive  risk  mitigation  strategies. Provides look ahead, backlog and future late reporting with prioritizations to clearly communicate potential  and real risk and drive the project priorities     Provides regular status reporting with forecasting and analytics to project team members    Communicate the project status to relevant stakeholders. And escalate issues/risks to ensure is properly addressed      G4s Secure Solution UK                                                                                                                         May 11   June 12  Position: Business and Data Analyst / Project Manager / Scheduler   Budget Planning, Business Administration, Human Resource Management, Auditing, Agile, Project Reporting,  Planning Analysis, System Implementation &amp; Integration, Application Development, Process System Analysis,  User Stories Customer Journeys Business System Analyst (BSA), Requirement Analysis, BA    Enterprise Resource Project and Scheduling for G4S Business Unit, based in controlling office - Canary Wharf, London   for project operation for the London Organising Committee of the Olympic and Paralympics Games (LOCOG) 2012  - NPI  project - Introduction of new improved and enhanced software tools to support a fully systems automated employee self- services. key contract R-SXD portfolio &gt; 86Million. Accountable for maintaining positive margin and Scheduling  Business Analyst Role: Primary role was to Elicit, analyse, challenge, prioritise, validate and document the requirements  of  the  business;  Write  and  model  functional  requirements  specifications;  Manage  scope  and  requirements  traceability  throughout the development lifecycle     Gathering  and  analysing  business  requirements,  defining  current  processes  and  performing  gap  analysis,  researching best practices, identifying and documenting operational model, process improvements and user stories /  functional specifications for project solution     Contributing to the development of new tools, processes, and solutions to meet desired product needs, by following   established business processes, protocols, and quality standards in the development and deployment of solutions.     Manage  stakeholder  expectations  and  raise  appropriate  issues  to  project  managers  as  necessary;  Identify  and  document  process  improvements  and functional  specifications  based  on  research  of  best  practices and  analysis  of  work group data.     Working with project teams to deliver solutions including scoping, testing, and reporting against advisory standards.    Strong in process mapping and Gap analysis, data Analysis and impact assessment,    Working directly with a broad range of clients and staffs, across a number of different sectors to deliver both advisory   and assurance engagements including internal audit assignments.     Building  client  relationships  through  engagement  delivery  and  targeted  business  development  activity,  identifying  opportunities  to  help  clients  resolve  their  security  challenges.  Perform  analysis  on  existing  systems;  identifying  options for potential solutions and assess for both technical and business suitability.      Conducting  user  interviews  and  facilitates  workshops  with  users,  producing  system  requirements  documents  &amp;   solution, system design documents, System Setup, Process &amp; support documents     Self-log  (on-site  &amp;  off-site);  self-holiday,  and  online  account  query:  payslip,  schedule  etc.  which  eliminates  costly  administrative tasks.; as well as automating incident identification and prioritisation. Work in close collaboration with  account  managers,  project  managers,  technical  architects  and  development  project  teams,  regarding  definition,  development and implementation of solutions      Project  Manager  role:  Project management  and Technical coordination  of  a  multi-discipline  IT  project  stakeholders  like:  Designers,  Architect,  Developers,  Testers  (system,  Hardware,  software,  validation  engineers)  to  meet  the  project  requirements throughout the full project delivery life cycle.    Defining the Project scope; managing the Project time (work breakdown structure -WBS and deadlines); Project cost  management  (BAC,  EAC,  ETC,  SPI,  CPI  and  TCPI  indexes,  Variance  analysis  and  Forecast  estimate);  Resources  (Human  hours  and  Hardware  Materials);  Risk  &amp;  opportunity  management  (issue,  change  and  opportunity  and  mitigation plan); Project Quality management and Communicating the KPIs performance to business     Analyzing  performance,  Monitoring  and  Control  the  trends  and  historical  information,  tracking  and  identifying  deviations  from  planned  and  forecasted  performance;  and  implement  corrective  actions;  capture  failure  codes  and  ensure repair/ corrective actions &amp; update Change log and Lesson learned Document   Facilitating  integrated  project  planning  and  earned  value  analysis  activities(EVM),  developing  plans  to  facilitates  reliable performance using MS Project/Primavera, (PERT, CPM, WBS, Baseline scope&amp; Milestone)            Reporting and presentation the integrated project schedule to the project team, division management, and customers   during Integrated Baseline Reviews (IBRs). Work directly with customers to integrate customer plans and schedules       Training Courses and professional mentoring                                                                                      June 10- May 11     Learning new skills and Training courses on French language with DELF A2 &amp; DELF B1 certificates      University of Dundee                                                                                                                     September 08 -June 10  Graduate study- Masters Degree in Business Administration and Project Management;  Focus on: UML, SQL Querying, Use case and Structured Analysis Techniques, Business modelling, Version  Control, Testing Principles, Database Administration, OOAD (Object Oriented Analysis and Design, ERDs (Entity  Relationship Diagram)  Based on Business Analysis &amp; Modelling    Process  re-engineering,  facilities  management,  renewable  energy  and  sustainability  options,  quality  management,   ISO 19001, Quality planning, construction design management, health and safety management     Primary  focus  was  on  Process  Change,  asset  management  and  Business  analysis.  With  high  exposure  to  several   forms of BA processes and procedure, Asset management for all operational projects and process change      Reviewing and identifying potential changes across the operations requirements    Examining  processes  holistically  to  understand  the  impact  of  changing  them  on  people,  strategy,  systems  and   general business operations      Analysing  process  models  as  they  are  (As-is),  compare  them  to  the  future  and  improved  designs  (To-be)  and  determine  the  necessary  changes  for  arriving  at  the  improved  state.  Support  in  preparing  Reports  of  findings  and  recommendations following functional reviews, including cost / benefit analysis for implementing change      Assisting specialists and work with the functional teams to conduct periodic reviews of operational processes    Assisting in the administration of agreed process changes with functional areas, providing support as required    Supporting the functional teams to document / update Procedure Manual with changed processes    Proactively contributing to timely and accurate delivery of assigned responsibilities    Participating in discussion on and provides input to special projects under way in the department    Creating data models  data definitions, logical and physical data models. Data analysis and data flow diagrams       Post Graduate student  Project Manager &amp; Cost Control     Focus was on project Management, control, planning tools, techniques such as Critical path analysis, Earned value  analysis, organizational structure OBS, milestone planning, task responsibility matrix, WBS. Business case scoping,  team building, Crash analysis, EPC &amp; MPR Cost planning, configuration management.     Value and Risk Management (Internal and external risks).    Project  financial  management,  corporate  and  financial  planning,  Internal  and  external  appraisals,  performance  gap  analysis  and  strategy,  project  level  cash  flow  forecasting  to  include  mark  up,  front  end  loading,  cost  accounting,  variations,  cost  value  reconciliation  (BAC,  ETC,  EAC  and  TCPI  etc  )  and  investment  appraisal  techniques  such  as  payback, IRR, NPV Balance sheets and Profit and loss accounts.     Supporting  in  benefits-focused  CAPEX  /  OPEX  planning  process  and  data  analysis  that  reflects  the  organisational   strategy, and aligning our business case with that of our client.     Management  information  systems,  document  management  systems,  requirement  gathering,  e-commerce,  business  solution  architecture,  inventory  systems,  MIS  reporting  and  decision  support  systems,  transaction  processing  systems, Material requirements planning (MRP), Information systems strategy and data flow modelling.      Contracts,  procurement,  construction  procurement,  Procurement  routes,  Contract  law,  Standard  types  of  contract  like:  Fixed  price  contracts  (FFP,  FPIF),  Cost  reimbursable  contracts  (CPFF,  CPIF)  and  Time  &amp;  Material  (T&amp;M),  Government works etc. and principles of payment.             </textarea>
+														
+      </div>
+      
+         
+     
+    </div>
+     
+  </div>
+   
+        
+      </div>
+	   
+	   </div>
+		
+				
+		
+		
+		
+		
+        <!-- right col -->
+      </div>
+      <!-- /.row (main row) -->
+
+    </section>
+
+  </div>
+  
+ 
+  <footer class="main-footer">
+    
+    <strong>Copyright &copy; 2016-2017 <a href="#">Root CRM</a>.</strong> All rights
+    reserved.
+  </footer>
+  
+  
+  
+ 
+</div>
+<script src="js/checkbox.js"></script>
+
+
+<script src="js/jquery-2.2.3.min.js"></script>
+
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-checkbox-radio-switch.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('#table').basictable();
+	   $('#table-breakpoint').basictable({
+        breakpoint: 751
+      });
+
+      
+    });
+  </script>
+  
+  <script>
+
+$('#toggle_event_editing button').click(function(){
+	if($(this).hasClass('locked_active') || $(this).hasClass('unlocked_inactive')){
+		
+		
+        $('#switch_status').html('Switched on.');
+	}else{
+		
+        $('#switch_status').html('Switched off.');
+	}
+	
+
+	$('#toggle_event_editing button').eq(0).toggleClass('locked_inactive locked_active btn-default btn-info');
+	$('#toggle_event_editing button').eq(1).toggleClass('unlocked_inactive unlocked_active btn-info btn-default');
+	});
+	
+	
+
+
+</script>
+  <script src="js/basictable.js"></script>
+<script src="js/app.min.js"></script>
+
+</body>
+</html>

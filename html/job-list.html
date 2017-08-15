@@ -24,6 +24,13 @@
 	 margin:0px;
  }
  
+ .clickfiter{
+	 background-color: #fff; width:250px; border:1px solid #ddd;  border-radius: 4px; padding: 17px; margin-top: 14px; -webkit-box-shadow: 0px 0px 4px 0px rgba(50, 50, 50, 0.27);
+-moz-box-shadow:    0px 0px 4px 0px rgba(50, 50, 50, 0.27);
+box-shadow:         0px 0px 4px 0px rgba(50, 50, 50, 0.27); margin-bottom: 5px;  position: absolute;
+
+ }
+ 
  </style>
  <body class="hold-transition skin-blue sidebar-mini">
  <div class="wrapper">
@@ -412,39 +419,53 @@
 	<div class="clearfix hidden-xs">
       						<div class="form-group no-margin">
 							<div CLASS="pull-left">
-							<div STYLE="float:left;"> <SELECT CLASS="form-control">
-							<option>Views</option>
-							<option>All views</option>
-							<option>My Open Job</option>
-							<option>All Jobs</option>
-							</SELECT></div>
-							<div STYLE="float:left; margin:0 10px;">
-							<SELECT CLASS="form-control">
-							<option>Action</option>
-							<option>Previous Job</option>
-							<option>Previous Opp</option>
-							</SELECT>
-							</div>
+							
+							  <button data-toggle="collapse" CLASS="btn btn-default" STYLE="" data-target="#filter"><i class="glyphicon glyphicon-search" ></i>  </button>
+							  
+<div id="filter" class="collapse col-md-12" style="background-color: rgb(239, 239, 239); border-radius: 4px; padding: 10px 45px 15px 27px; margin-top: 11px; margin-bottom: 5px;  position: relative; " >
+
+<div CLASS="row">
+
+<div CLASS="col-lg-12 col-sm-12" style="padding-left: 0px; padding-right:0px;" >
+ <form class="form-inline">
+  <div class="form-group">
+  <div CLASS="col-md-4"> <input type="text" class="form-control" id="text"></div>
+	  <div CLASS="col-md-4"> <input type="text" class="form-control" id="text"></div>
+	  <div CLASS="col-md-4"> <SELECT CLASS="form-control" STYLE="width:100%;">
+	 <OPTION>first</OPTION>
+	 <OPTION>second</OPTION>
+	 <OPTION>Third</OPTION>
+	 <OPTION>Four</OPTION>
+	 </SELECT>
+	 </div>
+  </div>
+  
+  
+  <button type="submit" class="btn btn-danger">Submit</button>
+</form> 
+
+</div>
+					
+
+</div>
+	
+</div> 
 							
 							
-							<div STYLE="float:left;">
-							<SELECT CLASS="form-control">
-							<option>New</option>
-							<option>New Job</option>
-							<option>Copy Job</option>
-							</SELECT>
-							</div>
 							
-							<div class="btn-inline display-inline-block" >
-											<input class="form-control searchFieldClass" style="min-width:225px; height:36px; margin-left:10px;" required="" id="searchField" placeholder="Search here..." value="" type="text">
-											<button class="btn btn-left-align btn-link no-shadow bg-transparent no-padding-top padding-right-10 right-auto left" type="button" id="searchBtn"><i class="glyphicon glyphicon-search"></i></button>		</div>
+							
+							<div >
+							
+											
+											
+												</div>
 							
 							</div>
 							
 							
      							<div class="pull-right margin-bottom-10 ">
 								
-								<ul class="pagination"><li class="paginate_button previous disabled" id="example2_previous"><a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="4" tabindex="0">4</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="5" tabindex="0">5</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0">6</a></li><li class="paginate_button next" id="example2_next"><a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0">Next</a></li></ul>
+								
 						<div style="float: right;     margin-top: 0px;     margin-left: 7px; ">	<button class="btn btn-primary btn-circle" type="button" onclick="refresh_data()">  <i class="fa fa-refresh"></i></button>
 						</div>
 						</div>
@@ -481,8 +502,51 @@
                                     <thead>
                                         <tr>
                                         		<th ><input TYPE="CHECKBOX"></th>
-                                            <th class="col-lg-2">Jobs</th>
-                                            <th class="col-lg-2">Client</th>
+                                            <th class="col-lg-2"><a data-toggle="collapse" STYLE="cursor:pointer;"  data-target="#jobs">Jobs <i CLASS="fa fa-arrow-circle-o-down"></i></a>
+											<div id="jobs" class="collapse col-md-12 clickfiter"  >
+
+<div CLASS="row">
+
+<div CLASS="col-lg-12 col-sm-12" style="padding-left: 0px; padding-right:0px;" >
+
+ <div CLASS="col-md-12">Filter</div>
+ <div class="btn-inline display-inline-block">
+
+											<input class="form-control searchFieldClass" style="min-width:223px; height:36px; margin-left: 6px;" required="" id="searchField" placeholder="Search here..." value="" type="text">
+											<button class="btn btn-left-align btn-link no-shadow bg-transparent no-padding-top padding-right-10 right-auto left" type="button" id="searchBtn"><i class="glyphicon glyphicon-search"></i></button>
+										</div> 
+
+</div>
+					
+
+</div>
+	
+</div>
+											
+											</th>
+                                            <th class="col-lg-2"><a data-toggle="collapse" STYLE="cursor:pointer;"  data-target="#client">Client <i CLASS="fa fa-user"></i></a>
+											<div id="client" class="collapse col-md-12 clickfiter"  >
+
+<div CLASS="row">
+
+<div CLASS="col-lg-12 col-sm-12" style="padding-left: 0px; padding-right:0px;" >
+
+ <div CLASS="col-md-12">Filter</div>
+ <div class="btn-inline display-inline-block">
+
+											<input class="form-control searchFieldClass" style="min-width:223px; height:36px; margin-left: 6px;" required="" id="searchField" placeholder="Search here..." value="" type="text">
+											<button class="btn btn-left-align btn-link no-shadow bg-transparent no-padding-top padding-right-10 right-auto left" type="button" id="searchBtn"><i class="glyphicon glyphicon-search"></i></button>
+										</div> 
+
+</div>
+					
+
+</div>
+	
+</div>
+											
+											
+											</th>
                                             <th>	Handler</th>
                                             <th>Description</th>
                                             <th>	Date due</th>

@@ -897,6 +897,33 @@
       <!-- /.row (main row) -->
 
     </section>
+	
+	<div CLASS="row">
+	<div CLASS="col-md-12" STYLE="margin-left:20px;">
+	<label class="btn-bs-file btn btn btn-success">
+                <i CLASS="fa fa-upload"></i> Browse
+                <input type="file">
+            </label>
+			
+			<style>
+			.btn-bs-file{
+    position:relative;
+}
+.btn-bs-file input[type="file"]{
+    position: absolute;
+    top: -9999999;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    width:0;
+    height:0;
+    outline: none;
+	
+    cursor: inherit;
+}
+			
+			</style>
+			</div>
+			</div>
 
   </div>
  

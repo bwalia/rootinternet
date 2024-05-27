@@ -88,6 +88,11 @@ table {
   /*width: 100%*/
 }
 
+.feature h2, h3{
+	color:#fff;
+	text-align:center;
+}
+
 /*=== Layout ===*/
 #page {
   /* background: url(../images/page-bgr.png) #fcfcfc top repeat-x; */
@@ -120,6 +125,7 @@ table {
 /*- Logo -*/
 #logo {
   height: 90px;
+  margin-left: -35px;
 }
 
 #logo h1 {
@@ -575,9 +581,110 @@ table {
   margin: 4px 0;
 }
 
+  /*=== Footer ===*/
+  footer {
+    color: #fff
+  }
+  
+  
+  footer p{
+    text-align:center;
+  }
+  footer h3 {
+    margin-bottom: 30px
+  }
+  footer .footer-above {
+    padding-top: 50px;
+    background-color: #2C3E50
+  }
+  footer .footer-col {
+    margin-bottom: 50px
+  }
+  footer .footer-below {
+    padding: 25px 0;
+    background-color: #233140
+  }
+
+  #footer {
+    /* background: url(../images/footer-bgr.png) top no-repeat; */
+    color: #707070;
+    font-size: .9em;
+    height: 80px;
+    margin: 0 auto;
+    padding: 50px 0 0;
+    width: 950px;
+  }
+
+  .footer-col h3 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .footer-col p {
+    font-size: 17px;
+  }
+  
+  #footer a {
+    color: #707070;
+    text-decoration: none;
+  }
+  
+  #footer a:hover {
+    color: #5a8900;
+  }
+  
+  /*- Copyright Info -*/
+  #copyr {
+    float: left;
+    font-size: 11px;
+    width: 270px;
+  }
+  
+  #copyr img {
+    display: block;
+    margin: 0 0 8px;
+  }
+  
+  /*- Footer Nav Links -*/
+  #footer-nav {
+    float: right;
+    padding: 21px 0 0;
+    width: 675px;
+  }
+  
+  #footer-nav ul {
+    float: right;
+  }
+  
+  #footer-nav li {
+    /* background: url(../images/ico-dot.png) right no-repeat; */
+    float: left;
+    padding: 0 7px 0 4px;
+  }
+  
+  #footer-nav li:last-child {
+    background: none;
+    padding-right: 0;
+  }
+
+  footer .footer-below {
+    padding: 25px 0;
+    background-color: #233140
+  }
+
+  footer .footer-below .copyright-wrapper {
+    font-size: 14px;
+  }
+
+  footer .footer-col .list-inline {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
 @media only screen and (max-width: 768px) {
   #nav1 ul {
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: #2C3E50;
     right: 0;
@@ -587,13 +694,24 @@ table {
     left: 0;
   }
 
-  #nav1 {
-    /* display: none; */
+  #nav1 ul.active {
+    display: flex;
   }
+
   #header .hamburger-menu {
     display: flex;
     position: relative;
     right: 10%;
     bottom: 40%;
-}
+  }
+  #page-top {
+    height: 110px;
+  }
+
+  #logo h1 {
+    background-size: 75%;
+  }
+  #logo {
+    margin-left: -35px;
+  }
 }

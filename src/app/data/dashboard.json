@@ -1,0 +1,96 @@
+{
+    "heading": {
+        "title": "Get rid of your uptime worries for good.",
+        "tag_line": "We watch your website.",
+        "description": "Our main goal is to improve your infrastructure performance and prevent downtime to keep you online and available for your customers.",
+        "button_text": "GET STARTED"
+    },
+    "services": {
+        "title": "OUR GREAT SERVICES",
+        "tag_line": "Explore our Features",
+        "services": [
+            {
+                "name": "Developer to operations automation and consultancy",
+                "image": "images/devops-consultancy.svg"
+            },
+            {
+                "name": "For Website, Email and Database Server Monitoring.",
+                "image": "images/database.svg"
+            },
+            {
+                "name": "For Domain names, Hosting, Cloud & Dedicated Servers",
+                "image": "images/website.svg"
+            },
+            {
+                "name": "Our system can notify you via SMS or email whenever your website or server is in trouble.",
+                "image": "images/email.svg"
+            }
+        ]
+    },
+    "why_choose": {
+        "title": "WHY CHOOSE US?",
+        "reasons": [
+            {
+                "name": "We are fast",
+                "icon": ""
+            },
+            {
+                "name": "We are reliable",
+                "icon": ""
+            },
+            {
+                "name": "We can do what you need",
+                "icon": ""
+            },
+            {
+                "name": "Easy to Use",
+                "icon": ""
+            },
+            {
+                "name": "Downtime Notification",
+                "icon": ""
+            },
+            {
+                "name": "Maintenance Scheduling",
+                "icon": ""
+            }
+        ]
+    },
+    "features": {
+        "title": "All these features, all to yourself.",
+        "features": [
+            {
+                "name_bold": "Build to grow with you",
+                "name_small": "and your clients.",
+                "icon": "",
+                "description": "New clients beating down your door? Upgrade plans anytime without having to re-provision."
+            },
+            {
+                "name_bold": "Provisioning that's",
+                "name_small": "ready to go now.",
+                "icon": "",
+                "description": "You and your clients don't have time to wait. We'll provision your server in minutes, not hours."
+            },
+            {
+                "name_bold": "Access that makes",
+                "name_small": "you feel like a VIP.",
+                "icon": "",
+                "description": "Edit your server files, install Magento or PHP. Do it all with root (administrative) access."
+            },
+            {
+                "name_bold": "Keep your data looking good",
+                "name_small": "with disk mirroring.",
+                "icon": "",
+                "description": "You and your clients don't have time to wait. We'll provision your server in minutes, not hours."
+            }
+        ],
+        "button_text": "VIEW MORE"
+    },
+    "how_works": {
+        "title": "How It Works",
+        "sub_title": "Getting Started & Configuration",
+        "description": " Getting started with Root Internet Pvt Ltd is easy. Using our intuitive Web-based control panel, enter the URL you wish to monitor (e.g. http://www.yourdomain.com), and select the monitoring interval (e.g. 1 minute). The monitoring interval represents how often we’ll check to see if the website is online and responding properly. The smaller the interval, the more frequently we’ll check your website.",
+        "icon": "",
+        "button_text": "READ MORE"
+    }
+}

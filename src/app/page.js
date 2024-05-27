@@ -1,94 +1,97 @@
-import Image from "next/image";
+import React from 'react';
 import styles from "./page.module.css";
+import { promises as fs } from 'fs';
 
-export default function Home() {
+export default async function Home() {
+  const dataFile = await fs.readFile(process.cwd() + '/src/app/data/dashboard.json', 'utf8');
+  const pageData = JSON.parse(dataFile);
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main classNameName={styles.main}>
+      {/* Heading Section */}
+      <div className="container" style={{ paddingTop: '155px' }}>
+        <div className="row">
+          <div className="col-md-12 slidetxt text-center">
+            <h1>{pageData.heading.title}</h1>
+            <h2><u>{pageData.heading.tag_line}</u></h2>
+            <h4>{pageData.heading.description}</h4>
+            <div className="col-md-12">
+              <h5 className="getstartbtn"><a href="#">{pageData.heading.button_text}</a></h5>
+            </div>
+          </div>
         </div>
       </div>
+      {/* /Heading Section */}
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      {/* Services Section */}
+      <div className="bcg">
+        <div className="container">
+          <div className="row feature">
+            <div className="col-md-12" align="CENTER">
+              <h2>{pageData.services.title}</h2>
+              <h3>{pageData.services.tag_line}</h3>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+            </div>
+          </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+          {/* {pageData.services.services.map((service, index) => {
+                // Start a new row for the first item or every second item
+                const isFirstItemInRow = index % 2 === 0;
+                const isLastItem = index === pageData.services.services.length - 1;
+                return (
+                    <React.Fragment key={index}>
+                        {isFirstItemInRow && <div className="row">{"}"}
+                            <div className="col-md-6">
+                                {service.content}
+                            </div>
+                        {index % 2 === 1 || isLastItem && '</div>'}
+                    </React.Fragment>
+                );
+            })} */}
+          <div className="row feature">
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+            <div className="col-md-6" align="CENTER">
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+              <img src="images/devops-consultancy.svg" width="30%" alt="" />
+              <h4>Developer to operations automation and consultancy,</h4>
+              <p><a href="#">Read More</a></p>
+
+            </div>
+
+            <div className="col-md-6" align="CENTER" style={{ borderLeft: '1px dashed #3f5871' }}>
+              <img SRC="images/database.svg" width="30%" alt="" />
+              <h4>For Website, Email and Database Server Monitoring.</h4>
+              <p><a href="#">Read More</a></p>
+
+
+            </div>
+          </div>
+
+
+          <div className="row feature">
+            <div style={{ borderTop: '1px dashed #3f5871', marginBottom: '30px' }}>
+
+              <div className="col-md-6" align="CENTER" style={{ paddingTop: '40px' }}>
+
+                <a href="#"> <img SRC="images/website.svg" width="30%" alt="" /></a>
+                <h4>For Domain names, Hosting, Cloud & Dedicated Servers</h4>
+                <p><a href="#">Read More</a></p>
+
+              </div>
+
+              <div className="col-md-6" align="CENTER" style={{ borderLeft: '1px dashed #3f5871', paddingTop: '40px' }}>
+                <img src="images/email.svg" width="30%" alt="" />
+                <h4>Our system can notify you via SMS or email whenever your website or server is in trouble.
+                </h4>
+                <p><a href="#">Read More</a></p>
+
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
       </div>
     </main>
   );

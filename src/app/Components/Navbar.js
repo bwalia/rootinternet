@@ -1,29 +1,28 @@
-import React from 'react'
+'use client'
+import React from 'react';
 
 const Navbar = () => {
+    const [isActiveNav, setActiveNav] = React.useState(false);
+    const handleNav = () => {
+        console.log("hiii");
+        setActiveNav(!isActiveNav);
+    }
     return (
         <React.Fragment>
             <div id="page-top">
                 <div id="header">
                     <div id="logo">
-                        <h1><a itemprop="url" href="/" title="Root Internet Monitoring">
+                        <h1><a itemProp="url" href="/" title="Root Internet Monitoring">
                             Root Internet MonitoringControl Panel
                         </a></h1>
-                        <div class="box">
-                            <div class="box-bgr">
-                                <div class="box-bgr-">
-                                    <div id="top-hide-box" class="content hide">
+                        <div className="box">
+                            <div className="box-bgr">
+                                <div className="box-bgr-">
+                                    <div id="top-hide-box" className="content hide">
                                         <div id="form-login">
                                             <div id="form-login-center">
                                                 <form action="/en/login.php" method="post">
-                                                    <fieldset>
-                                                        <input name="login_username" type="text" value="Username"
-                                                            onfocus="clickclear(this, 'Username')"
-                                                            onblur="clickrecall(this,'Username')" />
-                                                        <input name="password" type="password" value="********"
-                                                            onfocus="clickclear(this, '********')" />
-                                                        <input type="submit" value="Login" class="btn" />
-                                                    </fieldset>
+
                                                 </form>
                                             </div>
                                         </div>
@@ -33,22 +32,22 @@ const Navbar = () => {
                                             <li><a href="contact.php">Contact</a></li>
                                             <li><a href="faq.php">FAQ</a></li>
                                             <li><a href="languages.php">Language</a></li>
-                                            <li id="nav-top-show-hide-link" class="active"><a href="login.php">Login</a>
+                                            <li id="nav-top-show-hide-link" className="active"><a href="login.php">Login</a>
                                             </li>
 
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="box-bot">
-                                <div class="bot"></div>
-                                <div class="bot-"></div>
+                            <div className="box-bot">
+                                <div className="bot"></div>
+                                <div className="bot-"></div>
                             </div>
                         </div>
                     </div>
                     <div id="nav1">
-                        <ul>
-                            <li class="active"><a href="./">Home</a></li>
+                        <ul className={isActiveNav ? 'active': ''}>
+                            <li className="active"><a href="./">Home</a></li>
                             <li><a href="features.php">Monitoring</a>
                                 <ul>
                                     <li><a href="features.php">Features</a></li>
@@ -82,7 +81,7 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </div>
-                    <div class="hamburger-menu">
+                    <div className="hamburger-menu" onClick={handleNav}>
                         <span></span>
                         <span></span>
                         <span></span>

@@ -33,66 +33,105 @@ export default async function Home() {
 
             </div>
           </div>
-
-          {/* {pageData.services.services.map((service, index) => {
-                // Start a new row for the first item or every second item
-                const isFirstItemInRow = index % 2 === 0;
-                const isLastItem = index === pageData.services.services.length - 1;
-                return (
-                    <React.Fragment key={index}>
-                        {isFirstItemInRow && <div className="row">{"}"}
-                            <div className="col-md-6">
-                                {service.content}
-                            </div>
-                        {index % 2 === 1 || isLastItem && '</div>'}
-                    </React.Fragment>
-                );
-            })} */}
           <div className="row feature">
-
-            <div className="col-md-6" align="CENTER">
-
-              <img src="images/devops-consultancy.svg" width="30%" alt="" />
-              <h4>Developer to operations automation and consultancy,</h4>
-              <p><a href="#">Read More</a></p>
-
-            </div>
-
-            <div className="col-md-6" align="CENTER" style={{ borderLeft: '1px dashed #3f5871' }}>
-              <img SRC="images/database.svg" width="30%" alt="" />
-              <h4>For Website, Email and Database Server Monitoring.</h4>
-              <p><a href="#">Read More</a></p>
-
-
-            </div>
+            {pageData.services.services.map((service, index) => {
+              const isFirstItemInRow = index % 2 === 0;
+              const isLastItem = index === pageData.services.services.length - 1;
+              return (
+                <React.Fragment key={index}>
+                  <div className="col-md-6 service-wrapper" align="CENTER" style={index % 2 === 1 ? { borderLeft: '1px dashed #3f5871' } : {}}>
+                    <img src={service.image} width="30%" alt="" />
+                    <h4>{service.name}</h4>
+                    <p><a href="#">Read More</a></p>
+                  </div>
+                </React.Fragment>
+              );
+            })}
           </div>
-
-
-          <div className="row feature">
-            <div style={{ borderTop: '1px dashed #3f5871', marginBottom: '30px' }}>
-
-              <div className="col-md-6" align="CENTER" style={{ paddingTop: '40px' }}>
-
-                <a href="#"> <img SRC="images/website.svg" width="30%" alt="" /></a>
-                <h4>For Domain names, Hosting, Cloud & Dedicated Servers</h4>
-                <p><a href="#">Read More</a></p>
-
-              </div>
-
-              <div className="col-md-6" align="CENTER" style={{ borderLeft: '1px dashed #3f5871', paddingTop: '40px' }}>
-                <img src="images/email.svg" width="30%" alt="" />
-                <h4>Our system can notify you via SMS or email whenever your website or server is in trouble.
-                </h4>
-                <p><a href="#">Read More</a></p>
-
-
-              </div>
-            </div>
-          </div>
-
-
         </div>
       </div>
+      {/* /Services Section */}
+
+      {/* Why Choose Section */}
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <h2
+              ALIGN="CENTER"
+              style={{ paddingTop: '40px', fontSize: '40px', color: '#2C3E50' }}
+            >
+              {pageData.why_choose.title}
+            </h2>
+            <hr className="star-primary" />
+          </div>
+
+          {pageData.why_choose.reasons.map((reason, idx) => (
+            <div className="col-md-4 text-center textcolor" key={idx}>
+              <i className={reason.icon} style={{ fontSize: "70px" }}></i>
+              <h4>{reason.name}</h4>
+            </div>
+          ))}
+        </div>
+
+      </div>
+      {/* /Why Choose Section */}
+
+      {/* Features Section */}
+      <div className="bcg">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <h2 className="serviceh2">{pageData.features.title}</h2>
+            </div>
+
+            {pageData.features.features.map((feature, idx) => (
+              <div className="col-md-6 services  brdr-right-none" key={idx}>
+                <h3>{feature.name_bold}</h3>
+                <h4>{feature.name_small}</h4>
+                <img src={feature.image} />
+                <p>{feature.description}</p>
+              </div>
+            ))}
+
+            <div className="col-md-12" ALIGN="CENTER" style={{ marginTop: "40px" }}>
+              <a href="#" className="btn btn-warning btn-lg" style={{ paddingLeft: "50px", paddingRight: "50px" }}>
+                {pageData.features.button_text}
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* /Features Section */}
+
+      {/* How Works Section */}
+      <div className="container">
+        <h2
+          style={
+            { fontSize: "40px", 
+              color: "#2C3E50", 
+              borderBottom: "2px solid #2C3E50",
+              paddingBottom: "10px",
+              fontWeight: "700",
+              marginTop: "20px"
+            }
+          }
+        >
+          {pageData.how_works.title}
+        </h2>
+        <p><em><strong>{pageData.how_works.sub_title}</strong></em></p>
+        <p style={{ fontSize: "20px", lineHeight: "30px", textAlign: "justify" }}>
+          <img src={pageData.how_works.image} align="left" width="130" style={{ padding: "0 30px 15px 0px" }} />
+          {pageData.how_works.description}
+        </p>
+
+        <p align="RIGHT">
+          <a href="#" className="btn btn-warning btn-lg" style={{ paddingLeft: "50px", paddingRight: "50px" }}>
+            {pageData.how_works.button_text}
+          </a>
+        </p>
+      </div>
+      {/* /How Works Section */}
     </main>
   );
 }

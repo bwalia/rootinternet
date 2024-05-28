@@ -561,6 +561,11 @@
 
  }
 
+ .feature .service-wrapper:nth-child(n+3) {
+     border-top: 1px dashed #3f5871;
+     padding-top: 40px;
+ }
+
 
  .textcolor {
      margin-top: 15px;
@@ -621,6 +626,7 @@
 
  .services h3 {
      font-size: 30px;
+     color: #fff;
  }
 
  .services h4 {
@@ -683,7 +689,7 @@
      margin-top: 0px;
      color: #2C3E50;
      font-weight: 700;
-    font-size: 30px;
+     font-size: 30px;
  }
 
 

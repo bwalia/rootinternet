@@ -7,9 +7,9 @@ export default async function Home() {
   const pageData = JSON.parse(dataFile);
 
   return (
-    <main classNameName={styles.main}>
+    <main className="">
       {/* Heading Section */}
-      <div className="container" style={{ paddingTop: '155px' }}>
+      <div className="container" style={{ padding: '190px 0 40px 0' }}>
         <div className="row">
           <div className="col-md-12 slidetxt text-center">
             <h1>{pageData.heading.title}</h1>

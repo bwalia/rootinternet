@@ -932,3 +932,27 @@
  .treeMenu li span.pipe {
      color: #cccccc;
  }
+
+ .card .card-img {
+     height: 200px;
+ }
+
+ .card .card-text {
+     height: 55px;
+ }
+
+ .pagination {
+     display: flex;
+     justify-content: center;
+     padding: 1rem 0;
+ }
+
+ .page-item.active .page-link {
+     background-color: #007bff;
+     border-color: #007bff;
+     color: white;
+ }
+
+ .page-item .page-link {
+     color: #007bff;
+ }

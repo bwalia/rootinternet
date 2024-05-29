@@ -29,11 +29,11 @@ async function getData(articleUuid) {
 }
 
 export default async function BlogPage({ params, searchParams }) {
-    console.log({ searchParams });
     const articleData = await getData(searchParams.uuid);
+    console.log({articleData});
     function trimHtmlTags(html) {
-        const tagRegExp = /<[^>]*>/g; // Regular expression to match HTML tags
-        return html.replace(tagRegExp, ''); // Remove HTML tags
+        const tagRegExp = /<[^>]*>/g;
+        return html.replace(tagRegExp, '');
     }
     const convertDate = (timestamp) => {
         const date = new Date(timestamp * 1000);
@@ -53,9 +53,9 @@ export default async function BlogPage({ params, searchParams }) {
         <React.Fragment>
             <div className='container mb-3' style={{ paddingTop: '155px' }}>
                 <div className='row'>
-                    <div className='col-sm-10 m-auto text-center mb-3'>
-                        <h1>{articleData.title}</h1>
-                        <div className='article-meta'>
+                    <div className='col-sm-10 m-auto mb-3'>
+                        <h1 className='text-center'>{articleData.title}</h1>
+                        <div className='article-meta text-center'>
                             <span className='article-date me-3'>
                                 Created on: {articleData.created}
                             </span>
@@ -64,6 +64,13 @@ export default async function BlogPage({ params, searchParams }) {
                             </span>
                         </div>
                         <hr className='hr' />
+                        {articleData.image && (
+                            <div className='blog-image row mb-5'>
+                                <div className='col-md-10 m-auto'>
+                                    <img className='img-fluid' src={articleData.image} alt={articleData.title} />
+                                </div>
+                            </div>
+                        )}
                         <div className='article-content'>
                             {trimHtmlTags(articleData.content)}
                         </div>

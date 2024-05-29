@@ -27,19 +27,19 @@ const Footer = () => {
                             <h3>Follow Us</h3>
                             <ul className="list-inline">
                                 <li>
-                                    <a href="#" className="btn-social btn-outline"><i className="fa fa-fw fa-facebook"></i></a>
+                                    <a href="#" className="btn-social btn-outline"><i className="bi bi-facebook"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#" className="btn-social btn-outline"><i className="fa fa-fw fa-google-plus"></i></a>
+                                    <a href="#" className="btn-social btn-outline"><i className="bi bi-google"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#" className="btn-social btn-outline"><i className="fa fa-fw fa-twitter"></i></a>
+                                    <a href="#" className="btn-social btn-outline"><i className="bi bi-twitter-x"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#" className="btn-social btn-outline"><i className="fa fa-fw fa-linkedin"></i></a>
+                                    <a href="#" className="btn-social btn-outline"><i className="bi bi-linkedin"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#" className="btn-social btn-outline"><i className="fa fa-fw fa-dribbble"></i></a>
+                                    <a href="#" className="btn-social btn-outline"><i className="bi bi-dribbble"></i></a>
                                 </li>
                             </ul>
                         </div>

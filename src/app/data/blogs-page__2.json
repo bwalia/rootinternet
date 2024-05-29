@@ -1,0 +1,32 @@
+{
+    "data": {
+        "content": [
+            {
+                "id": "42421",
+                "uuid": "d28d9638-d786-5f99-be47-d803a901c0e7",
+                "title": "Eleven",
+                "sub_title": "sub to eleven",
+                "content": "<p>Sed egestas nunc a lacinia malesuada. Cras vel convallis sem. Fusce vestibulum viverra tempus. Praesent porttitor aliquet enim, quis placerat dui ultricies eu. Aenean finibus finibus tellus, non ullamcorper mi tristique nec. Suspendisse imperdiet efficitur lobortis. Cras tristique iaculis ipsum. Nulla sed sapien sem. Vivamus placerat tellus nec erat cursus, at viverra eros egestas. Sed placerat, est et ultrices dictum, magna mauris vestibulum tortor, ut maximus ex velit et nibh. In interdum lobortis ultrices. Vivamus vel finibus est. Donec quis viverra dolor. Mauris aliquet sed tellus eget facilisis. Nullam ornare arcu lacus, ultrices fermentum odio placerat vel.</p>\r\n\r\n<p>In dapibus rhoncus pulvinar. Maecenas at mattis neque, ac ornare arcu. Etiam blandit nibh et tellus laoreet elementum. Donec sit amet sodales nunc. Nulla condimentum congue lectus, nec varius orci vehicula non. Maecenas eros nunc, elementum in rutrum id, mattis eu diam. Cras interdum leo id accumsan sagittis. Nullam tincidunt non quam id bibendum. Donec at vulputate sem. Curabitur vel diam lobortis, fermentum urna sed, facilisis libero. Praesent convallis tristique ex. Pellentesque purus enim, aliquam quis elementum in, imperdiet quis quam.</p>\r\n",
+                "type": "2",
+                "status": "1",
+                "code": "eleven",
+                "meta_title": "",
+                "meta_description": "",
+                "meta_keywords": "",
+                "custom_fields": null,
+                "custom_assets": null,
+                "user_uuid": null,
+                "publish_date": "1716977879",
+                "created": "2024-05-29 10:17:59",
+                "uuid_business_id": "0f6c4e64-9b50-5e11-a7d1-1923b7aef282",
+                "categories": null,
+                "published_date": null,
+                "language_code": null,
+                "blog_type": "1",
+                "image": null
+            }
+        ],
+        "total": 11
+    },
+    "status": 200
+}

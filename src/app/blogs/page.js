@@ -1,20 +1,21 @@
 import React from 'react';
 import { promises as fs, existsSync } from 'fs';
 import Link from 'next/link';
+import Pagination from '../Components/Pagination';
 
-async function getData() {
+async function getData(page) {
     try {
         const apiUrl = process.env.API_BASE_URL;
-        const pubUrl = process.env.PUB_BASE_URL;
+        const perPage = process.env.PER_PAGE_RECORDS;
         const bCode = process.env.BUSINESS_CODE;
-        const res = await fetch(`${apiUrl}/business/${bCode}/public/blogs`);
+        const res = await fetch(`${apiUrl}/business/${bCode}/public/blogs?page=${page}&perPage=${perPage}`);
         const apiData = await res.json();
         console.log({ apiData });
-        const filePath = process.cwd() + '/src/app/data/blogs.json';
+        const filePath = process.cwd() + `/src/app/data/blogs-page__${page}.json`;
         console.log({ apiData: apiData.data.content });
         let results;
         if (!res.ok) {
-            const dataFile = await fs.readFile(process.cwd() + '/src/app/data/blogs.json', 'utf8');
+            const dataFile = await fs.readFile(process.cwd() + `/src/app/data/blogs-page__${page}.json`, 'utf8');
             const existingData = JSON.parse(dataFile);
             return existingData;
         }
@@ -34,14 +35,17 @@ async function getData() {
         }
         return results;
     } catch {
-        const dataFile = await fs.readFile(process.cwd() + '/src/app/data/blogs.json', 'utf8');
+        const dataFile = await fs.readFile(process.cwd() + `/src/app/data/blogs-page__${page}.json`, 'utf8');
         const existingData = JSON.parse(dataFile);
         return existingData
     }
 }
 
-const Page = async () => {
-    const pageData = await getData();
+const Page = async ({ searchParams }) => {
+    const pageData = await getData(searchParams.page);
+    const blogsPerPage = 10;
+    const totalBlogs = pageData?.data?.total;
+    const totalPages = Math.ceil(totalBlogs / blogsPerPage);
     const convertDate = (timestamp) => {
         const date = new Date(timestamp * 1000);
         const formattedDate = new Intl.DateTimeFormat(
@@ -80,25 +84,30 @@ const Page = async () => {
                     {pageData?.data?.content.map((blog) => (
                         <div key={blog.id} className="col-12 col-sm-8 col-md-6 col-lg-4 mt-3 mb-3">
                             <div className="card">
-                                <Link href={{ pathname: `blogs/${blog.code}`, query: { uuid: blog.uuid } }}>
-                                    <img className="card-img" src={blog.image ?? 'images/default-blog.svg'} alt={blog.code} />
+                                <Link href={{ pathname: `/blogs/${blog.code}`, query: { uuid: blog.uuid } }}>
+                                    <img className="card-img" src={blog.image ?? '/images/mountains.png'} alt={blog.code} />
                                 </Link>
                                 <div className="card-img-overlay">
                                     <Link 
                                         className="btn btn-light btn-sm" 
-                                        href={{ pathname: `blogs/${blog.code}`, query: { uuid: blog.uuid } }}
+                                        href={{ pathname: `/blogs/${blog.code}`, query: { uuid: blog.uuid } }}
                                     >
                                         {blog.code}
                                     </Link>
                                 </div>
-                                <div className="card-body">
+                                <div className="card-body" style={{position: 'relative'}}>
                                     <h4 className="card-title">{blog.title}</h4>
                                     <small className="text-muted cat">
                                         <i className="far fa-clock text-info"></i> 30 minutes
                                         <i className="fas fa-users text-info"></i> 4 portions
                                     </small>
                                     <p className="card-text">{trimHtmlTags(spliceText(blog.content))}</p>
-                                    <a href="#" className="btn btn-info">Read More</a>
+                                    <Link 
+                                        className="btn btn-info" 
+                                        href={{ pathname: `/blogs/${blog.code}`, query: { uuid: blog.uuid } }}
+                                    >
+                                        Read More
+                                    </Link>
                                 </div>
                                 <div className="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
                                     <div className="views">{convertDate(blog.publish_date)}
@@ -113,6 +122,7 @@ const Page = async () => {
                         </div>
                     ))}
                 </div>
+                <Pagination currentPage={10} totalPages={totalPages} />
             </div>
         </React.Fragment>
     )

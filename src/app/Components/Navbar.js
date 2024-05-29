@@ -1,10 +1,10 @@
 'use client'
+import Link from 'next/link';
 import React from 'react';
 
 const Navbar = () => {
     const [isActiveNav, setActiveNav] = React.useState(false);
     const handleNav = () => {
-        console.log("hiii");
         setActiveNav(!isActiveNav);
     }
     return (
@@ -12,9 +12,11 @@ const Navbar = () => {
             <div id="page-top">
                 <div id="header">
                     <div id="logo">
-                        <h1><a itemProp="url" href="/" title="Root Internet Monitoring">
-                            Root Internet MonitoringControl Panel
-                        </a></h1>
+                        <h1>
+                            <Link href={"/"} title='Root Internet Monitoring'>
+                                Root Internet MonitoringControl Panel
+                            </Link>
+                        </h1>
                         <div className="box">
                             <div className="box-bgr">
                                 <div className="box-bgr-">
@@ -29,10 +31,10 @@ const Navbar = () => {
                                     </div>
                                     <div id="nav-top">
                                         <ul>
-                                            <li><a href="contact.php">Contact</a></li>
-                                            <li><a href="faq.php">FAQ</a></li>
-                                            <li><a href="languages.php">Language</a></li>
-                                            <li id="nav-top-show-hide-link" className="active"><a href="login.php">Login</a>
+                                            <li><Link href="contact.php">Contact</Link></li>
+                                            <li><Link href="faq.php">FAQ</Link></li>
+                                            <li><Link href="languages.php">Language</Link></li>
+                                            <li id="nav-top-show-hide-link" className="active"><Link href="login.php">Login</Link>
                                             </li>
 
                                         </ul>
@@ -47,38 +49,39 @@ const Navbar = () => {
                     </div>
                     <div id="nav1">
                         <ul className={isActiveNav ? 'active': ''}>
-                            <li className="active"><a href="./">Home</a></li>
-                            <li><a href="features.php">Monitoring</a>
+                            <li className="active"><Link href="./">Home</Link></li>
+                            <li><Link href="features.php">Monitoring</Link>
                                 <ul>
-                                    <li><a href="features.php">Features</a></li>
-                                    <li><a href="howitworks.php">How It Works</a></li>
-                                    <li><a href="network.php">Monitoring Network</a></li>
-                                    <li><a href="notification.php">SMS &amp; Email Notification</a></li>
-                                    <li><a href="pushnotification.php">Push Notification</a></li>
-                                    <li><a href="quicktest.php">Quick Test</a></li>
-                                    <li><a href="signup.php">Sign Up</a></li>
+                                    <li><Link href="features.php">Features</Link></li>
+                                    <li><Link href="howitworks.php">How It Works</Link></li>
+                                    <li><Link href="network.php">Monitoring Network</Link></li>
+                                    <li><Link href="notification.php">SMS &amp; Email Notification</Link></li>
+                                    <li><Link href="pushnotification.php">Push Notification</Link></li>
+                                    <li><Link href="quicktest.php">Quick Test</Link></li>
+                                    <li><Link href="signup.php">Sign Up</Link></li>
                                 </ul>
                             </li>
-                            <li><a href="pricing.php">Pricing</a>
+                            <li><Link href="pricing.php">Pricing</Link>
                                 <ul>
-                                    <li><a href="pricing.php">Pricing</a></li>
-                                    <li><a href="discount.php">Discount</a></li>
-                                    <li><a href="compare.php">Compare Free &amp; Professional</a></li>
+                                    <li><Link href="pricing.php">Pricing</Link></li>
+                                    <li><Link href="discount.php">Discount</Link></li>
+                                    <li><Link href="compare.php">Compare Free &amp; Professional</Link></li>
                                 </ul>
                             </li>
-                            <li><a href="reseller.php">Reseller</a></li>
-                            <li><a href="ranking.php">Webhost Ranking</a>
+                            <li><Link href="reseller.php">Reseller</Link></li>
+                            <li><Link href="ranking.php">Webhost Ranking</Link>
                                 <ul>
-                                    <li><a href="ranking.php">Introduction</a></li>
-                                    <li><a href="ranking.php?type=1">Shared</a></li>
-                                    <li><a href="ranking.php?type=2">Virtual Private</a></li>
-                                    <li><a href="ranking.php?type=3">Dedicated</a></li>
-                                    <li><a href="ranking.php?type=4">Colocation</a></li>
-                                    <li><a href="ranking.php?type=5">Leased Line</a></li>
-                                    <li><a href="ranking.php?type=6">Broadband</a></li>
-                                    <li><a href="ranking.php?type=7">Others</a></li>
+                                    <li><Link href="ranking.php">Introduction</Link></li>
+                                    <li><Link href="ranking.php?type=1">Shared</Link></li>
+                                    <li><Link href="ranking.php?type=2">Virtual Private</Link></li>
+                                    <li><Link href="ranking.php?type=3">Dedicated</Link></li>
+                                    <li><Link href="ranking.php?type=4">Colocation</Link></li>
+                                    <li><Link href="ranking.php?type=5">Leased Line</Link></li>
+                                    <li><Link href="ranking.php?type=6">Broadband</Link></li>
+                                    <li><Link href="ranking.php?type=7">Others</Link></li>
                                 </ul>
                             </li>
+                            <li><Link href="/blogs">Blogs</Link></li>
                         </ul>
                     </div>
                     <div className="hamburger-menu" onClick={handleNav}>

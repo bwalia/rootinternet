@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <Script strategy='lazyOnload' src="https://www.googletagmanager.com/gtag/js?id=G-E57BRVBV6D" />
+        <Script id="google-analytics" strategy='lazyOnload'>
+          {
+            `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-E57BRVBV6D');
+            `
+          }
+        </Script>
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />

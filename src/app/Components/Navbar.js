@@ -31,8 +31,8 @@ const Navbar = () => {
                                     </div>
                                     <div id="nav-top">
                                         <ul>
-                                            <li><Link href="contact.php">Contact</Link></li>
-                                            <li><Link href="faq.php">FAQ</Link></li>
+                                            <li><Link href="/contact">Contact</Link></li>
+                                            <li><Link href="/faq">FAQ</Link></li>
                                             <li><Link href="languages.php">Language</Link></li>
                                             <li id="nav-top-show-hide-link" className="active"><Link href="login.php">Login</Link>
                                             </li>
@@ -81,7 +81,7 @@ const Navbar = () => {
                                     <li><Link href="ranking.php?type=7">Others</Link></li>
                                 </ul>
                             </li>
-                            <li><Link href="/blogs">Blogs</Link></li>
+                            <li><Link href="/blog">Blog</Link></li>
                         </ul>
                     </div>
                     <div className="hamburger-menu" onClick={handleNav}>

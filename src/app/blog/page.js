@@ -42,7 +42,7 @@ async function getData(page) {
 }
 
 const Page = async ({ searchParams }) => {
-    const pageData = await getData(searchParams.page);
+    const pageData = await getData(searchParams.page ?? 1   );
     const blogsPerPage = 10;
     const totalBlogs = pageData?.data?.total;
     const totalPages = Math.ceil(totalBlogs / blogsPerPage);
@@ -77,20 +77,20 @@ const Page = async ({ searchParams }) => {
             <div className="container" style={{ paddingTop: '155px' }}>
                 <div className="row">
                     <div className="col-md-12">
-                        <h1>Blogs</h1>
+                        <h1>Blog</h1>
                     </div>
                 </div>
                 <div className='row'>
                     {pageData?.data?.content.map((blog) => (
                         <div key={blog.id} className="col-12 col-sm-8 col-md-6 col-lg-4 mt-3 mb-3">
                             <div className="card">
-                                <Link href={{ pathname: `/blogs/${blog.code}`, query: { uuid: blog.uuid } }}>
+                                <Link href={{ pathname: `/blog/${blog.code}`, query: { uuid: blog.uuid } }}>
                                     <img className="card-img" src={blog.image ?? '/images/mountains.png'} alt={blog.code} />
                                 </Link>
                                 <div className="card-img-overlay">
                                     <Link 
                                         className="btn btn-light btn-sm" 
-                                        href={{ pathname: `/blogs/${blog.code}`, query: { uuid: blog.uuid } }}
+                                        href={{ pathname: `/blog/${blog.code}`, query: { uuid: blog.uuid } }}
                                     >
                                         {blog.code}
                                     </Link>
@@ -104,7 +104,7 @@ const Page = async ({ searchParams }) => {
                                     <p className="card-text">{trimHtmlTags(spliceText(blog.content))}</p>
                                     <Link 
                                         className="btn btn-info" 
-                                        href={{ pathname: `/blogs/${blog.code}`, query: { uuid: blog.uuid } }}
+                                        href={{ pathname: `/blog/${blog.code}`, query: { uuid: blog.uuid } }}
                                     >
                                         Read More
                                     </Link>

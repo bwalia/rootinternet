@@ -1,6 +1,11 @@
 import React from 'react';
-import styles from "./page.module.css";
 import { promises as fs } from 'fs';
+
+export const metadata = {
+  title: 'Free Website Monitoring (from 48 Global Locations) - Monitoring Control Panel',
+  description: "Be the first to know when your website goes down. Receive alerts by email, SMS and push notification. Sign up FREE!",
+  keywords: "Monitoring Control Panel, website monitoring, web server monitoring, server monitoring, sms notification, push notification, "
+}
 
 export default async function Home() {
   const dataFile = await fs.readFile(process.cwd() + '/src/app/data/dashboard.json', 'utf8');
@@ -11,7 +16,10 @@ export default async function Home() {
       {/* Heading Section */}
       <div className="container" style={{ padding: '190px 0 40px 0' }}>
         <div className="row">
-          <div className="col-md-12 slidetxt text-center">
+          <div className='col-md-6'>
+            <img src='/images/Default_website_monitoring.jpg' className='img-fluid' />
+          </div>
+          <div className="col-md-6 slidetxt text-center" style={{alignContent: "center"}}>
             <h1>{pageData.heading.title}</h1>
             <h2><u>{pageData.heading.tag_line}</u></h2>
             <h4>{pageData.heading.description}</h4>
@@ -57,7 +65,7 @@ export default async function Home() {
         <div className="row">
           <div className="col-md-12">
             <h2
-              ALIGN="CENTER"
+              align="CENTER"
               style={{ paddingTop: '40px', fontSize: '40px', color: '#2C3E50' }}
             >
               {pageData.why_choose.title}
@@ -93,7 +101,7 @@ export default async function Home() {
               </div>
             ))}
 
-            <div className="col-md-12" ALIGN="CENTER" style={{ marginTop: "40px" }}>
+            <div className="col-md-12" align="CENTER" style={{ marginTop: "40px" }}>
               <a href="#" className="btn btn-warning btn-lg" style={{ paddingLeft: "50px", paddingRight: "50px" }}>
                 {pageData.features.button_text}
               </a>
@@ -108,8 +116,9 @@ export default async function Home() {
       <div className="container">
         <h2
           style={
-            { fontSize: "40px", 
-              color: "#2C3E50", 
+            {
+              fontSize: "40px",
+              color: "#2C3E50",
               borderBottom: "2px solid #2C3E50",
               paddingBottom: "10px",
               fontWeight: "700",

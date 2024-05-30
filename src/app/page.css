@@ -777,9 +777,35 @@
      margin-top: 0px;
      color: #2C3E50;
      text-align: justify;
+     font-weight: 700;
  }
 
+ .content .contact-form-label {
+     display: inline-block;
+     max-width: 100%;
+     margin-bottom: 5px;
+     font-weight: 700;
+     font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+     font-size: 14px;
+     line-height: 1.42857143;
+     color: #333;
+     padding-left: 5px;
+ }
 
+ .content .contact-form-desc {
+     font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+     font-size: 14px;
+     line-height: 1.42857143;
+     color: #333;
+ }
+
+ .content .control-label {
+     font-size: 14px;
+     line-height: 1.42857143;
+     color: #333;
+     font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+     font-weight: 700;
+ }
 
  .btn {
      letter-spacing: 2px;
@@ -788,6 +814,23 @@
      padding: 13px 41px;
      font-size: 17px;
      font-weight: normal;
+ }
+
+ .btn-warning {
+    background-color: #feb10d !important;
+    border: 1px solid #feb10d !important;
+    color: #fff !important;
+ }
+ .btn-warning:hover {
+    background-color: #be8a06 !important;
+ }
+ .btn-primary {
+    background-color: #2C3E50 !important;
+    border: 1px solid #2C3E50 !important;
+    color: #fff !important;
+ }
+ .btn-primary:hover {
+    background-color: #233140 !important;
  }
 
 

@@ -1,0 +1,57 @@
+name: Workflow Test
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ dummy/* ]
+  workflow_dispatch:
+    inputs:
+      ENV_REF:
+        type: choice
+        description: 'Please choose the Target S3'
+        default: 'int'
+        required: true
+        options:
+        - int
+        - test
+        - acc
+        - prod
+
+env:
+  TARGET_ENV: ${{ github.event.inputs.ENV_REF }}
+  AWS_ACCOUNT_NO: ${{ secrets.AWS_ACCOUNT_NO }}
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
+  AWS_REGION_NAME: ${{ github.event.inputs.AWS_REGION_NAME }}
+
+jobs:  
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: master
+          
+      - name: S3 Upload Action
+        uses: hkusu/s3-upload-action@v2.1.0
+        with:
+            aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            aws-region: ${{ secrets.AWS_REGION }}
+            aws-bucket: YOUR_BUCKET_NAME
+            file-path: YOUR_FILE_PATH
+          
+      - name: Slack Notification for Odincm Frontend release 
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: general
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_ICON: https://github.com/rtCamp.png?size=48
+          SLACK_MESSAGE: 'Post Content :rocket:'
+          SLACK_TITLE: Post Title
+          SLACK_USERNAME: rtCamp
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+

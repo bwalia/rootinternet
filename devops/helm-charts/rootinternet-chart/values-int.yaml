@@ -1,0 +1,107 @@
+# Default values for rootinternet-chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: bwalia/rootinternet-frontend
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "latest"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+safeEnvFile: "AgBZA6d2keJ8Okh4/sIOBguFz+exDlHfXA2uas6+LLYzT0Q02zznono0GEv8avLPgQCanNHddwBYFgnfd9yp94KEn+CGofsXs0159f0qzCwbHGs8wE4THdq4a4U6Q4ayJ/K8A+0NJ3wk8YwNOPRX9lDbZNFRkc/xMtjH7VGjG7pgRU5f40diqjwXn832pKTukgbGJoJno/Fv0ublhiz1FvHsKApXgaPPm4n+7mtpVVYHWYZMCZ2e4Xb3uJ35rUUQFBC7MGdDnfVE+0r4JmjlAZ8tiUNMs4Zyf+gWamegMcX+bzbz70U1QXqcaGTo5x2cdN+FxGo50klSLc0sAuFo58YwHGHU/jIm8muRj4la6XCKvENMxDXMXpAlWHYv+X9Z1ud03XS7ApZg7VtGrW8AN2Io7x6ajtWPhZpEm/ZFAlV9l+kJDNFcTCLkjhrsqQesGZk0A0CswfvXmxYLQrGS/E+CBSuwBC+ZSyu7wY+6CR4LkF6AjDoph/FKao54Tlk14HV/O87mRsNSwy/9M/Su40VF1BP6VSC9xegZC9htZvCBAEqUNZyQvtY29TxiNPtqMN8nqjAQ058Gm4ocZyoi6sXSOgrka0z7QEIEdSz7feTfhrQiQkZeyDr/zRNDDz3QeBv6oU3Fe8Z4RMFGqzQbf9T+btAmVgo8WHZSrkRNEti8Fjcp2CkjSBUw3QGwspC5fds6l30KrapuKNwUaEPL2+rfC/Tn5+SITpe9YOJFC7eLOsp1DDxwonZctzYoohDqMFbU7SXQigPwKeKE24NNrrn/8QxJvJJvi//+hKGLVnMHZJI0MPb79S3M84G/xmgDl5DtU3uReYWUU9ymlbVKlgdDwS6N5744GwhCl7EHlCsd1/yLuUM44ctRCLLOoAknDjU2fkFoql2yeK67A15IFZIST85V/lUeZJmVmpOMtg6d4X033DtxSP9JtHjLp++W2i5dYZfj0bOP14a8ZiI8qK+L+vzATW0jQXdV7oAWA3n8iVHOfAxsdHXGSB1moLYepXpUpkpupNRtNU9O4tb3bMcaiGMWWpq+mQbBzWDeQDaWzHAgeKSDPxj6cPHTqRcy+w=="
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Automatically mount a ServiceAccount's API credentials?
+  automount: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+podAnnotations: {}
+podLabels: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 3000
+  targetPort: 3000
+  namespace: "int"
+
+ingress:
+  enabled: true
+  className: "traefik"
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: int.workstation.co.uk
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+    - host: int-www.workstation.co.uk
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+# Additional volumes on the output Deployment definition.
+volumes: []
+# - name: foo
+#   secret:
+#     secretName: mysecret
+#     optional: false
+
+# Additional volumeMounts on the output Deployment definition.
+volumeMounts: []
+# - name: foo
+#   mountPath: "/etc/foo"
+#   readOnly: true
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

@@ -1,0 +1,29 @@
+FROM node:20.11.1-alpine3.18 AS development
+ENV NODE_ENV development
+
+# Add a work directory
+WORKDIR /app
+
+# Cache and Install dependencies
+COPY package.json .
+#COPY yarn.lock .
+
+RUN apk add curl
+
+RUN npm i
+
+# Copy app files
+COPY . .
+
+#RUN npm install vite -g
+# this works here but not in dockerfile RUN vite build --mode staging so replacing with npm build
+# RUN npm run build
+
+# Expose port
+EXPOSE 3000
+
+# RUN pwd
+# RUN ls -alt
+
+# Start the app
+CMD [ "npm", "run", "dev" ]

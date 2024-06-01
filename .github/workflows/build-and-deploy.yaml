@@ -142,7 +142,18 @@ jobs:
             KUBE_CONFIG: ${{ env.KUBE_CONFIG_K3S }}
           with:
             args: get pods -n ${{ env.TARGET_ENV }}     
-        
+
+        - name: Slack Notification for Github updates 
+          uses: rtCamp/action-slack-notify@v2
+          env:
+            SLACK_CHANNEL: github-updates
+            SLACK_COLOR: ${{ job.status }}
+            SLACK_ICON: https://github.com/rtCamp.png?size=48
+            SLACK_MESSAGE: 'Root Internet Website Github master branch updated'
+            SLACK_TITLE: Root Internet Website Github master branch updated
+            SLACK_USERNAME: rtCamp
+            SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+
         - name: Slack Notification for Root Internet Website release 
           uses: rtCamp/action-slack-notify@v2
           env:

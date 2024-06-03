@@ -1,0 +1,143 @@
+{
+    "head": {
+        "title": "FAQ"
+    },
+    "content": [
+        {
+            "category": "Monitoring & Alert",
+            "questions": [
+                {
+                    "ques": "When will I receive alert emails from your service?",
+                    "ans": "You will receive alert email when your website or server goes DOWN. When it is UP again, you will receive another notification."
+                },
+                {
+                    "ques": "How do you determine a website or server is down?",
+                    "ans": [
+                        {
+                            "child_title": "Ping tests fail when",
+                            "child_details": [
+                                "Your server is inaccessible via the Internet or",
+                                "Ping requests timed out"
+                            ]
+                        },
+                        {
+                            "child_title": "Web server tests fail when",
+                            "child_details": [
+                                "Your web server is inaccessible via the Internet or",
+                                "Your web server is not running, that is we can't connect to port 80 or",
+                                "The web server is running but does not respond to requests or returns invalid HTTP responses (according to HTTP specification)"
+                            ]
+                        },
+                        {
+                            "child_title": "TCP port tests fail when",
+                            "child_details": [
+                                "Your server is inaccessible via the Internet or",
+                                "Your server is not running, that is we can't connect to the specified port"
+                            ]
+                        },
+                        {
+                            "child_title": "Website tests fail when",
+                            "child_details": [
+                                "The URL inaccessible via the Internet or",
+                                "Username/password not specified or incorrect or",
+                                "Required keywords do not appear in the page or",
+                                "Excluded keywords appear in the page"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ques": "Do you send alert via SMS?",
+                    "ans": "Yes, we send SMS worldwide."
+                },
+                {
+                    "ques": "How can I add a push contact?",
+                    "ans": [
+                        {
+                            "child_title": "To Add a Pushbullet Contact",
+                            "child_details": [
+                                {
+                                    "options_heading": "On Pushbullet website",
+                                    "options_value": [
+                                        "Sign up a Pushbullet account by connecting your Google account"
+                                    ]
+                                },
+                                {
+                                    "options_heading": "On your mobile device",
+                                    "options_value": [
+                                        "Install Pushbullet app for Android/iOS",
+                                        "Open the Pushbullet app and log in to your account (otherwise you will not be able to receive push notification)"
+                                    ]
+                                },
+                                {
+                                    "options_heading": "On Monitoring Control Panel",
+                                    "options_value": [
+                                        "In your control panel, go to Contacts => Add New Push Contact",
+                                        "Select Pushbullet for \"Push Service\"",
+                                        "Enter the email address associated with your Pushbullet account into the \"Pushbullet Email\" field",
+                                        "Fill other relevant fields and save"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "child_title": "To Add a Pushbullet Contact",
+                            "child_details": [
+                                {
+                                    "options_heading": "On Pushbullet website",
+                                    "options_value": [
+                                        "Sign up a Pushbullet account by connecting your Google account"
+                                    ]
+                                },
+                                {
+                                    "options_heading": "On your mobile device",
+                                    "options_value": [
+                                        "Install Pushbullet app for Android/iOS",
+                                        "Open the Pushbullet app and log in to your account (otherwise you will not be able to receive push notification)"
+                                    ]
+                                },
+                                {
+                                    "options_heading": "On Monitoring Control Panel",
+                                    "options_value": [
+                                        "In your control panel, go to Contacts => Add New Push Contact",
+                                        "Select Pushbullet for \"Push Service\"",
+                                        "Enter the email address associated with your Pushbullet account into the \"Pushbullet Email\" field",
+                                        "Fill other relevant fields and save"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "child_title": "To Add a Pushover Contact",
+                            "child_details": [
+                                {
+                                    "options_heading": "On Pushbullet website",
+                                    "options_value": [
+                                        "Create a Pushover account",
+                                        "Login and copy your 30 characters user key under \"Your User Key\" section"
+                                    ]
+                                },
+                                {
+                                    "options_heading": "On your mobile device",
+                                    "options_value": [
+                                        "Install Pushover app for Android/iOS",
+                                        "Open the Pushover app and log in to your account (otherwise you will not be able to add the push contact)"
+                                    ]
+                                },
+                                {
+                                    "options_heading": "On Monitoring Control Panel",
+                                    "options_value": [
+                                        "In your control panel, go to Contacts => Add New Push Contact",
+                                        "Select Pushover for \"Push Service\"",
+                                        "Paste the key you copied from Pushover website into the \"User Key\" field",
+                                        "Fill other relevant fields and save"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

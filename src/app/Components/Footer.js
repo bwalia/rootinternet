@@ -16,10 +16,8 @@ const Footer = () => {
 
                         <div className="footer-col col-md-4">
                             <h3>Contact Us</h3>
-                            <p>E :info@rootinternet.co.uk <br />
-
-                                T: 0414 000 9896
-                            </p>
+                            <p className='mb-0'>E :info@rootinternet.co.uk </p>
+                            <p>T: 0414 000 9896</p>
                         </div>
 
 

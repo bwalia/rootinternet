@@ -49,8 +49,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12 copyright-wrapper">
-                            Copyright &copy; 2017 Root internet All rights reserved
-
+                            Copyright &copy; {`2009 - ${new Date().getFullYear()}`} Root internet All rights reserved
                         </div>
                     </div>
                 </div>

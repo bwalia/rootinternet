@@ -11,7 +11,7 @@ const Pagination = ({ currentPage, totalPages }) => {
     }
   
     const handlePagination = (pageNumber) => {
-      router.push(`/blogs?page=${pageNumber}`);
+      router.push(`/blog?page=${pageNumber}`);
     };
   
     return (

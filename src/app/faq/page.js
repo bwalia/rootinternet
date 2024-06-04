@@ -23,23 +23,23 @@ const Page = async () => {
                         {pageData.content.map((parent, pIdx) => (
                             <React.Fragment key={pIdx}>
                                 <h2>{parent.category}</h2>
-                                <div className="accordion" id="faqs">
+                                <div className="accordion mb-5" id="faqs">
                                     {parent.questions.map((question, qIdx) => (
-                                        <div className="accordion-item" key={qIdx}>
-                                            <h2 className="accordion-header">
+                                        <div className={`accordion-item`} key={qIdx}>
+                                            <h2 className={`accordion-header mt-1 ${qIdx == 0 && 'mt-0'}`}>
                                                 <button
-                                                    className="accordion-button"
+                                                    className={`faq-ques-button accordion-button ${qIdx != 0 && 'collapsed'}`}
                                                     type="button"
                                                     data-bs-toggle="collapse"
-                                                    data-bs-target={`#collapse${qIdx}`}
+                                                    data-bs-target={`#collapse-${pIdx}-${qIdx}`}
                                                     aria-expanded="true"
-                                                    aria-controls={`collapse${qIdx}`}
+                                                    aria-controls={`collapse-${pIdx}-${qIdx}`}
                                                 >
                                                     {question.ques}
                                                 </button>
                                             </h2>
                                             <div
-                                                id={`collapse${qIdx}`}
+                                                id={`collapse-${pIdx}-${qIdx}`}
                                                 className={`accordion-collapse collapse ${qIdx == 0 && 'show'}`}
                                                 data-bs-parent="#faqs"
                                             >
@@ -48,15 +48,15 @@ const Page = async () => {
                                                         <React.Fragment>
                                                             {question.ans.map((ans, aIdx) => (
                                                                 <React.Fragment key={aIdx}>
-                                                                    <p>{ans.child_title}</p>
+                                                                    <p className='mb-0'>{ans.child_title}: </p>
                                                                     <ul>
                                                                     {ans.child_details.map((childList, cIdx) => (
-                                                                        <li key={cIdx}>{typeof(childList) === "string" ? childList : (
+                                                                        <li style={{listStyle: 'inherit'}} key={cIdx}>{typeof(childList) === "string" ? childList : (
                                                                             <React.Fragment>
-                                                                                <p>{childList.options_heading}</p>
-                                                                                <ul>
+                                                                                <p className='mb-0 pb-2'>{childList.options_heading}: </p>
+                                                                                <ul className='mb-3'>
                                                                                     {childList.options_value.map((option, oIdx) => (
-                                                                                        <li key={oIdx}>{option}</li>
+                                                                                        <li style={{listStyle: 'inherit'}} key={oIdx}>{option}</li>
                                                                                     ))}
                                                                                 </ul>
                                                                             </React.Fragment>

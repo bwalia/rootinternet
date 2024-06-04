@@ -34,7 +34,7 @@ const Navbar = () => {
                                             <li><Link href="/contact">Contact</Link></li>
                                             <li><Link href="/faq">FAQ</Link></li>
                                             <li><Link href="languages.php">Language</Link></li>
-                                            <li id="nav-top-show-hide-link" className="active"><Link href="login.php">Login</Link>
+                                            <li id="nav-top-show-hide-link" className="active"><Link href="/login">Login</Link>
                                             </li>
 
                                         </ul>

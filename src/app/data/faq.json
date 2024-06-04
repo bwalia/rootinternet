@@ -136,6 +136,571 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "ques": "Which push service should I use?",
+                    "ans": [
+                        {
+                            "child_title": "Factors to consider when choosing a push service include cost, platform support and feature. Choose one that fits your requirements. The reliability of these services are comparable.",
+                            "child_details": [
+                                {
+                                    "options_heading": "Free",
+                                    "options_value": [
+                                        "Pushbullet"
+                                    ]
+                                },
+                                {
+                                    "options_heading": "Android",
+                                    "options_value": [
+                                        "Pushbullet",
+                                        "Pushover"
+                                    ]
+                                },
+                                {
+                                    "options_heading": "iOS",
+                                    "options_value": [
+                                        "Pushbullet",
+                                        "Pushover",
+                                        "Prowl"
+                                    ]
+                                },
+                                {
+                                    "options_heading": "Desktop or other platforms",
+                                    "options_value": [
+                                        "Pushbullet",
+                                        "Pushover"
+                                    ]
+                                },
+                                {
+                                    "options_heading": "Notification acknowledgement",
+                                    "options_value": [
+                                        "Pushover"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ques": "How do I know if your service is being used to monitor my website or server?",
+                    "ans": "If our user use website test or web server test, you will see \"monitor.rootinternet.co.uk/monitored-by-user-xxxx\" as a referer in your web server log, where xxxxx is the name of the user who initiated monitoring. For other test, you have to check your router log for any traffic (ICMP, SYN etc) from us."
+                },
+                {
+                    "ques": "Someone seems to be using your service to monitor my website or server!",
+                    "ans": "Please use \"whomonitor\" tool to find out who is monitoring your server."
+                },
+                {
+                    "ques": "Why do I receive alerts in reverse order (UP alert followed by DOWN alert)?",
+                    "ans": [
+                        {
+                            "child_title": "This problem will occur if your mail server is unreachable when your monitored website/server is down. This means either",
+                            "child_details": [
+                                "your mail server is ON the same server you are monitoring or",
+                                "your mail server is on a different server but a network outage affects connectivity to both machines"
+                            ]
+                        },
+                        {
+                            "child_title": "In either cases, when your monitored website/server is down, our mail server tries to send you DOWN alert. However, since your mail server is unreachable, the DOWN alert is queued and retried on regular basis.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "On the other hand, when your website/server is up again, our mail server will be able to send the UP alert to you immediately (assuming your mail server is also up). However, the DOWN alert will only reach you in the next retry and thus comes out of order.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "You can avoid this problem by adding contacts with email addresses that are outside of your server or network, for example: @yahoo.com, @hotmail.com etc. Alerts to these contacts will certainly be in the correct order. Return to FAQ",
+                            "child_details": []
+                        }
+                    ]
+                },
+                {
+                    "ques": "Why do I see many short downtimes?",
+                    "ans": [
+                        {
+                            "child_title": "If you see many short downtimes, it is likely caused by short-term network connectivity problems such as congestion, BGP routing failure, peering network failure etc.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "These problems are quite common but usually go unnoticed by users due to their short duration. Depending on the quality of your network, the frequency of these problems will vary. We have customers who do not have a downtime in a year, while some others have short downtimes every few other days. All reporting are correct when we checked our system log.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "To avoid receiving alerts for short-term connectivity problem, you can specify a threshold so that you only receive alerts if the duration of downtime exceeded the specified threshold. For example, if your monitoring interval is 5 min, you may specify to only receive alerts for downtime longer than 10 mins. This helps to cut down unnecessary alerts.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "To set a notification threshold",
+                            "child_details": [
+                                "Login to your account",
+                                "Go to Contacts",
+                                "\"Edit\" the desired contact",
+                                "set to \"notify after X consecutive errors\""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ques": "Why do I receive \"unknown host xxx\" error when I can still access my website/server?",
+                    "ans": [
+                        {
+                            "child_title": "This error occurs when our system is unable to resolve your domain name, and this indicates a problem with your DNS servers. This can happen due to all of your DNS servers being down, or connectivity to the DNS servers was down.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "You may not notice DNS problems immediately if you use cached DNS records rather than make new DNS queries. This is often the case if you access the website/server regularly and have the DNS records in cache. However, your visitors (especially first time visitors) will not be able to resolve the domain.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "Our system is configured to perform a new DNS query on each check so that we can catch DNS problems instantly. Due to the caching behaviour described above, you may regard the reported error as false. This is not the case as the error is confirmed from multiple monitoring locations.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "You can also bypass DNS checking by monitoring with the website/server IP address instead of domain name. If you choose to do this, please make sure you monitor your DNS servers separately.",
+                            "child_details": []
+                        }
+                    ]
+                },
+                {
+                    "ques": "What should I observe when using PING?",
+                    "ans": [
+                        {
+                            "child_title": "Some Intrusion Detection Systems (IDS) may incorrectly report our regular Ping Tests as \"port scanning\". Our servers use the standard Operating System \"ping\" utility, which is not intrusive by nature.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "Please DO NOT use ping test if you are using shared IP hosting as the IP address is not exclusively used by you. It is OK if you are using shared hosting but are assigned a dedicated IP address. Return to FAQ",
+                            "child_details": []
+                        }
+                    ]
+                },
+                {
+                    "ques": "How do I monitor ASP/PHP/JSP/Coldfusion?",
+                    "ans": [
+                        {
+                            "child_title": "Sometimes, the scripting engine can fail but the main web server may still run fine. Therefore, by monitoring the web server port alone, you will not be notified of script errors.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "To monitor scripts, login to your account, click on \"Add a Test\" and select to monitor a website. Then enter the URL of the script (one that ends in .asp, .php, jsp or .cfm) and specify some keywords that exist on the page.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "In the event the script gives an error, our system will notify you as the required keywords will be missing.",
+                            "child_details": []
+                        }
+                    ]
+                },
+                {
+                    "ques": "How do I monitor database servers behind firewall?",
+                    "ans": [
+                        {
+                            "child_title": "Use your preferred web programming language (eg. ASP, JSP, PHP, Coldfusion, Perl) to write a script to connect to the database server and perform a simple query. If the query executed successfully, the script outputs something like \"Database server is UP\".",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "Lastly, go to Monitoring -> Add a Test and select to monitor a website. Enter the URL of the script and specify the required keyword \"Database server is UP\". If our system can't find the keyword on the page, it will notify you and you know the database server is down.",
+                            "child_details": []
+                        }
+                    ]
+                },
+                {
+                    "ques": "How do I monitor password-protected websites?",
+                    "ans": [
+                        {
+                            "child_title": "There are 2 types of authentication used on the web: HTTP-based and form-based, we support both methods.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "A web site uses HTTP-based authentication if your browser pops up a dialog for you to enter the username and password. To monitor this type of website",
+                            "child_details": [
+                                "Login to your account",
+                                "Go to Monitor -> Add a Test",
+                                "Select \"Monitor a website\"",
+                                "Fill in the username and password fields and complete other details"
+                            ]
+                        },
+                        {
+                            "child_title": "The second type of authentication is form-based. Websites using this method have a login prompt on the website itself, examples are web-based emails like Hotmail, Yahoo! Mail and GMail. This authentication method works by posting your credentials via the form to the website for verification. To monitor these websites",
+                            "child_details": [
+                                "Login to your account",
+                                "Go to Monitor -> Add a Test",
+                                "Select \"Monitor a website\"",
+                                "You can use Live HTTP Headers / Firebug to get the POST data.",
+                                {
+                                    "options_heading": "Instructions for using Live HTTP Headers",
+                                    "options_value": [
+                                        "Install Live HTTP Headers to Firefox.",
+                                        "Open the form submission page in Firefox. Fill in the form, but DO NOT submit yet.",
+                                        "Go to Tools menu and open Live HTTP Headers. Clear any contents that is shown, so that we can see the form submission request.",
+                                        "Now submit the form.",
+                                        "Locate the POST request at the top of the Live HTTP Headers window.",
+                                        "Copy the POST URL and data to the website test form. The POST data may look like parameter1=value1&parameter2=value2...."
+                                    ]
+                                },
+                                "Add keywords that signify a successful login (eg. Login successful, or Your last login was on...) into the required keywords field",
+                                "Optionally, add keywords that signify a failed login (eg. Bad username or password) into the excluded keywords field",
+                                "Complete other details (but NOT the username and password fields)"
+                            ]
+                        },
+                        {
+                            "child_title": "Setting up monitoring for websites with form-based authentication can be challenging. We will be glad to assist if you are unsure how to set this up. Simply send us the URL, username and password on contact page.",
+                            "child_details": []
+                        }
+                    ]
+                },
+                {
+                    "ques": "How do I show my website/server uptime statistics on my website?",
+                    "ans": [
+                        {
+                            "child_title": "Please login to your account, navigate to \"Report\" -> \"Public Report\" and follow the steps.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "You can link directly to public report URL or create an \"invisible\" iframe on the web page to include the public report.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "For example:",
+                            "child_details": [
+                                "<iframe src=\"your_public_report_url\" scolling=\"no\" align=\"center\" height=\"400\" width=\"300\" border=\"0\" frameborder=\"0\"></iframe>"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ques": "How do I pause monitoring during planned downtime?",
+                    "ans": [
+                        {
+                            "child_title": "There are 2 ways to pause monitoring: maintenance and manual.",
+                            "child_details": [
+                                "You can specify one-time or recurring maintenances and instruct the system to pause during those periods. These settings appear under the \"Maintenance\" menu.",
+                                "You can also pause monitoring manually at any time you wish. Simply login and select \"deactivate monitoring\" for the test concerned."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ques": "How to automatically send reboot request to my provider during downtime?",
+                    "ans": [
+                        {
+                            "child_title": "You can use our service to automatically send email to your provider during downtime, to request for a reboot or any additional investigation.",
+                            "child_details": [
+                                "Login to your account.",
+                                "Go to Contacts -> Notification Template.",
+                                "Click \"Add New Notification Template\".",
+                                "Change \"Template Name\" to something intuitive, eg. \"My Provider\".",
+                                "You may want to change \"From\" to your own email so that your provider can reply directly to you.",
+                                "Change subject to something that catches attention, eg. \"URGENT: Please reboot my server\".",
+                                "Change message to include all details you need you supply to your provider, eg. IP address, server ID, rack ID, login, steps to restart service or server etc.",
+                                "Save the template.",
+                                "Go to Contacts -> Add New Email Contact.",
+                                "Enter your provider's emergency email.",
+                                "You may want to disable sending UP notification to your provider, ie. just send the reboot request when your website/server goes DOWN.",
+                                "You may want to set to \"Notify after X consecutive errors\" to prevent sending reboot request for very short downtimes (possibly small network issues).",
+                                "Select \"My Provider\" as the \"Notification Template\".",
+                                "Save the contact."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ques": "How to prevent monitoring from affecting my website stats?",
+                    "ans": [
+                        {
+                            "child_title": "Most web analytics programs (webalizer, urchin, awstats etc) provide ways to exclude hits based on referer URL, or IP address.",
+                            "child_details": [
+                                "The easiest way would be to exclude hits from the referer URL (one that looks like ....../monitored-by-user-[your_username]) .",
+                                "If the program you use cannot exclude hits based on referer URL, you can exclude our IP addresses instead (check our network page or contact us for the full IP list). Since our IP addresses may change from time to time (due to system upgrades etc), you need to make sure you follow the changes."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ques": "I am using T-Mobile USA and I don't receive SMS from your service.",
+                    "ans": [
+                        {
+                            "child_title": "T-Mobile has been problematic with its \"peering\" with other mobile providers in recent months. This causes us to have difficulty sending SMS to T-Mobile.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "We recommend that you use T-Mobile's own email-to-sms service instead. That is, you can use YOUR_PHONE_NUMBER@tmomail.net to receive SMS. Please send a test email to this address. If it works, you can add it to your account to receive notifications.",
+                            "child_details": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "Technical",
+            "questions": [
+                {
+                    "ques": "Do you monitor from multiple locations?",
+                    "ans": [
+                        {
+                            "child_title": "Yes, we monitor from a global monitoring network.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "At a time, one of the stations will check your website or server. If it detects an error, another station will check again to confirm. All reported downtime are confirmed by at least 2 stations, this eliminates any false alarm.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "As we grow, we will add more monitoring stations in different locations worldwide to increase our coverage.",
+                            "child_details": []
+                        }
+                    ]
+                },
+                {
+                    "ques": "our downtime report seems incorrect or conflict with my webhost's.",
+                    "ans": [
+                        {
+                            "child_title": "First of all, you need to know the differences between our monitoring system from your webhost's",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "Our Monitoring System",
+                            "child_details": [
+                                {
+                                    "options_heading": "Tests from",
+                                    "options_value": ["global locations"]
+                                },
+                                {
+                                    "options_heading": "Detects",
+                                    "options_value": ["website/server downtime and internet congestion or breakdown"]
+                                },
+                                {
+                                    "options_heading": "Reports",
+                                    "options_value": ["all downtime"]
+                                }
+                            ]
+                        },
+                        {
+                            "child_title": "Webhost",
+                            "child_details": [
+                                {
+                                    "options_heading": "Tests from",
+                                    "options_value": ["within data center"]
+                                },
+                                {
+                                    "options_heading": "Detects",
+                                    "options_value": ["only website/server downtime"]
+                                },
+                                {
+                                    "options_heading": "Reports",
+                                    "options_value": ["only unscheduled downtime (scheduled downtime not reported)"]
+                                }
+                            ]
+                        },
+                        {
+                            "child_title": "Due to these differences, the reported downtime could be different.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "Keep in mind that all our reported downtime are confirmed by global monitoring stations.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "The internet is an inter-connected gateway-based system and routing is dynamically controlled by protocols such as BGP. Intermittent connection problems can happen due to congestion or other issues. If you see short downtime once in a while, it should be ok. However, if downtime happens every now and then, it is likely a problem with your webhost or its upstream provider.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "We have seen some cases where we report a downtime but users claim that they were not having any problem at that time. Due to the nature of the internet, it is possible that a connection problem affects only traffic from certain locations. This could be due to temporary problems with a peering network in the backbone. Thus, you may not experience our detected downtime.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "Very often, the best judge is yourself. You can check your website/server log or gather feedback from your users.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "Nevertheless, if you feel we report a downtime wrongly, kindly contact us so that we can investigate.",
+                            "child_details": []
+                        }
+                    ]
+                },
+                {
+                    "ques": "Will your monitoring activity consume my website/server bandwidth noticeably?",
+                    "ans": [
+                        {
+                            "child_title": "Our monitoring activity does not consume a lot of bandwidth because our system uses HEAD method to retrieve headers only (for website and server HTTP test). Suppose each request+response consume 500 bytes, the bandwidth consumed according to the monitoring interval is",
+                            "child_details": [
+                                "1 minute interval - 20MB per month",
+                                "2 minute interval - 10MB per month",
+                                "3 minute interval - 6.87MB per month",
+                                "5 minute interval - 4.12MB per month",
+                                "10 minute interval - 2.06MB per month",
+                                "15 minute interval - 1.37MB per month",
+                                "30 minute interval - 0.69MB per month",
+                                "60 minute interval - 0.34MB per month"
+                            ]
+                        },
+                        {
+                            "child_title": "Most hosting plans allocate much more bandwidth than these, so the impact of monitoring on your bandwidth is negligible.",
+                            "child_details": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "Billing",
+            "questions": [
+                {
+                    "ques": "I am interested in subscribing, but I don't know how.",
+                    "ans": "Firstly, please sign up for an account. When you are logged in to your account, navigate to \"Account\" -> \"Subscription\". You can then configure the type of service you need and proceed to subscribe."
+                },
+                {
+                    "ques": "How do I update my credit card information in PayPal?",
+                    "ans": [
+                        {
+                            "child_title": "Please follow these steps",
+                            "child_details": [
+                                "Login to www.paypal.com with your email & password",
+                                "Navigate to \"My Account\" -> \"Profile\" -> \"Add or Edit Credit Card\"",
+                                "\"Edit\" an existing card or \"Add\" a new card",
+                                "If you added a new card, perform this extra step. Navigate to \"My Account\" -> \"Profile\" -> \"My money\" -> \"My pre-approved payments\". Find your subscription with us and change the funding source to the NEW credit card you just added. DO NOT REMOVE the OLD credit card before you complete this step, or it will result in immediate cancellation of the subscription."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ques": "How do I use the \"funds\" payment method?",
+                    "ans": [
+                        {
+                            "child_title": "You add funds into your account just like you do to your bank account. We store the funds safely for you and you can use it to purchase any services from us. When the funds runs low, we will send you notices so that you can top up the funds for any pending payments.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "Please note that adding funds does not automatically subscribe you to our service. You still need to sign up a subscription and specify to use the funds in your account.",
+                            "child_details": []
+                        }
+                    ]
+                },
+                {
+                    "ques": "How do I calculate the number of ports I need?",
+                    "ans": [
+                        {
+                            "child_title": "To monitor servers, you need to sum up the number of ports of each server you would like to monitor. Suppose you want to monitor 2 servers (1 port on the first server and 5 ports on the second server), you will need 1 + 5 = 6 ports in total.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "Note: count ping as a port.",
+                            "child_details": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "Others",
+            "questions": [
+                {
+                    "ques": "Can I manage more than one website or server in an account?",
+                    "ans": "Multiple tests is supported in the Professional account but not in the Free account."
+                },
+                {
+                    "ques": "Why is my website or server restricted?",
+                    "ans": [
+                        {
+                            "child_title": "We introduced the free trial as a way to let users try out features of Professional. However, some take advantage by trying to sign up a new account when their existing free trial ends, thinking that they can enjoy Professional features \"forever\".",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "To prevent this from happening, we record some information of the websites and servers added during a free trial. When a user tries to add the same website or server again in a different free trial account, we would know that it has been monitoring in a free trial account before. We mark these websites or servers as \"restricted\".",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "A restricted website or server only supports features of a free account. The monitoring interval is limited to 60 mins. Additionally, a restricted website supports only HTTP port 80 with no advanced options, while a restricted server supports only ping test and HTTP port 80.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "If you upgrade to Professional account, these restrictions will be removed.",
+                            "child_details": []
+                        }
+                    ]
+                },
+                {
+                    "ques": "How do I add my company to the webhost ranking?",
+                    "ans": [
+                        {
+                            "child_title": "Firstly, please subscribe to our Professional service.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "In your account, click \"Add a Test\" to monitor a website or server you own. When you come back to the main screen again, click on \"Edit Provider\" and fill in your company details.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "If you already have a website or server monitored, select \"Edit Hosting Provider\" from the actions for your website/server.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "Done. Your company will appear in the ranking within 4 hours, as the ranking is updated every 4 hours.",
+                            "child_details": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "Reseller",
+            "questions": [
+                {
+                    "ques": "How much profit can I make?",
+                    "ans": "You can sell at any price you like. Many other monitoring services of similar features / reliability / accuracy are often priced very high, this means you can mark up considerably while remaining competitive."
+                },
+                {
+                    "ques": "How much does it cost me?",
+                    "ans": [
+                        {
+                            "child_title": "One-time activation fee - (only USD $50.00). No other fees to maintain reseller status.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "Pay-as-you-go for services that you resell - you only pay us when you have clients to resell to. Refer to our pricing and discounts.",
+                            "child_details": []
+                        }
+                    ]
+                },
+                {
+                    "ques": "How does rebranding work?",
+                    "ans": [
+                        {
+                            "child_title": "We use 2 demo to illustrate how rebranding works. Please take some time to explore them",
+                            "child_details": [
+                                "Reseller control panel",
+                                "Sample reseller site"
+                            ]
+                        },
+                        {
+                            "child_title": "The reseller control panel (1) lets you define how your reseller site (2) looks like. In the reseller control panel, you can customize the header & footer of the entire site, place your logo and company name everywhere and use your own domain or subdomain. Our name will NEVER appear in your reseller site and emails.",
+                            "child_details": []
+                        }
+                    ]
+                },
+                {
+                    "ques": "How does billing work?",
+                    "ans": [
+                        {
+                            "child_title": "We fully support PayPal and 2checkout for automated billing. You just have to enter some billing details and the system will handle the rest. There is no programming involved.",
+                            "child_details": []
+                        },
+                        {
+                            "child_title": "If you wish to use a different pricing model or a 3rd party billing system, you may use our API to implement your own billing solution.",
+                            "child_details": []
+                        }
+                    ]
+                },
+                {
+                    "ques": "How do I setup my reseller site? Do I need to upload any file?",
+                    "ans": "You don't have to upload any file; we create and host the reseller site for you. Simply enable \"show private-labelled contents\" in your reseller setting and you will have a reseller site that looks like this instantly."
+                },
+                {
+                    "ques": "Can I offer free trial, and free accounts to my clients?",
+                    "ans": "Yes, we let you offer free trials and free accounts at no cost to you. At the end of the 14-days free trials, your clients can either let the system downgrade their account to the free version (60-min monitoring), or purchase paid service from you."
+                },
+                {
+                    "ques": "Who will provide support?",
+                    "ans": "All clients' support requests go to you. Help them if you're able to do so. For issues that you can't handle, RELAY their message to us for resolution. We do NOT provide direct support to your clients in order to maintain our anonymity."
                 }
             ]
         }

@@ -921,7 +921,27 @@
  }
 
 
+ .accordion-button:not(.collapsed) {
+    background-color: #2C3E50;
+    color: #fff;
+ }
 
+ .accordion-button:focus {
+    box-shadow: 0 0 2px 0.1em #2c3e50;
+ }
+
+ .accordion .accordion-header {
+    border-bottom: none;
+ }
+
+ .faq-ques-button {
+    font-size: 20px;
+    font-weight: 600;
+ }
+
+ .accordion-body {
+    font-size: 1rem;
+ }
 
  .glyphicon {
      padding-right: 7px;

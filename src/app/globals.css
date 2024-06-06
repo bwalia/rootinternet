@@ -88,6 +88,13 @@ table {
   /*width: 100%*/
 }
 
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+
 .feature h2, h3{
 	color:#fff;
 	text-align:center;

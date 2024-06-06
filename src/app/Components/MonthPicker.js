@@ -6,12 +6,13 @@ import { useRouter, useSearchParams } from 'next/navigation';
 const MonthPicker = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
+    const currentDate = new Date();
     const [selectedMonth, setMonth] = React.useState(null);
     const [selectedYear, setYear] = React.useState(null);
 
     React.useEffect(() => {
-        const month = searchParams.get('month');
-        const year = searchParams.get('year');
+        const month = searchParams.get('month') || currentDate.getMonth() + 1;
+        const year = searchParams.get('year') || currentDate.getFullYear();
         setMonth(month);
         setYear(year);
     }, [searchParams])

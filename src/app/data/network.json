@@ -1,0 +1,323 @@
+{
+    "title": "Monitoring Network",
+    "tag_line": "We monitor your websites and servers from a network of 48 worldwide monitoring stations. This helps to reduce and eliminate false alarms.",
+    "network": {
+        "heading": "Global Monitoring Locations",
+        "description": "Below are information of our monitoring stations, they are subject to change without prior notice. If you use this information for setting up your firewall, please subscribe to the \"Changes of monitoring network\" mailing (login to your account, go to Account -> Account Settings) so that we can notify you whenever there is a change in our IP addresses.",
+        "table_headings": [
+            "No.",
+            "Monitoring Station",
+            "IP Address"
+        ],
+        "stations": [
+            {
+                "region": "North America",
+                "locations": [
+                    {
+                        "no": 1,
+                        "name": "Seattle, Washington, USA",
+                        "ip": "216.176.179.82",
+                        "image": "/images/us.png"
+                    },
+                    {
+                        "no": 2,
+                        "name": "Bend, Oregon, USA",
+                        "ip": "94.158.244.7",
+                        "image": "/images/us.png"
+                    },
+                    {
+                        "no": 3,
+                        "name": "Fremont, California, USA",
+                        "ip": "142.147.94.149",
+                        "image": "/images/us.png"
+                    },
+                    {
+                        "no": 4,
+                        "name": "Los Angeles 1, California, USA",
+                        "ip": "67.215.229.210",
+                        "image": "/images/us.png"
+                    },
+                    {
+                        "no": 5,
+                        "name": "Los Angeles 2, California, USA",
+                        "ip": "38.170.230.250",
+                        "image": "/images/us.png"
+                    },
+                    {
+                        "no": 6,
+                        "name": "Los Angeles 3, California, USA",
+                        "ip": "108.181.25.161",
+                        "image": "/images/us.png"
+                    },
+                    {
+                        "no": 7,
+                        "name": "Phoenix, Arizona, USAPhoenix, Arizona, USA",
+                        "ip": "209.188.15.100",
+                        "image": "/images/us.png"
+                    },
+                    {
+                        "no": 8,
+                        "name": "Dallas 1, Texas, USA",
+                        "ip": "74.117.132.254",
+                        "image": "/images/us.png"
+                    },
+                    {
+                        "no": 9,
+                        "name": "Dallas 2, Texas, USA",
+                        "ip": "108.181.54.35",
+                        "image": "/images/us.png"
+                    },
+                    {
+                        "no": 10,
+                        "name": "Dallas 3, Texas, USA",
+                        "ip": "45.59.163.130",
+                        "image": "/images/us.png"
+                    },
+                    {
+                        "no": 11,
+                        "name": "Chicago, Illinois, USA",
+                        "ip": "68.235.39.99",
+                        "image": "/images/us.png"
+                    },
+                    {
+                        "no": 12,
+                        "name": "Lansing, Michigan, USA",
+                        "ip": "67.225.218.51",
+                        "image": "/images/us.png"
+                    },
+                    {
+                        "no": 13,
+                        "name": "Buffalo, New York, USA",
+                        "ip": "23.236.155.2",
+                        "image": "/images/us.png"
+                    },
+                    {
+                        "no": 14,
+                        "name": "Secaucus, New Jersey, USA",
+                        "ip": "163.123.140.138",
+                        "image": "/images/us.png"
+                    },
+                    {
+                        "no": 15,
+                        "name": "Montreal 1, Quebec, Canada",
+                        "ip": "199.16.128.31",
+                        "image": "/images/ca.png"
+                    },
+                    {
+                        "no": 16,
+                        "name": "Montreal 2, Quebec, Canada",
+                        "ip": "173.209.42.57",
+                        "image": "/images/ca.png"
+                    }
+                ]
+            },
+            {
+                "region": "Europe",
+                "locations": [
+                    {
+                        "no": 17,
+                        "name": "Coventry, UK",
+                        "ip": "78.157.209.245",
+                        "image": "/images/uk.png"
+                    },
+                    {
+                        "no": 18,
+                        "name": "Maidenhead, UK",
+                        "ip": "91.206.183.42",
+                        "image": "/images/uk.png"
+                    },
+                    {
+                        "no": 19,
+                        "name": "Reading, UK",
+                        "ip": "185.26.150.121",
+                        "image": "/images/uk.png"
+                    },
+                    {
+                        "no": 20,
+                        "name": "Paris, France",
+                        "ip": "146.88.233.119",
+                        "image": "/images/fr.png"
+                    },
+                    {
+                        "no": 21,
+                        "name": "Amsterdam, Netherlands",
+                        "ip": "95.211.10.34",
+                        "image": "/images/nl.png"
+                    },
+                    {
+                        "no": 22,
+                        "name": "Dronten, Netherlands",
+                        "ip": "185.10.57.32",
+                        "image": "/images/nl.png"
+                    },
+                    {
+                        "no": 23,
+                        "name": "Rotterdam, Netherlands",
+                        "ip": "213.163.72.163",
+                        "image": "/images/nl.png"
+                    },
+                    {
+                        "no": 24,
+                        "name": "The Hague, Netherlands",
+                        "ip": "185.126.34.199",
+                        "image": "/images/nl.png"
+                    },
+                    {
+                        "no": 25,
+                        "name": "Frankfurt, Germany",
+                        "ip": "147.78.179.101",
+                        "image": "/images/de.png"
+                    },
+                    {
+                        "no": 26,
+                        "name": "Zurich, Switzerland",
+                        "ip": "79.142.69.17",
+                        "image": "/images/ch.png"
+                    },
+                    {
+                        "no": 27,
+                        "name": "Milan, Italy",
+                        "ip": "5.144.160.79",
+                        "image": "/images/it.png"
+                    },
+                    {
+                        "no": 28,
+                        "name": "Rome, Italy",
+                        "ip": "80.241.140.90",
+                        "image": "/images/it.png"
+                    },
+                    {
+                        "no": 29,
+                        "name": "Vienna, Austria",
+                        "ip": "77.244.250.227",
+                        "image": "/images/at.png"
+                    },
+                    {
+                        "no": 30,
+                        "name": "Stockholm, Sweden",
+                        "ip": "31.3.155.130",
+                        "image": "/images/se.png"
+                    },
+                    {
+                        "no": 31,
+                        "name": "Warsaw, Poland",
+                        "ip": "146.59.10.156",
+                        "image": "/images/pl.png"
+                    },
+                    {
+                        "no": 32,
+                        "name": "Siauliai, Lithuania",
+                        "ip": "213.252.244.174",
+                        "image": "/images/lt.png"
+                    },
+                    {
+                        "no": 33,
+                        "name": "Iasi, Romania",
+                        "ip": "185.225.17.93",
+                        "image": "/images/ro.png"
+                    },
+                    {
+                        "no": 34,
+                        "name": "Chisinau, Moldova",
+                        "ip": "185.163.45.98",
+                        "image": "/images/md.png"
+                    },
+                    {
+                        "no": 35,
+                        "name": "Sofia, Bulgaria",
+                        "ip": "79.142.70.105",
+                        "image": "/images/bg.png"
+                    }
+                ]
+            },
+            {
+                "region": "Asia/Pacific",
+                "locations": [
+                    {
+                        "no": 36,
+                        "name": "Jaipur, India",
+                        "ip": "103.10.234.171",
+                        "image": "/images/in.png"
+                    },
+                    {
+                        "no": 37,
+                        "name": "Tokyo, Japan",
+                        "ip": "103.121.209.224",
+                        "image": "/images/jp.png"
+                    },
+                    {
+                        "no": 38,
+                        "name": "Osaka, Japan",
+                        "ip": "103.88.45.14",
+                        "image": "/images/jp.png"
+                    },
+                    {
+                        "no": 39,
+                        "name": "Hong Kong SAR 1, China",
+                        "ip": "103.109.100.141",
+                        "image": "/images/hk.png"
+                    },
+                    {
+                        "no": 40,
+                        "name": "Hong Kong SAR 2, China",
+                        "ip": "180.235.132.75",
+                        "image": "/images/hk.png"
+                    },
+                    {
+                        "no": 41,
+                        "name": "Hong Kong SAR 2, China",
+                        "ip": "45.125.1.28",
+                        "image": "/images/hk.png"
+                    },
+                    {
+                        "no": 42,
+                        "name": "Singapore 1",
+                        "ip": "202.150.208.170",
+                        "image": "/images/sg.png"
+                    },
+                    {
+                        "no": 43,
+                        "name": "Singapore 2",
+                        "ip": "124.6.58.24",
+                        "image": "/images/sg.png"
+                    },
+                    {
+                        "no": 44,
+                        "name": "Brisbane, Australia",
+                        "ip": "223.252.37.233",
+                        "image": "/images/au.png"
+                    },
+                    {
+                        "no": 45,
+                        "name": "Sydney, Australia",
+                        "ip": "103.136.144.13",
+                        "image": "/images/au.png"
+                    },
+                    {
+                        "no": 46,
+                        "name": "Auckland, New Zealand",
+                        "ip": "103.137.135.134",
+                        "image": "/images/nz.png"
+                    },
+                    {
+                        "no": 47,
+                        "name": "Christchurch, New Zealand",
+                        "ip": "202.174.114.86",
+                        "image": "/images/nz.png"
+                    }
+                ]
+            },
+            {
+                "region": "Others",
+                "locations": [
+                    {
+                        "no": 48,
+                        "name": "Buenos Aires, Argentina",
+                        "ip": "190.106.128.138",
+                        "image": "/images/ar.png"
+                    }
+                ]
+            }
+        ]
+    }
+}

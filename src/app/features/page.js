@@ -1,0 +1,34 @@
+import React from 'react';
+import { promises as fs } from 'fs';
+import './features.css'
+
+const Page = async () => {
+    const dataFile = await fs.readFile(process.cwd() + '/src/app/data/features.json', 'utf8');
+    const pageData = JSON.parse(dataFile);
+    return (
+        <div class="container" style={{ paddingTop: "155px" }}>
+            <div class="row">
+                <div className='col-12'>
+                    <h2 className='mt-0'>{pageData.title}</h2>
+                </div>
+                <div className='row'>
+                    {pageData.content.map((feature, idx) => (
+                        <div class="col-md-6 feature-col" key={idx}>
+                            <dl>
+                                <dt>
+                                    <img src={feature.image} alt={feature.title} />
+                                    <span className='ps-3'>{feature.title}</span>
+                                </dt>
+                                <dd>
+                                    <p>{feature.description}</p>
+                                </dd>
+                            </dl>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Page

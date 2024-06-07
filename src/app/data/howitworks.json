@@ -1,0 +1,29 @@
+{
+    "title": "How It Works",
+    "content": [
+        {
+            "title": "Getting Started & Configuration",
+            "image": "/images/get-start.svg",
+            "content": [
+                "Getting started with Root Internet Monitoring © All rights reserved. is easy. Using our intuitive Web-based control panel, enter the URL you wish to monitor (e.g. https://www.yourdomain.com), and select the monitoring interval (e.g. 1 minute). The monitoring interval represents how often we’ll check to see if the website is online and responding properly. The smaller the interval, the more frequently we’ll check your website.",
+                "Next, add email, SMS and push contacts to be alerted on outages. We’ll send an email or text message to these contacts any time there is an outage with your URL, so you’ll know instantly if your website goes down."
+            ]
+        },
+        {
+            "title": "Monitoring and Alerts",
+            "image": "/images/alert.svg",
+            "content": [
+                "Our monitoring technology is fully redundant and globally distributed. Each monitoring location is housed in an enterprise-grade data center, and powered by high performance hardware.",
+                "At each monitoring interval (e.g. each time we check your website), we send a request from a random global monitoring site. If we detect that your website is down, we immediately seek a “second opinion” from another monitoring location. If the second location confirms the outage, we then notify your account’s SMS and email contacts of the outage. The use of multiple locations eliminates false alarms, and assures the integrity of our results."
+            ]
+        },
+        {
+            "title": "Reports",
+            "image": "/images/report.svg",
+            "content": [
+                "One of our most powerful features is our interactive reporting tools. You can access reports from our Web-based control panel. We can also automatically email reports to you, depending upon your preferences. These graphical and text-based reports are useful in troubleshooting problems, looking for trends in website performance, or monitoring compliance with stated uptime promises from your Web hosting provider.",
+                "We also offer a unique Public Report feature, allowing you to share the real-time results of our monitoring publicly on your website. By displaying a Public Report, you can independently verify your uptime guarantee to your visitors or customers. You can configure a Public Report in our Web-based interface."
+            ]
+        }
+    ]
+}

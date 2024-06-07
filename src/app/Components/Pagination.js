@@ -1,9 +1,10 @@
 'use client'
 import React from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 const Pagination = ({ currentPage, totalPages }) => {
     const router = useRouter();
+    const searchParams = useSearchParams();
     const pageNumbers = [];
   
     for (let i = 1; i <= totalPages; i++) {
@@ -11,7 +12,10 @@ const Pagination = ({ currentPage, totalPages }) => {
     }
   
     const handlePagination = (pageNumber) => {
-      router.push(`/blog?page=${pageNumber}`);
+      let queryParams = `page=${pageNumber}`
+      if (searchParams.has('month')) queryParams = `${queryParams}&month=${searchParams.get('month')}`;
+      if (searchParams.has('year')) queryParams = `${queryParams}&year=${searchParams.get('year')}`;
+      router.push(`/blog?${queryParams}`);
     };
   
     return (

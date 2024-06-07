@@ -1,0 +1,55 @@
+{
+    "title": "Features",
+    "content": [
+        {
+            "title": "24 x 7 x 365 Non-Stop Monitoring",
+            "image": "/images/ico-feature01.png",
+            "description": "Unless you are a robot, it is infeasible for you to keep checking your website to see if it is available. Leave this tedious job to our automated service, and enjoy peace of mind!"
+        },
+        {
+            "title": "Multi-Protocol Support",
+            "image": "/images/ico-feature02.png",
+            "description": "We support ping, HTTP, HTTPS, FTP, SSH, SMTP, DNS, POP3, IMAP, MySQL, and any arbitrary services running on TCP/IP."
+        },
+        {
+            "title": "Easy to Use",
+            "image": "/images/ico-feature03.png",
+            "description": "No complicated software to install; all you need is a web browser."
+        },
+        {
+            "title": "Worldwide Monitoring",
+            "image": "/images/ico-feature04.png",
+            "description": "We monitor your websites and servers from a network of 48 worldwide monitoring stations."
+        },
+        {
+            "title": "Uptime & Performance Reports",
+            "image": "/images/ico-feature05.png",
+            "description": "Knowledge is power, that's why we provide you all the information you need about the uptime and performance of your websites and servers in easy-to-read reports and graphs. Public report is also available."
+        },
+        {
+            "title": "Downtime Notification",
+            "image": "/images/ico-feature06.png",
+            "description": "Be the first to know when your website or server is in trouble! We notify via email, SMS and push notification."
+        },
+        {
+            "title": "Maintenance Scheduling",
+            "image": "/images/ico-feature07.png",
+            "description": "You can define one-time and recurring maintenance windows to pause uptime checks. We will not send you downtime alerts on planned outages."
+        },
+        {
+            "title": "Send Reboot Request to Your Provider During Downtime",
+            "image": "/images/ico-feature08.png",
+            "description": "You can automatically send an email to your provider during downtime to ask for a reboot or other assistance."
+        },
+        {
+            "title": "Dependency",
+            "image": "/images/ico-feature09.png",
+            "description": "In a data center environment, devices are inter-dependent. Consider, for example, a network segment where ten servers are connected to a switch. We allow you to define the dependencies between the servers and the switch. In the event of a switch outage, you receive only one alert - for the switch - rather than eleven alerts - for the switch and all the ten servers."
+        },
+        {
+            "title": "False Alarm Elimination",
+            "image": "/images/ico-feature10.png",
+            "description": "Don't waste your time! Act only when it's needed and stop receiving false alarms, we employ advanced verification technology to avoid them. To meet your requirements, we allow you to increase or decrease the sensitivity of monitoring by specifying factors like timeout, waiting time and locations."
+        }
+    ]
+}

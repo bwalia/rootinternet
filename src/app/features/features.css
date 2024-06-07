@@ -1,0 +1,39 @@
+.main-column{
+	margin: 0 auto;
+	padding: 1px 0 20px;
+	width: 950px;
+}
+.fix{
+	clear: both;
+	height: 1px;
+	margin: -1px 0 0;
+	overflow: hidden;
+}
+.list-features{
+	height: 1%;
+	padding: 10px 0;
+}
+.list-features h3{
+	color: #4c4c4c;
+	margin: 0 0 .8em;
+}
+.list-features dl{
+	display: table;
+	height: 1%;
+	margin: 0 0 1em;
+	width: 460px;
+}
+.list-features dt{
+	float: left;
+	width: 47px;
+}
+.list-features dd{
+	float: left;
+	margin: 0 0 0 17px;
+	width: 390px;
+}
+.feature-col dl dd h3 {
+    font-size: 1.55em;
+  font-weight: normal;
+  letter-spacing: -1px;
+}

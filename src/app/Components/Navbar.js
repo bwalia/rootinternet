@@ -23,7 +23,7 @@ const Navbar = () => {
                                     <div id="top-hide-box" className="content hide">
                                         <div id="form-login">
                                             <div id="form-login-center">
-                                                <form action="/en/login.php" method="post">
+                                                <form action="/en/login" method="post">
 
                                                 </form>
                                             </div>
@@ -33,7 +33,7 @@ const Navbar = () => {
                                         <ul>
                                             <li><Link href="/contact">Contact</Link></li>
                                             <li><Link href="/faq">FAQ</Link></li>
-                                            <li><Link href="languages.php">Language</Link></li>
+                                            <li><Link href="/languages">Language</Link></li>
                                             <li id="nav-top-show-hide-link" className="active"><Link href="/login">Login</Link>
                                             </li>
 
@@ -50,35 +50,35 @@ const Navbar = () => {
                     <div id="nav1">
                         <ul className={isActiveNav ? 'active': ''}>
                             <li className="active"><Link href="./">Home</Link></li>
-                            <li><Link href="features.php">Monitoring</Link>
+                            <li><Link href="/features">Monitoring</Link>
                                 <ul>
-                                    <li><Link href="features.php">Features</Link></li>
-                                    <li><Link href="howitworks.php">How It Works</Link></li>
-                                    <li><Link href="network.php">Monitoring Network</Link></li>
-                                    <li><Link href="notification.php">SMS &amp; Email Notification</Link></li>
-                                    <li><Link href="pushnotification.php">Push Notification</Link></li>
-                                    <li><Link href="quicktest.php">Quick Test</Link></li>
-                                    <li><Link href="signup.php">Sign Up</Link></li>
+                                    <li><Link href="/features">Features</Link></li>
+                                    <li><Link href="/howitworks">How It Works</Link></li>
+                                    <li><Link href="/network">Monitoring Network</Link></li>
+                                    <li><Link href="/notification">SMS &amp; Email Notification</Link></li>
+                                    <li><Link href="/pushnotification">Push Notification</Link></li>
+                                    <li><Link href="/quicktest">Quick Test</Link></li>
+                                    <li><Link href="/signup">Sign Up</Link></li>
                                 </ul>
                             </li>
-                            <li><Link href="pricing.php">Pricing</Link>
+                            <li><Link href="/pricing">Pricing</Link>
                                 <ul>
-                                    <li><Link href="pricing.php">Pricing</Link></li>
-                                    <li><Link href="discount.php">Discount</Link></li>
-                                    <li><Link href="compare.php">Compare Free &amp; Professional</Link></li>
+                                    <li><Link href="/pricing">Pricing</Link></li>
+                                    <li><Link href="/discount">Discount</Link></li>
+                                    <li><Link href="/compare">Compare Free &amp; Professional</Link></li>
                                 </ul>
                             </li>
-                            <li><Link href="reseller.php">Reseller</Link></li>
-                            <li><Link href="ranking.php">Webhost Ranking</Link>
+                            <li><Link href="/reseller">Reseller</Link></li>
+                            <li><Link href="/ranking">Webhost Ranking</Link>
                                 <ul>
-                                    <li><Link href="ranking.php">Introduction</Link></li>
-                                    <li><Link href="ranking.php?type=1">Shared</Link></li>
-                                    <li><Link href="ranking.php?type=2">Virtual Private</Link></li>
-                                    <li><Link href="ranking.php?type=3">Dedicated</Link></li>
-                                    <li><Link href="ranking.php?type=4">Colocation</Link></li>
-                                    <li><Link href="ranking.php?type=5">Leased Line</Link></li>
-                                    <li><Link href="ranking.php?type=6">Broadband</Link></li>
-                                    <li><Link href="ranking.php?type=7">Others</Link></li>
+                                    <li><Link href="/ranking">Introduction</Link></li>
+                                    <li><Link href="/ranking?type=1">Shared</Link></li>
+                                    <li><Link href="/ranking?type=2">Virtual Private</Link></li>
+                                    <li><Link href="/ranking?type=3">Dedicated</Link></li>
+                                    <li><Link href="/ranking?type=4">Colocation</Link></li>
+                                    <li><Link href="/ranking?type=5">Leased Line</Link></li>
+                                    <li><Link href="/ranking?type=6">Broadband</Link></li>
+                                    <li><Link href="/ranking?type=7">Others</Link></li>
                                 </ul>
                             </li>
                             <li><Link href="/blog">Blog</Link></li>

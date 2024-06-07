@@ -7,11 +7,12 @@ import MonthPicker from '../Components/MonthPicker';
 async function getData(params) {
     const page = params.page ?? 1;
     try {
+        const currentDate = new Date();
         const apiUrl = process.env.API_BASE_URL;
         const perPage = process.env.PER_PAGE_RECORDS;
         const bCode = process.env.BUSINESS_CODE;
-        const month = params.month ?? null;
-        const year = params.year ?? null;
+        const month = params.month ?? currentDate.getMonth() + 1;
+        const year = params.year ?? currentDate.getFullYear();
 
         const url = `${apiUrl}/business/${bCode}/public/blogs?page=${page}&perPage=${perPage}&month=${month}&year=${year}`;
         const res = await fetch(url);
@@ -28,17 +29,11 @@ async function getData(params) {
             const dataFile = await fs.readFile(filePath, 'utf8');
             const existingData = JSON.parse(dataFile);
             const newData = apiData.data.content.filter(item => !existingData.data.content.some(existingItem => existingItem.publish_date === item.publish_date));
-            console.log({newData});
             if (newData.length > 0) {
                 await fs.writeFile(filePath, JSON.stringify(apiData, null, 2));
                 results = apiData;
             } else {
-                results = {
-                    data: {
-                        content: [],
-                        total: 0
-                    }
-                };
+                results = existingData;
             }
         } else {
             await fs.writeFile(filePath, JSON.stringify(apiData));

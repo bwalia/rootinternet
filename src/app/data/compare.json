@@ -1,0 +1,76 @@
+{
+    "title": "Compare Free & Professional",
+    "comparison_headings": [
+        "Feature",
+        "Free account",
+        "Professional account"
+    ],
+    "description": "When you first sign up, you are automatically given 14-days free trial of Professional. At the end of the trial, your account will be downgraded to the Free version (features exclusive to Professional will be removed) or you may upgrade to Professional to enjoy uninterrupted monitoring.",
+    "comparisons": [
+        {
+            "feature": "Monitoring interval",
+            "free_account": "60 min",
+            "pro_account": "1 to 60 min (selectable)"
+        },
+        {
+            "feature": "Multiple monitoring locations",
+            "free_account": "Yes",
+            "pro_account": "Yes"
+        },
+        {
+            "feature": "Email contact",
+            "free_account": "1",
+            "pro_account": "Unlimited"
+        },
+        {
+            "feature": "SMS contact",
+            "free_account": "No",
+            "pro_account": "Unlimited, per message fee of USD $0.50 applies"
+        },
+        {
+            "feature": "Push contact",
+            "free_account": "No",
+            "pro_account": "Unlimited"
+        },
+        {
+            "feature": "Advanced notification options",
+            "free_account": "No",
+            "pro_account": "Notification templates, and various advanced options"
+        },
+        {
+            "feature": "Maintenance scheduling",
+            "free_account": "No",
+            "pro_account": "Yes"
+        },
+        {
+            "feature": "Report retention",
+            "free_account": "1 Year",
+            "pro_account": "Lifetime"
+        },
+        {
+            "feature": "Technical support",
+            "free_account": "No",
+            "pro_account": "Yes"
+        },
+        {
+            "feature": "Public report",
+            "free_account": "Yes, no customization, no RSS",
+            "pro_account": "Yes, customizable, RSS available"
+        },
+        {
+            "feature": "Participate in Uptime Ranking",
+            "free_account": "No",
+            "pro_account": "Yes"
+        },
+        {
+            "feature": "Recommended for",
+            "free_account": "Personal websites",
+            "pro_account": "Business websites"
+        },
+        {
+            "feature": "Cost",
+            "free_account": "Free!",
+            "pro_account": "Monitoring: from USD $2.99/month SMS notification: USD $0.50/SMS"
+        }
+    ]
+}

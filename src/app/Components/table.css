@@ -1,0 +1,35 @@
+.table-header {
+    font-weight: bold;
+    background-color: #f8f9fa;
+}
+.table-header .table-heading {
+    font-size: 0.75em;
+}
+.table-row {
+    border-bottom: 1px solid #dee2e6;
+    padding: 0.05rem;
+}
+.table-cell {
+    padding: 0.75rem;
+    font-size: 0.70em;
+}
+
+.table-data {
+    color: #5c5c5c;
+  text-shadow: 1px 1px 1px #ffffff;
+}
+
+.table-region {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.table-country-image {
+    width: 1.25em;
+}
+
+.table-country-name {
+    padding-left: 10px;
+}

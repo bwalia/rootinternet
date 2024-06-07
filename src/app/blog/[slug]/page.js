@@ -1,17 +1,37 @@
 import React from 'react';
 import { promises as fs, existsSync } from 'fs';
 
-export async function generateStaticParams(context) {
-    const apiUrl = process.env.API_BASE_URL;
-    const bCode = process.env.BUSINESS_CODE;
-
-    const url = `${apiUrl}/business/${bCode}/public/blogs`
-    const article = await fetch(url).then((res) => res.json())
-
-    return article.data.content.map((post) => ({
-        slug: post.code,
-    }))
-}
+export async function generateMetadata({ params, searchParams }, parent) {
+    const {uuid} = searchParams;
+    const filePath = process.cwd() + `/src/app/data/blog/${uuid}.json`;
+    try {
+        const apiUrl = process.env.API_BASE_URL;
+        const bCode = process.env.BUSINESS_CODE;
+    
+        const url = `${apiUrl}/business/${bCode}/public/blog/${uuid}`
+        const response = await fetch(url)
+        const article = await response.json();
+        let results = article;
+        if (!res.ok) {
+            const dataFile = await fs.readFile(filePath, 'utf8');
+            const existingData = JSON.parse(dataFile);
+            results = existingData;
+        }
+        return {
+          title: results.data.content.meta_title,
+          description: results.data.content.meta_description,
+          keywords: results.data.content.meta_keywords
+        }
+    } catch (error) {
+        const dataFile = await fs.readFile(filePath, 'utf8');
+        const existingData = JSON.parse(dataFile);
+        return {
+            title: existingData.data.content.meta_title || existingData.data.content.title,
+            description: existingData.data.content.meta_description,
+            keywords: existingData.data.content.meta_keywords
+          }
+    }
+  }
 
 async function getData(articleUuid) {
     try {
@@ -19,18 +39,40 @@ async function getData(articleUuid) {
         const bCode = process.env.BUSINESS_CODE;
 
         const url = `${apiUrl}/business/${bCode}/public/blog/${articleUuid}`
-        const article = await fetch(url).then((res) => res.json())
-        return article.data.content;
+        const res = await fetch(url);
+        const article = await res.json();
+        fs.mkdir(`${process.cwd()}/src/app/data/blog`);
+        const filePath = process.cwd() + `/src/app/data/blog/${articleUuid}.json`;
+        let resultsData;
+        if (!res.ok) {
+            const dataFile = await fs.readFile(filePath, 'utf8');
+            const existingData = JSON.parse(dataFile);
+            return existingData;
+        }
+        if (existsSync(filePath)) {
+            const dataFile = await fs.readFile(filePath, 'utf8');
+            const existingData = JSON.parse(dataFile);
+            if (article.data.content.publish_date !== existingData.data.content.publish_date) {
+                await fs.writeFile(filePath, JSON.stringify(article, null, 2));
+                resultsData = article;
+            } else {
+                resultsData = existingData;
+            }
+        } else {
+            await fs.writeFile(filePath, JSON.stringify(article));
+            resultsData = article;
+        }
+        return resultsData;
     } catch {
-        const dataFile = await fs.readFile(process.cwd() + '/src/app/data/blogs.json', 'utf8');
+        const dataFile = await fs.readFile(process.cwd() + `/src/app/data/blog/${articleUuid}.json`, 'utf8');
         const existingData = JSON.parse(dataFile);
-        return existingData
+        return existingData;
     }
 }
 
 export default async function BlogPage({ params, searchParams }) {
     const articleData = await getData(searchParams.uuid);
-    console.log({articleData});
+    const articleContent = articleData.data.content;
     function trimHtmlTags(html) {
         const tagRegExp = /<[^>]*>/g;
         return html.replace(tagRegExp, '');
@@ -54,25 +96,25 @@ export default async function BlogPage({ params, searchParams }) {
             <div className='container mb-3' style={{ paddingTop: '155px' }}>
                 <div className='row'>
                     <div className='col-sm-10 m-auto mb-3'>
-                        <h1 className='text-center'>{articleData.title}</h1>
+                        <h1 className='text-center'>{articleContent.title}</h1>
                         <div className='article-meta text-center'>
                             <span className='article-date me-3'>
-                                Created on: {articleData.created}
+                                Created on: {articleContent.created}
                             </span>
                             <span className='article-author'>
-                                Published on: {convertDate(articleData.publish_date)}
+                                Published on: {convertDate(articleContent.publish_date)}
                             </span>
                         </div>
                         <hr className='hr' />
-                        {articleData.image && (
+                        {articleContent.image && (
                             <div className='blog-image row mb-5'>
                                 <div className='col-md-10 m-auto'>
-                                    <img className='img-fluid' src={articleData.image} alt={articleData.title} />
+                                    <img className='img-fluid' src={articleContent.image} alt={articleContent.title} />
                                 </div>
                             </div>
                         )}
                         <div className='article-content'>
-                            {trimHtmlTags(articleData.content)}
+                            {trimHtmlTags(articleContent.content)}
                         </div>
                     </div>
                 </div>

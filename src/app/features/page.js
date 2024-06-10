@@ -6,14 +6,14 @@ const Page = async () => {
     const dataFile = await fs.readFile(process.cwd() + '/src/app/data/features.json', 'utf8');
     const pageData = JSON.parse(dataFile);
     return (
-        <div class="container" style={{ paddingTop: "155px" }}>
-            <div class="row">
+        <div className="container" style={{ paddingTop: "155px" }}>
+            <div className="row">
                 <div className='col-12'>
                     <h2 className='mt-0'>{pageData.title}</h2>
                 </div>
                 <div className='row'>
                     {pageData.content.map((feature, idx) => (
-                        <div class="col-md-6 feature-col" key={idx}>
+                        <div className="col-md-6 feature-col" key={idx}>
                             <dl>
                                 <dt>
                                     <img src={feature.image} alt={feature.title} />

@@ -1,47 +1,39 @@
-import React from 'react'
+import React from 'react';
+import { promises as fs } from 'fs';
 
-const Footer = () => {
+const Footer = async () => {
+    const dataFile = await fs.readFile(process.cwd() + '/src/app/data/footer.json', 'utf8');
+    const pageData = JSON.parse(dataFile);
     return (
         <footer className="text-center">
             <div className="footer-above">
                 <div className="container">
                     <div className="row">
-                        <div className="footer-col col-md-4">
-                            <h3>Location</h3>
-                            <p>1234 Faster Place
-                                <br />Beverly Hills, CA 90210
-                            </p>
-                        </div>
+                        {pageData.sections.map((section, idx) => (
+                            <div className="footer-col col-md-4" key={idx}>
+                                <h3>{section.title}</h3>
+                                {section?.description && section.description.map((desc, dIdx) => (
+                                    <p key={dIdx} className='mb-0 pb-0'>{desc}</p>
+                                ))}
 
-
-                        <div className="footer-col col-md-4">
-                            <h3>Contact Us</h3>
-                            <p className='mb-0'>E :info@rootinternet.co.uk </p>
-                            <p>T: 0414 000 9896</p>
-                        </div>
-
-
-                        <div className="footer-col col-md-4">
-                            <h3>Follow Us</h3>
-                            <ul className="list-inline">
-                                <li>
-                                    <a href="#" className="btn-social btn-outline"><i className="bi bi-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" className="btn-social btn-outline"><i className="bi bi-google"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" className="btn-social btn-outline"><i className="bi bi-twitter-x"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" className="btn-social btn-outline"><i className="bi bi-linkedin"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" className="btn-social btn-outline"><i className="bi bi-dribbble"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-
+                                {section?.social_links && (
+                                    <React.Fragment>
+                                        <ul className="list-inline">
+                                            {section.social_links.map((social, sIdx) => (
+                                                <li>
+                                                    <a 
+                                                        href={social.link} 
+                                                        className="btn-social btn-outline"
+                                                    >
+                                                        <i className={social.icon}></i>
+                                                    </a>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </React.Fragment>
+                                )}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

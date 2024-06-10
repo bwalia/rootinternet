@@ -24,13 +24,13 @@ const Page = () => {
                                     <div className="panel-body">
                                         <form role="form">
                                             <br />
-                                            <div class="input-group flex-nowrap">
-                                                <span class="input-group-text" id="addon-wrapping">@</span>
-                                                <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="addon-wrapping" />
+                                            <div className="input-group flex-nowrap">
+                                                <span className="input-group-text" id="addon-wrapping">@</span>
+                                                <input type="text" className="form-control" placeholder="Email" aria-label="Email" aria-describedby="addon-wrapping" />
                                             </div>
-                                            <div class="input-group flex-nowrap">
-                                                <span class="input-group-text" id="addon-wrapping">&#128274;</span>
-                                                <input type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping" />
+                                            <div className="input-group flex-nowrap">
+                                                <span className="input-group-text" id="addon-wrapping">&#128274;</span>
+                                                <input type="text" className="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping" />
                                             </div>
                                             <div className="text-right"><a href="#" className="btn btn-warning">Login</a></div>
                                         </form>

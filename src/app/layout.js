@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <Script strategy='lazyOnload' src="https://www.googletagmanager.com/gtag/js?id=G-E57BRVBV6D" />
+        {/* <Script strategy='lazyOnload' src="https://www.googletagmanager.com/gtag/js?id=G-E57BRVBV6D" />
         <Script id="google-analytics" strategy='lazyOnload'>
           {
             `
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
               gtag('config', 'G-E57BRVBV6D');
             `
           }
-        </Script>
+        </Script> */}
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" strategy="lazyOnload" crossOrigin="anonymous"/>
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />

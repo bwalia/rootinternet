@@ -268,7 +268,7 @@ table {
   top: 39px;
 }
 
-#nav1 li:hover ul {
+#nav1 li ul.sub-nav-active {
   background: #2C3E50;
   border: 1px solid #262626;
   left: 0;
@@ -690,6 +690,7 @@ table {
     display: flex;
     gap: 10px;
     justify-content: center;
+    margin-top: -17px;
   }
 
 @media only screen and (max-width: 768px) {
@@ -698,6 +699,10 @@ table {
     flex-direction: column;
     background-color: #2C3E50;
     right: 0;
+  }
+
+  #nav1 ul li ul.sub-nav-active {
+    display: block;
   }
 
   #nav1 li {

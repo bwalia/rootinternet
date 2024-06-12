@@ -1,0 +1,43 @@
+{
+    "sections": [
+        {
+            "title": "Location",
+            "description": [
+                "1234 Faster Place", 
+                "Beverly Hills, CA 90210"
+            ]
+        },
+        {
+            "title": "Contact Us",
+            "description": [
+                "E :info@rootinternet.co.uk",
+                "T: 0414 000 9896"
+            ]
+        },
+        {
+            "title": "Follow Us",
+            "social_links": [
+                {
+                    "link": "https://www.facebook.com/RootInternet/",
+                    "icon": "bi bi-facebook"
+                },
+                {
+                    "link": "https://www.google.com/RootInternet/",
+                    "icon": "bi bi-google"
+                },
+                {
+                    "link": "https://x.com/RootInternet/",
+                    "icon": "bi bi-twitter-x"
+                },
+                {
+                    "link": "https://linkedin.com/RootInternet/",
+                    "icon": "bi bi-linkedin"
+                },
+                {
+                    "link": "https://dribbble.com/RootInternet/",
+                    "icon": "bi bi-dribbble"
+                }
+            ]
+        }
+    ]
+}

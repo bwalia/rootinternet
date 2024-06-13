@@ -107,7 +107,7 @@ jobs:
                 echo "KUBE_CONFIG_K3S is set to default env"
             fi
             if [ "${{ env.TARGET_ENV }}" == "prod" ]; then
-                echo "KUBE_CONFIG_K3S=${{ secrets.KUBE_CONFIG_DATA_K3S1 }}" >> $GITHUB_ENV
+                echo "KUBE_CONFIG_K3S=${{ secrets.KUBE_CONFIG_DATA_K3S2 }}" >> $GITHUB_ENV
             else
                 echo "KUBE_CONFIG_K3S is set to default env"
             fi

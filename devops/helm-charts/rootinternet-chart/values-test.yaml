@@ -54,7 +54,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: test.rootinternet.co.uk
+    - host: test-direct.rootinternet.co.uk
       paths:
         - path: /
           pathType: ImplementationSpecific

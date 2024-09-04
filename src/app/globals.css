@@ -107,7 +107,8 @@ table {
 }
 
 #page-top {
-  background: #2C3E50;
+  /* background: #2C3E50; */
+  background-image: linear-gradient(to bottom right, #2C3E50, #527a8d);
   font-weight: 700;
   border: none;
   height: 140px;
@@ -717,7 +718,7 @@ table {
     display: flex;
     position: relative;
     right: 10%;
-    bottom: 40%;
+    bottom: 76%;
   }
   #page-top {
     height: 110px;

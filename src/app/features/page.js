@@ -15,10 +15,14 @@ const Page = async () => {
                     {pageData.content.map((feature, idx) => (
                         <div className="col-md-6 feature-col" key={idx}>
                             <dl>
-                                <dt>
+                               
+                                <dt className='feature-heading'>
                                     <img src={feature.image} alt={feature.title} />
                                     <span className='ps-3'>{feature.title}</span>
+                                    
                                 </dt>
+                                <dt> <img src={feature.content_image} className='feature-image' alt={feature.title} /></dt>
+
                                 <dd>
                                     <p>{feature.description}</p>
                                 </dd>

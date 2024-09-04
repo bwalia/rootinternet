@@ -17,11 +17,11 @@ export default async function Home() {
       {/* Heading Section */}
       <div className="container" style={{ padding: '190px 0 40px 0' }}>
         <div className="row">
-          <div className='col-md-6'>
-            <img src='/images/Default_website_monitoring.jpg' className='img-fluid' />
+          <div className='col-lg-6 text-center'>
+            <img src='/images/Default_website_monitoring.jpg' className='img-fluid' id='img-main-dashboard' />
           </div>
-          <div className="col-md-6 slidetxt text-center" style={{alignContent: "center"}}>
-            <h1>{pageData.heading.title}</h1>
+          <div className="col-lg-6 slidetxt text-center" style={{alignContent: "center"}}>
+            <h1 className='intro-heading'>{pageData.heading.title}</h1>
             <h2><u>{pageData.heading.tag_line}</u></h2>
             <h4>{pageData.heading.description}</h4>
             <div className="col-md-12">
@@ -49,9 +49,9 @@ export default async function Home() {
               return (
                 <React.Fragment key={index}>
                   <div className="col-md-6 service-wrapper" align="CENTER" style={index % 2 === 1 ? { borderLeft: '1px dashed #3f5871' } : {}}>
-                    <img src={service.image} width="30%" alt="" />
+                    <img src={service.image} width="10%" alt="" className='dashboard-icons' />
                     <h4>{service.name}</h4>
-                    <p><Link href="/features">Read More</Link></p>
+                    <p className='readmore-button'><Link href="/features">Read More</Link></p>
                   </div>
                 </React.Fragment>
               );
@@ -135,7 +135,7 @@ export default async function Home() {
           {pageData.how_works.description}
         </p>
 
-        <p align="RIGHT">
+        <p className='text-center'>
           <Link href="/howitworks" className="btn btn-warning btn-lg" style={{ paddingLeft: "50px", paddingRight: "50px" }}>
             {pageData.how_works.button_text}
           </Link>

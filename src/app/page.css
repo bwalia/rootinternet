@@ -581,7 +581,8 @@
  }
 
  .bcg {
-     background-color: #2C3E50;
+     /* background-color: #2C3E50; */
+     background-image: linear-gradient(to bottom right, #2C3E50, #527a8d);
      padding: 50px 0px;
      margin-top: 50px;
  }
@@ -817,20 +818,23 @@
  }
 
  .btn-warning {
-    background-color: #feb10d !important;
-    border: 1px solid #feb10d !important;
-    color: #fff !important;
+     background-color: #feb10d !important;
+     border: 1px solid #feb10d !important;
+     color: #fff !important;
  }
+
  .btn-warning:hover {
-    background-color: #be8a06 !important;
+     background-color: #be8a06 !important;
  }
+
  .btn-primary {
-    background-color: #2C3E50 !important;
-    border: 1px solid #2C3E50 !important;
-    color: #fff !important;
+     background-color: #2C3E50 !important;
+     border: 1px solid #2C3E50 !important;
+     color: #fff !important;
  }
+
  .btn-primary:hover {
-    background-color: #233140 !important;
+     background-color: #233140 !important;
  }
 
 
@@ -842,7 +846,8 @@
 
 
  .feature_bcg {
-     background-color: #2C3E50;
+     /* background-color: #2C3E50; */
+     background-image: linear-gradient(to bottom right, #2C3E50, #527a8d);
      padding: 50px 0px;
      margin-bottom: 20px;
 
@@ -922,25 +927,25 @@
 
 
  .accordion-button:not(.collapsed) {
-    background-color: #2C3E50;
-    color: #fff;
+     background-color: #2C3E50;
+     color: #fff;
  }
 
  .accordion-button:focus {
-    box-shadow: 0 0 2px 0.1em #2c3e50;
+     box-shadow: 0 0 2px 0.1em #2c3e50;
  }
 
  .accordion .accordion-header {
-    border-bottom: none;
+     border-bottom: none;
  }
 
  .faq-ques-button {
-    font-size: 20px;
-    font-weight: 600;
+     font-size: 20px;
+     font-weight: 600;
  }
 
  .accordion-body {
-    font-size: 1rem;
+     font-size: 1rem;
  }
 
  .glyphicon {
@@ -1019,3 +1024,31 @@
  .page-item .page-link {
      color: #007bff;
  }
+
+ #img-main-dashboard {
+     width: 80%;
+     height: 90%;
+
+
+ }
+
+ @media screen and (max-width: 992px) {
+     .intro-heading {
+         margin-top: 90px !important;
+
+     }
+ }
+ .feature-image{
+    width: 400px;
+    height: 300px;
+    margin-left: 19%;
+    padding:20px;
+    mix-blend-mode: multiply;
+    
+    
+ }
+ .feature-heading{
+    text-align: center;
+    padding: 10px;
+ }
+

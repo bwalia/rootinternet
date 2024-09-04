@@ -4,52 +4,63 @@
         {
             "title": "24 x 7 x 365 Non-Stop Monitoring",
             "image": "/images/ico-feature01.png",
-            "description": "Unless you are a robot, it is infeasible for you to keep checking your website to see if it is available. Leave this tedious job to our automated service, and enjoy peace of mind!"
+            "description": "Our 24 x 7 x 365 non-stop monitoring ensures that your systems are continuously observed and protected around the clock, every day of the year. With this constant vigilance, we provide unwavering oversight to detect and address any issues before they become problems. Whether it's a late-night alert or a weekend disruption, our monitoring never pauses, guaranteeing that your operations remain secure and uninterrupted. This relentless commitment means you can rely on us to keep your systems running smoothly, 24 hours a day, 7 days a week, and 365 days a year.",
+            "content_image": "/images/24services.jpg"
         },
         {
             "title": "Multi-Protocol Support",
             "image": "/images/ico-feature02.png",
-            "description": "We support ping, HTTP, HTTPS, FTP, SSH, SMTP, DNS, POP3, IMAP, MySQL, and any arbitrary services running on TCP/IP."
+            "description": "We support ping, HTTP, HTTPS, FTP, SSH, SMTP, DNS, POP3, IMAP, MySQL, and any arbitrary services running on TCP/IP, ensuring comprehensive coverage for all your network and application needs.",
+            "content_image": "/images/multi-protocal.jpg"
         },
         {
             "title": "Easy to Use",
             "image": "/images/ico-feature03.png",
-            "description": "No complicated software to install; all you need is a web browser."
+            "description": "Our platform is designed with simplicity in mind, so you can get started without any hassle. There’s no need for complex software installations or configurations. All you require is a standard web browser to access and manage our services. This user-friendly approach ensures that you can easily navigate and utilize our features without the need for technical expertise or additional setup. Whether you’re at your desk or on the go, you can seamlessly monitor and manage your systems through an intuitive web interface, making the experience both efficient and straightforward. Enjoy a hassle-free setup and operation that keeps your focus on what matters most—your business.",
+            "content_image": "/images/easy-use.jpg"
         },
         {
             "title": "Worldwide Monitoring",
             "image": "/images/ico-feature04.png",
-            "description": "We monitor your websites and servers from a network of 48 worldwide monitoring stations."
+            "description": "Our service provides comprehensive, global oversight with a network of 48 strategically located monitoring stations across the globe. This extensive network allows us to continuously check the performance, availability, and responsiveness of your websites and servers from diverse geographical regions. By leveraging these multiple monitoring stations, we ensure that you receive a thorough assessment of your systems' performance, no matter where your users are located. This global perspective helps us detect and address potential issues swiftly, minimizing the impact of any regional disruptions and ensuring optimal performance and reliability for your international audience. With our worldwide monitoring, you can trust that your online presence is consistently monitored and maintained at the highest standards across all locations.",
+            "content_image": "/images/worldwide.png"
         },
         {
             "title": "Uptime & Performance Reports",
             "image": "/images/ico-feature05.png",
-            "description": "Knowledge is power, that's why we provide you all the information you need about the uptime and performance of your websites and servers in easy-to-read reports and graphs. Public report is also available."
+            "description": "We provide you with all the essential information about the uptime and performance of your websites and servers through comprehensive, easy-to-read reports and detailed graphs. Our reports offer a clear view of critical metrics such as uptime, response times, and system reliability, allowing you to monitor your infrastructure's performance at a glance. The visual graphs make it simple to identify trends and pinpoint issues quickly, so you can take action before problems impact your users. With these in-depth insights, you have the tools you need to maintain optimal performance, ensure high availability, and make informed decisions about your systems' management and optimization.",
+            "content_image": "/images/report.jpg"
         },
         {
             "title": "Downtime Notification",
             "image": "/images/ico-feature06.png",
-            "description": "Be the first to know when your website or server is in trouble! We notify via email, SMS and push notification."
+            "description": "Stay ahead of potential issues with our proactive downtime notifications. We ensure that you are the first to know if your website or server encounters any problems by providing immediate alerts through multiple channels. Whether it's an email, SMS, or push notification, you'll receive timely updates to keep you informed about the status of your systems. This rapid notification system allows you to quickly address and resolve issues, minimizing downtime and maintaining a seamless experience for your users. With our comprehensive alert system, you can rest assured that you'll always be in the loop and able to act swiftly to keep your operations running smoothly.",
+            "content_image": "/images/alert.jpg"
         },
         {
             "title": "Maintenance Scheduling",
             "image": "/images/ico-feature07.png",
-            "description": "You can define one-time and recurring maintenance windows to pause uptime checks. We will not send you downtime alerts on planned outages."
+            "description": "Efficiently manage planned maintenance with our flexible scheduling options. You can easily define one-time and recurring maintenance windows to temporarily pause uptime checks during scheduled service interruptions or updates. During these predefined maintenance periods, we will refrain from sending downtime alerts, ensuring that you only receive notifications for unexpected issues. This feature helps prevent unnecessary alerts and allows you to carry out maintenance tasks without disruption, ensuring that your system updates and improvements are handled smoothly and with minimal impact on your monitoring experience.",
+            "content_image": "/images/maintenance.jpg"
         },
         {
             "title": "Send Reboot Request to Your Provider During Downtime",
             "image": "/images/ico-feature08.png",
-            "description": "You can automatically send an email to your provider during downtime to ask for a reboot or other assistance."
+            "description": "Streamline your response to server downtime with our automated reboot request feature. If an issue arises, you can automatically trigger an email notification to your service provider, requesting a reboot or other necessary assistance. This feature ensures that action is taken promptly to address any disruptions, reducing the time spent managing downtime and speeding up the resolution process. By automating the communication with your provider, you can maintain focus on your core operations while ensuring that your support team is promptly informed and can act quickly to restore service.",
+            "content_image": "/images/reboot.png"
         },
         {
             "title": "Dependency",
             "image": "/images/ico-feature09.png",
-            "description": "In a data center environment, devices are inter-dependent. Consider, for example, a network segment where ten servers are connected to a switch. We allow you to define the dependencies between the servers and the switch. In the event of a switch outage, you receive only one alert - for the switch - rather than eleven alerts - for the switch and all the ten servers."
+            "description": "In a data center environment, devices are inter-dependent. Consider, for example, a network segment where ten servers are connected to a switch. We allow you to define the dependencies between the servers and the switch. In the event of a switch outage, you receive only one alert - for the switch - rather than eleven alerts - for the switch and all the ten servers.",
+            "content_image": "/images/depend.png"
         },
         {
             "title": "False Alarm Elimination",
             "image": "/images/ico-feature10.png",
-            "description": "Don't waste your time! Act only when it's needed and stop receiving false alarms, we employ advanced verification technology to avoid them. To meet your requirements, we allow you to increase or decrease the sensitivity of monitoring by specifying factors like timeout, waiting time and locations."
+            "description": "Save valuable time and resources with our advanced false alarm elimination technology. We employ sophisticated verification methods to ensure that you only receive alerts when genuine issues occur, minimizing unnecessary disruptions. Our system is designed to filter out false alarms, so you can focus on addressing real problems without being overwhelmed by irrelevant notifications. To further tailor the monitoring experience to your needs, you have the flexibility to adjust the sensitivity of alerts by configuring factors such as timeout thresholds, waiting times, and monitoring locations. This customization allows you to fine-tune the monitoring process, ensuring that it aligns with your specific requirements and provides accurate, actionable insights.",
+            "content_image": "/images/alarm.png"
+
         }
     ]
 }

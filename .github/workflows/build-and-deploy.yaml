@@ -49,13 +49,13 @@ env:
   minReplicas: ${{ secrets.MINREPLICAS_TEST || '1' }}
   IMAGE_REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
   TARGET_CLUSTER: ${{ github.event.inputs.TARGET_CLUSTER || 'k3s2' }}
-  KUBE_CONFIG_K3S: ${{ secrets.KUBE_CONFIG_DATA_K3S2 }}
+  KUBE_CONFIG_K3S: ${{ secrets.KUBE_CONFIG_DATA_K3S }}
   DEPLOYMENT_TYPE: ${{ github.event.inputs.DEPLOYMENT_TYPE || 'build-and-deploy' }}
 
 jobs:
     build:
         name: Build the Image and push to Docker Hub
-        runs-on: 'ubuntu-latest'
+        runs-on: 'rootinternet'
         steps:
 
         - name: Checkout this repo
@@ -97,7 +97,7 @@ jobs:
         - name: Map Cluster kubeconfig for selected env
           run: |
             if [ "${{ env.TARGET_ENV }}" == "test" ]; then
-                echo "KUBE_CONFIG_K3S=${{ secrets.KUBE_CONFIG_DATA_K3S2 }}" >> $GITHUB_ENV
+                echo "KUBE_CONFIG_K3S=${{ secrets.KUBE_CONFIG_DATA_K3S }}" >> $GITHUB_ENV
             else
                 echo "KUBE_CONFIG_K3S is set to default env"
             fi

@@ -54,11 +54,11 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: int-direct.rootinternet.co.uk
+    - host: int-direct.whitefalcon.io
       paths:
         - path: /
           pathType: ImplementationSpecific
-    - host: int-www.rootinternet.co.uk
+    - host: int-www.whitefalcon.io
       paths:
         - path: /
           pathType: ImplementationSpecific

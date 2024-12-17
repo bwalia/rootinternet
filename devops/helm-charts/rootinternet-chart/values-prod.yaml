@@ -46,11 +46,11 @@ service:
   port: 3000
   targetPort: 3000
   namespace: "prod"
-  svcAccessPort: 30995
+  svcAccessPort: 30295
 
 ingress:
   enabled: true
-  className: "traefik"
+  className: "nginx"
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"

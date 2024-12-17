@@ -135,11 +135,8 @@ jobs:
 
         - name: Restart Root Internet Website Pods using Kubectl
           if: ${{ env.DEPLOYMENT_TYPE == 'deploy' || env.DEPLOYMENT_TYPE == 'build-and-deploy' }}            
-          uses: actions-hub/kubectl@master
-          env:
-            KUBE_CONFIG: ${{ env.KUBE_CONFIG_K3S }}
-          with:
-            args: rollout restart deployment/rootinternet-${{ env.TARGET_ENV }}-rootinternet-chart -n ${{ env.TARGET_ENV }}        
+          run: |
+            kubectl rollout restart deployment/rootinternet-${{ env.TARGET_ENV }}-rootinternet-chart -n ${{ env.TARGET_ENV }}        
 
         - name: Print Root Internet Website deployment history using Kubectl
           uses: actions-hub/kubectl@master

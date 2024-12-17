@@ -45,7 +45,7 @@ env:
   TARGET_IMAGE_TAG: "latest"
   TARGET_STACK: react
   IMAGE_NAME: rootinternet-frontend
-  TARGET_ENV: ${{ github.event.inputs.TARGET_ENV || 'dev' }}
+  TARGET_ENV: ${{ github.event.inputs.TARGET_ENV || 'test' }}
   minReplicas: ${{ secrets.MINREPLICAS_TEST || '1' }}
   IMAGE_REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
   TARGET_CLUSTER: ${{ github.event.inputs.TARGET_CLUSTER || 'k3s2' }}

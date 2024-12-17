@@ -111,15 +111,27 @@ jobs:
             else
                 echo "KUBE_CONFIG_K3S is set to default env"
             fi
+
+
+        - name: Decode and Export Kubeconfig
+          if: ${{ env.DEPLOYMENT_TYPE == 'deploy' || env.DEPLOYMENT_TYPE == 'build-and-deploy' }}
+          env:
+            KUBECONFIG_BASE64: ${{ env.KUBE_CONFIG_K3S }}
+          run: |
+            echo "$KUBECONFIG_BASE64" | base64 -d > kubeconfig
+            export KUBECONFIG=$(pwd)/kubeconfig
+            echo "Kubeconfig decoded and exported successfully."
                       
         - name: Helm Deploy - Release Root Internet Website to K3S2 Rancher
           if: ${{ env.DEPLOYMENT_TYPE == 'deploy' || env.DEPLOYMENT_TYPE == 'build-and-deploy' }}
-          uses: koslib/helm-eks-action@master
-          env:
-            KUBE_CONFIG_DATA: ${{ env.KUBE_CONFIG_K3S }}
-          with:
-            command: |
-              helm upgrade -i rootinternet-${{ env.TARGET_ENV }} ./devops/helm-charts/rootinternet-chart -f devops/helm-charts/rootinternet-chart/values-${{ env.TARGET_ENV }}.yaml --set-string targetImage="${{ env.IMAGE_REGISTRY }}/${{ env.IMAGE_NAME }}" --set-string targetImageTag="${{ env.IMAGE_TAG }}" --namespace ${{ env.TARGET_ENV }} --create-namespace
+          run: |
+            helm upgrade -i rootinternet-${{ env.TARGET_ENV }} \
+            ./devops/helm-charts/rootinternet-chart \
+            -f devops/helm-charts/rootinternet-chart/values-${{ env.TARGET_ENV }}.yaml \
+            --set-string targetImage="${{ env.IMAGE_REGISTRY }}/${{ env.IMAGE_NAME }}" \
+            --set-string targetImageTag="${{ env.IMAGE_TAG }}" \
+            --namespace ${{ env.TARGET_ENV }} \
+            --create-namespace
 
         - name: Restart Root Internet Website Pods using Kubectl
           if: ${{ env.DEPLOYMENT_TYPE == 'deploy' || env.DEPLOYMENT_TYPE == 'build-and-deploy' }}            

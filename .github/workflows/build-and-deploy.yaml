@@ -125,6 +125,7 @@ jobs:
         - name: Helm Deploy - Release Root Internet Website to K3S2 Rancher
           if: ${{ env.DEPLOYMENT_TYPE == 'deploy' || env.DEPLOYMENT_TYPE == 'build-and-deploy' }}
           run: |
+            export KUBECONFIG=$(pwd)/kubeconfig
             helm upgrade -i rootinternet-${{ env.TARGET_ENV }} \
             ./devops/helm-charts/rootinternet-chart \
             -f devops/helm-charts/rootinternet-chart/values-${{ env.TARGET_ENV }}.yaml \
@@ -136,14 +137,17 @@ jobs:
         - name: Restart Root Internet Website Pods using Kubectl
           if: ${{ env.DEPLOYMENT_TYPE == 'deploy' || env.DEPLOYMENT_TYPE == 'build-and-deploy' }}            
           run: |
+            export KUBECONFIG=$(pwd)/kubeconfig
             kubectl rollout restart deployment/rootinternet-${{ env.TARGET_ENV }}-rootinternet-chart -n ${{ env.TARGET_ENV }}
 
         - name: Print Root Internet Website deployment history using Kubectl
           run: |
+            export KUBECONFIG=$(pwd)/kubeconfig
             kubectl rollout history deployment/rootinternet-${{ env.TARGET_ENV }}-rootinternet-chart -n ${{ env.TARGET_ENV }}
 
         - name: Print Root Internet Website Pods using Kubectl
           run: |
+            export KUBECONFIG=$(pwd)/kubeconfig
             kubectl get pods -n ${{ env.TARGET_ENV }}     
 
         - name: Slack Notification for Github updates 
